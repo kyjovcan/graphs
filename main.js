@@ -1,3 +1,25 @@
+var request = require('request');
+var fs = require('fs');
+var express = require('express');
+var app = require('express')();
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+
+app.get('', function(req, res) {
+    res.sendFile(__dirname + '/client/index.html');
+});
+app.get('/client.js', function(req, res){
+    res.sendFile(__dirname + '/client/client.js');
+});
+app.get('/style.css', function(req, res){
+    res.sendFile(__dirname + '/client/style.css');
+});
+app.get('/jquery-3.3.1.min.js', function(req, res){
+    res.sendFile(__dirname + '/client/jquery-3.3.1.min.js');
+});
+
+
+
 const moves = {
     "mm":[  
         "247 500 684",
@@ -235,29 +257,44 @@ const moves = {
         "6473 757 699"
      ]
 }
+let velocities = [];
+
+
+
+// inicializacia servera
+server.listen(process.env.PORT || 2500);
+console.log("Server started on PORT 2500");
+
+// pripojenie na klienta
+io.on('connection', function (socket) {
+  socket.on('mainInput', function (data) {
+    console.log("Connected");
+  });
+
+  socket.on('computeData', function (data){
+    velocities = mapArray();
+    socket.emit('velocityData', velocities);
+  });
+});
 
 function mapArray() {
     let temp = '';
-    const distances = moves.mm.map((move, index) => {
-        if (index === 1) {
+    const velocities = moves.mm.map((move, index) => {
+        if (index === 0) {
             temp = move;
+            return 0;
         }
-        else if (index < 5) {
+        else {
             const currentVars = move.split(" ");
             const prevVars = temp.split(" ");
+            temp = move;
             const deltaT = Math.abs(currentVars[0] - prevVars[0]);
             const deltaX = Math.abs(currentVars[1] - prevVars[1]);
             const deltaY = Math.abs(currentVars[2] - prevVars[2]);
             const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
-            console.log('*****************************************');
-            console.log('move ' + move);
-            console.log('temp ' + temp);
-            console.log('deltaT ' + deltaT);
-            console.log('deltaX ' + deltaX);
-            console.log('deltaY ' + deltaY);
-            console.log('dist ' + dist);
-            temp = move;
+
+            return (dist / deltaT);
         }
     });
-    return distances;
+    return velocities;
 }
