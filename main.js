@@ -17,7 +17,9 @@ app.get('/style.css', function(req, res){
 app.get('/jquery-3.3.1.min.js', function(req, res){
     res.sendFile(__dirname + '/client/jquery-3.3.1.min.js');
 });
-
+app.get('/Chart.bundle.js', function(req, res){
+    res.sendFile(__dirname + '/node_modules/chart.js/dist/Chart.bundle.js');
+});
 
 
 const moves = {
@@ -257,7 +259,7 @@ const moves = {
         "6473 757 699"
      ]
 }
-let velocities = [];
+let vels = [];
 
 
 
@@ -271,18 +273,19 @@ io.on('connection', function (socket) {
     console.log("Connected");
   });
 
-  socket.on('computeData', function (data){
-    velocities = mapArray();
-    socket.emit('velocityData', velocities);
+  socket.on('computeData', function (data, fn){
+    vels = mapArray();
+    console.log(vels)
+    fn({ data: vels });
   });
 });
 
 function mapArray() {
     let temp = '';
-    const velocities = moves.mm.map((move, index) => {
+    const vels = moves.mm.map((move, index) => {
         if (index === 0) {
             temp = move;
-            return 0;
+            return {velocity: 0, time: 0};
         }
         else {
             const currentVars = move.split(" ");
@@ -292,9 +295,14 @@ function mapArray() {
             const deltaX = Math.abs(currentVars[1] - prevVars[1]);
             const deltaY = Math.abs(currentVars[2] - prevVars[2]);
             const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
-
-            return (dist / deltaT);
+            
+            const vel = {
+                velocity: dist / deltaT,
+                time: deltaT,
+            }; 
+            
+            return vel;
         }
     });
-    return velocities;
+    return vels;
 }
