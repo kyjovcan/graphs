@@ -1,15 +1,18 @@
-var request = require('request');
-var fs = require('fs');
-var express = require('express');
-var app = require('express')();
-var server = require('http').Server(app);
-var io = require('socket.io')(server);
+const request = require('request');
+const fs = require('fs');
+const express = require('express');
+const app = express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 
 app.get('', function(req, res) {
     res.sendFile(__dirname + '/client/index.html');
 });
 app.get('/client.js', function(req, res){
     res.sendFile(__dirname + '/client/client.js');
+});
+app.get('/icon.gif', function(req, res){
+    res.sendFile(__dirname + '/client/icon.gif');
 });
 app.get('/style.css', function(req, res){
     res.sendFile(__dirname + '/client/style.css');
@@ -259,6 +262,7 @@ const moves = {
         "6473 757 699"
      ]
 }
+
 let vels = [];
 
 
@@ -275,7 +279,6 @@ io.on('connection', function (socket) {
 
   socket.on('computeData', function (data, fn){
     vels = mapArray();
-    console.log(vels)
     fn({ data: vels });
   });
 });
@@ -298,7 +301,7 @@ function mapArray() {
             
             const vel = {
                 velocity: dist / deltaT,
-                time: deltaT,
+                time: currentVars[0],
             }; 
             
             return vel;

@@ -7,12 +7,11 @@ socket.on('connect', function () {
 });
 
 function createGraph() {
-    console.log(serverVelocities.data);
     
-    const labels = serverVelocities.map((vel) => {
+    const labels = serverVelocities.data.map((vel) => {
         return vel.time;
     });
-    const velData = serverVelocities.map((vel) => {
+    const velData = serverVelocities.data.map((vel) => {
         return vel.velocity;
     });
 
@@ -22,7 +21,7 @@ function createGraph() {
         data: {
             labels: labels,
             datasets: [{
-                label: '# of Votes',
+                label: 'Speed',
                 data: velData,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)'
