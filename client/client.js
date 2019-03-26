@@ -48,7 +48,6 @@ function createGraph() {
 
 function compute(){
     socket.emit('computeData', serverVelocities, function(data){
-        console.log(data)
         serverVelocities = data; 
         const pele = createGraph();
     });

@@ -42,35 +42,26 @@
                 </button>
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-4">
-                    <form ref='uploadForm' 
-                    id='uploadForm' 
-                    action='http://localhost:2500/upload' 
-                    method='post' 
-                    encType="multipart/form-data">
-                      <input type="file" name="sampleFile" />
-                      <input type='submit' value='Upload!' />
+                    <form 
+                        class="file-upload"
+                        ref='uploadForm' 
+                        id='uploadForm' 
+                        action='http://localhost:2500/upload' 
+                        method='post' 
+                        encType="multipart/form-data"
+                    >
+                        <input type="file" name="sampleFile" />
+                        <input type='submit' value='Upload!' />
                   </form> 
             </div>
 
             <div class="col-md-4">
-                <form role="form" class="form-inline">
-                    <div class="form-group">
-                        <label for="exampleInputFile">
-                            File input
-                        </label>
-
-                        <input type="file" class="form-control-file" id="exampleInputFile" />
-
-                        <p class="help-block">
-                            * len log subory
-                        </p>
-                    </div>
-                    <button type="submit" class="btn btn-primary">
-                        Submit
-                    </button>
-                </form>
+                <h2>
+                    logy
+                </h2>
             </div>
 
             <div class="col-md-4">

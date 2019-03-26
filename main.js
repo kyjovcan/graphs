@@ -2,6 +2,7 @@ const request = require('request');
 const fs = require('fs');
 const express = require('express');
 const app = express();
+const fileUpload = require('express-fileupload');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 
@@ -265,7 +266,24 @@ const moves = {
 
 let vels = [];
 
+app.use(fileUpload());
 
+app.post('/upload', function(req, res) {
+    if (Object.keys(req.files).length == 0) {
+        return res.status(400).send('No files were uploaded.');
+    }
+    console.log(req.files.sampleFile.data); 
+
+    let sampleFile = req.files.sampleFile;
+
+    sampleFile.mv('./logs/log.txt', function(err) {
+        if (err)
+          return res.status(500).send(err);
+    
+        res.send('LOG recieved', 200);
+        res.end();
+    });
+});
 
 // inicializacia servera
 server.listen(process.env.PORT || 2500);
@@ -307,5 +325,39 @@ function mapArray() {
             return vel;
         }
     });
+    parseLog();
     return vels;
+}
+
+
+function parseLog(){
+    fs.readFile('./logs/log.txt', 'utf8', function(err, contents) {
+        const logContent = contents;
+
+    });
+    const myLines = fs.readFileSync('./logs/log.txt').toString().split('\n');
+
+    let userData = {};
+
+    myLines.forEach((line) => {
+        // INTRODUCTION INFORMATION RETRIEVAL
+        const match = line.match(/====BEGIN\[{"cursor"/);
+        if(match) {
+            userData.cursor = line.substring(
+                line.lastIndexOf('"cursor":"') + 10, 
+                line.lastIndexOf('","exp_months"')
+            );
+            userData.expMonths = line.substring(
+                line.lastIndexOf('"exp_months":"') + 14, 
+                line.lastIndexOf('","exp_type"')
+            );
+            userData.expType = line.substring(
+                line.lastIndexOf('"exp_type":"') + 12, 
+                line.lastIndexOf('"}]END')
+            );
+        }
+
+        // MOUSE DATA RETRIEVAL
+        
+    })
 }
