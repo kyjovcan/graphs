@@ -349,42 +349,33 @@ function parseLog(){
         // INTRODUCTION INFORMATION RETRIEVAL
         const matchIntro = line.match(/====BEGIN\[{"cursor"/);
         if(matchIntro) {
-            userData.cursor = line.substring(
-                line.lastIndexOf('"cursor":"') + 10, 
-                line.lastIndexOf('","exp_months"')
-            );
-            userData.expMonths = line.substring(
-                line.lastIndexOf('"exp_months":"') + 14, 
-                line.lastIndexOf('","exp_type"')
-            );
-            userData.expType = line.substring(
-                line.lastIndexOf('"exp_type":"') + 12, 
-                line.lastIndexOf('"}]END')
-            );
+            const intro = line.match(/"cursor":"(.*)","exp_months":"(.*)","exp_type":"(.*)"}]END====/);
+            userData.cursor = intro[1];
+            userData.expMonths = intro[2];
+            userData.expType = intro[3];
         };
-
+        
         // MOUSE DATA RETRIEVAL
-        const matchData = line.match(/====BEGIN\[{"evs":/);
+        const matchData = line.match(/====BEGIN\[{"(evs|mm)":/);
         const question = {};
-        if(matchData) {
 
-            let mm = line.match(new RegExp(/"mm":\[(.*)],"ans/));
+        if(matchData) {
+            let mm = line.match(new RegExp(/"mm":\[(.*)],"(ans|evs)/));
             if (!mm) {
                 mm = line.match(new RegExp(/"mm":\[(.*)]}]END====/));
-                question.answer = 'n/a'
+                question.mm = mm[1];
+                question.answer = 'n/a';
+            } else {
+                question.mm = mm[1];
+                const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
+                question.name = answer[1];
+                question.answer = answer[2];
             }
-            //console.log(`uloha ${index}*******************************************************`);
-            //console.log(mm[1]);
-
-            question.answer = line.substring(
-                line.lastIndexOf('"ans_tutorial_01":"') + 19, 
-                line.lastIndexOf('"}]END====')
-            );
-
-            
             userData.questions.push(question);
         };
 
         //console.log(userData.questions[0]);
-    })
+
+        // EVALUATION DATA RETRIEVAL
+    });
 } 
