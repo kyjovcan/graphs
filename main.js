@@ -337,12 +337,18 @@ function parseLog(){
     });
     const myLines = fs.readFileSync('./logs/log.txt').toString().split('\n');
 
-    let userData = {};
+    let userData = {
+        cursor: '',
+        expMonths: '',
+        expType: '',
+        questions: [],
+        evaluation: []
+    };
 
-    myLines.forEach((line) => {
+    myLines.forEach((line, index) => {
         // INTRODUCTION INFORMATION RETRIEVAL
-        const match = line.match(/====BEGIN\[{"cursor"/);
-        if(match) {
+        const matchIntro = line.match(/====BEGIN\[{"cursor"/);
+        if(matchIntro) {
             userData.cursor = line.substring(
                 line.lastIndexOf('"cursor":"') + 10, 
                 line.lastIndexOf('","exp_months"')
@@ -355,9 +361,30 @@ function parseLog(){
                 line.lastIndexOf('"exp_type":"') + 12, 
                 line.lastIndexOf('"}]END')
             );
-        }
+        };
 
         // MOUSE DATA RETRIEVAL
-        
+        const matchData = line.match(/====BEGIN\[{"evs":/);
+        const question = {};
+        if(matchData) {
+
+            let mm = line.match(new RegExp(/"mm":\[(.*)],"ans/));
+            if (!mm) {
+                mm = line.match(new RegExp(/"mm":\[(.*)]}]END====/));
+                question.answer = 'n/a'
+            }
+            //console.log(`uloha ${index}*******************************************************`);
+            //console.log(mm[1]);
+
+            question.answer = line.substring(
+                line.lastIndexOf('"ans_tutorial_01":"') + 19, 
+                line.lastIndexOf('"}]END====')
+            );
+
+            
+            userData.questions.push(question);
+        };
+
+        //console.log(userData.questions[0]);
     })
-}
+} 
