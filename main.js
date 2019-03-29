@@ -302,8 +302,14 @@ io.on('connection', function (socket) {
 });
 
 function mapArray() {
+    const data = parseLog();
+
+    let processedData = {};
+    console.log(data.questions.length)
+    const moves = data.questions[0].mm[0].split(',');
+
     let temp = '';
-    const vels = moves.mm.map((move, index) => {
+    const vels = moves.map((move, index) => {
         if (index === 0) {
             temp = move;
             return {velocity: 0, time: 0};
@@ -312,29 +318,24 @@ function mapArray() {
             const currentVars = move.split(" ");
             const prevVars = temp.split(" ");
             temp = move;
-            const deltaT = Math.abs(currentVars[0] - prevVars[0]);
+            const deltaT = Math.abs(currentVars[0].replace('"', '') - prevVars[0].replace('"', ''));
             const deltaX = Math.abs(currentVars[1] - prevVars[1]);
-            const deltaY = Math.abs(currentVars[2] - prevVars[2]);
+            const deltaY = Math.abs(currentVars[2].replace('"', '') - prevVars[2].replace('"', ''));
             const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
-            
             const vel = {
                 velocity: dist / deltaT,
-                time: currentVars[0],
-            }; 
+                time: currentVars[0].replace('"', ''),
+            };
             
             return vel;
         }
     });
-    parseLog();
+    
     return vels;
 }
 
 
 function parseLog(){
-    fs.readFile('./logs/log.txt', 'utf8', function(err, contents) {
-        const logContent = contents;
-
-    });
     const myLines = fs.readFileSync('./logs/log.txt').toString().split('\n');
 
     let userData = {
@@ -364,10 +365,12 @@ function parseLog(){
             let mm = line.match(new RegExp(/"mm":\[(.*)],"(ans|evs)/));
             if (!mm) {
                 mm = line.match(new RegExp(/"mm":\[(.*)]}]END====/));
-                question.mm = mm[1];
+                question.mm = [];
+                question.mm.push(mm[1]);
                 question.answer = 'n/a';
             } else {
-                question.mm = mm[1];
+                question.mm = [];
+                question.mm.push(mm[1]);
                 const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
                 question.name = answer[1];
                 question.answer = answer[2];
@@ -399,4 +402,6 @@ function parseLog(){
         }
         console.log("The file was saved!");
     }); 
+
+    return userData;
 } 
