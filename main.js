@@ -305,33 +305,47 @@ function mapArray() {
     const data = parseLog();
 
     let processedData = {};
-    console.log(data.questions.length)
-    const moves = data.questions[0].mm[0].split(',');
 
-    let temp = '';
-    const vels = moves.map((move, index) => {
-        if (index === 0) {
-            temp = move;
-            return {velocity: 0, time: 0};
-        }
-        else {
-            const currentVars = move.split(" ");
-            const prevVars = temp.split(" ");
-            temp = move;
-            const deltaT = Math.abs(currentVars[0].replace('"', '') - prevVars[0].replace('"', ''));
-            const deltaX = Math.abs(currentVars[1] - prevVars[1]);
-            const deltaY = Math.abs(currentVars[2].replace('"', '') - prevVars[2].replace('"', ''));
-            const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
-            const vel = {
-                velocity: dist / deltaT,
-                time: currentVars[0].replace('"', ''),
-            };
-            
-            return vel;
-        }
+    const allVelocities = data.questions.map((question) => {
+        const moves = question.mm[0].split(',');
+        if (question.name)
+            console.log(question.name + ' otazka ');
+
+        let temp = '';
+        const vels = moves.map((move, index) => {
+            if (index === 0) {
+                temp = move;
+                return {velocity: 0, time: 0};
+            }
+            else {
+                const currentVars = move.split(" ");
+                const prevVars = temp.split(" ");
+                temp = move;
+                const deltaT = Math.abs(currentVars[0].replace('"', '') - prevVars[0].replace('"', ''));
+                const deltaX = Math.abs(currentVars[1] - prevVars[1]);
+                const deltaY = Math.abs(currentVars[2].replace('"', '') - prevVars[2].replace('"', ''));
+                const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+                const vel = {
+                    velocity: dist / deltaT,
+                    time: currentVars[0].replace('"', ''),
+                };
+
+                return vel;
+            }
+        });
+
+        const quest = {
+            vels: vels,
+            name: question.name ? question.name : 'n/a',
+            answer: question.answer,
+            difference: question.difference,
+        };
+        return quest;
     });
-    
-    return vels;
+
+    writeFile("./logAllVelocities.json", allVelocities);
+
+    return allVelocities;
 }
 
 
@@ -396,12 +410,16 @@ function parseLog(){
         };
     });
 
-    fs.writeFile("./logData.json", JSON.stringify(userData), function(err) {
+    writeFile("./logData.json", userData);
+
+    return userData;
+}
+
+function writeFile(name, data){
+    fs.writeFile(name, JSON.stringify(data), function(err) {
         if(err) {
             return console.log(err);
         }
-        console.log("The file was saved!");
-    }); 
-
-    return userData;
-} 
+        console.log(`The file ${name} was saved!`);
+    });
+}

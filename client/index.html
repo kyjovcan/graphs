@@ -21,15 +21,21 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <h3 class="text-center">
-                    Uloha cislo X.Y
+                <h3 id="question-name" class="text-center">
+                    Question number
                 </h3>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-1">
-                <button type="button" class="arrow btn btn-default btn-sm">
+                <button
+                    id="arrow-left"
+                    type="button"
+                    class="arrow btn btn-default btn-sm"
+                    onclick="changeQuestionNumber(false)"
+                    disabled=true
+                >
                     <span><i class="fas fa-arrow-left"></i></span>    
                 </button>
             </div>
@@ -37,7 +43,12 @@
                 <canvas id="myChart"></canvas>
             </div>
             <div class="col-md-1">
-                <button type="button" class="arrow btn btn-default btn-sm">
+                <button
+                    id="arrow-right"
+                    type="button"
+                    class="arrow btn btn-default btn-sm"
+                    onclick="changeQuestionNumber(true)"
+                >
                     <i class="fas fa-arrow-right"></i>
                 </button>
             </div>
