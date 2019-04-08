@@ -1,0 +1,322 @@
+[
+  {
+    "name": "code_01",
+    "mainFn": {
+      "from": 13,
+      "to": 17
+    },
+    "mainChanging": [
+      15
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 9
+    },
+    "primary": [
+      5,
+      7,
+      9
+    ],
+    "rtrn": [
+      9
+    ]
+  },
+  {
+    "name": "code_02",
+    "mainFn": {
+      "from": 19,
+      "to": 23
+    },
+    "mainChanging": [
+      21
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 15
+    },
+    "primary": [
+      5,
+      10
+    ],
+    "rtrn": [
+      7,
+      12,
+      15
+    ]
+  },
+  {
+    "name": "code_03",
+    "mainFn": {
+      "from": 23,
+      "to": 27
+    },
+    "mainChanging": [
+      25
+    ],
+    "secFn": {
+      "from": 5,
+      "to": 20
+    },
+    "primary": [
+      7,
+      13,
+      19
+    ],
+    "rtrn": [
+      7,
+      13,
+      19
+    ]
+  },
+  {
+    "name": "code_04",
+    "mainFn": {
+      "from": 18,
+      "to": 22
+    },
+    "mainChanging": [
+      20
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 14
+    },
+    "primary": [
+      7,
+      9,
+      11
+    ],
+    "rtrn": [
+      14
+    ]
+  },
+  {
+    "name": "code_05",
+    "mainFn": {
+      "from": 16,
+      "to": 20
+    },
+    "mainChanging": [
+      18
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 12
+    },
+    "primary": [
+      7,
+      9
+    ],
+    "rtrn": [
+      12
+    ]
+  },
+  {
+    "name": "code_06",
+    "mainFn": {
+      "from": 16,
+      "to": 20
+    },
+    "mainChanging": [
+      18
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 12
+    },
+    "primary": [
+      7,
+      9
+    ],
+    "rtrn": [
+      12
+    ]
+  },
+  {
+    "name": "code_07",
+    "mainFn": {
+      "from": 13,
+      "to": 19
+    },
+    "mainChanging": [
+      15,
+      17
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 9
+    },
+    "primary": [
+      5,
+      7,
+      9
+    ],
+    "rtrn": [
+      9
+    ]
+  },
+  {
+    "name": "code_08",
+    "mainFn": {
+      "from": 16,
+      "to": 22
+    },
+    "mainChanging": [
+      18,
+      20
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 12
+    },
+    "primary": [
+      7,
+      9
+    ],
+    "rtrn": [
+      12
+    ]
+  },
+  {
+    "name": "code_09",
+    "mainFn": {
+      "from": 21,
+      "to": 27
+    },
+    "mainChanging": [
+      23,
+      25
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 17
+    },
+    "primary": [
+      7,
+      9,
+      11,
+      13
+    ],
+    "rtrn": [
+      17
+    ]
+  },
+  {
+    "name": "code_10",
+    "mainFn": {
+      "from": 18,
+      "to": 24
+    },
+    "mainChanging": [
+      20,
+      22
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 14
+    },
+    "primary": [
+      7,
+      9,
+      11
+    ],
+    "rtrn": [
+      14
+    ]
+  },
+  {
+    "name": "code_11",
+    "mainFn": {
+      "from": 16,
+      "to": 22
+    },
+    "mainChanging": [
+      18
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 12
+    },
+    "primary": [
+      7,
+      9
+    ],
+    "rtrn": [
+      12
+    ]
+  },
+  {
+    "name": "code_12",
+    "mainFn": {
+      "from": 23,
+      "to": 29
+    },
+    "mainChanging": [
+      25
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 19
+    },
+    "primary": [
+      7,
+      9,
+      11,
+      17
+    ],
+    "rtrn": [
+      19
+    ]
+  },
+  {
+    "name": "code_13",
+    "mainFn": {
+      "from": 19,
+      "to": 31
+    },
+    "mainChanging": [
+      21,
+      25
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 16
+    },
+    "primary": [
+      7,
+      9,
+      11,
+      13
+    ],
+    "rtrn": [
+      16
+    ]
+  },
+  {
+    "name": "code_14",
+    "mainFn": {
+      "from": 23,
+      "to": 33
+    },
+    "mainChanging": [
+      25,
+      27,
+      29
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 20
+    },
+    "primary": [
+      7,
+      9,
+      11,
+      13,
+      15,
+      17
+    ],
+    "rtrn": [
+      0
+    ]
+  }
+]

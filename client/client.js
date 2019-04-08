@@ -54,13 +54,14 @@ function compute(){
 }
 
 function changeQuestionNumber(direction) {
-    if (questionNumber >= 0 && questionNumber <= serverVelocities.data.length){
+    if (questionNumber >= 0 && questionNumber <= serverVelocities.data.length-1){
         direction ? questionNumber++ : questionNumber--;
         createGraph();
+        console.log(questionNumber + ' / ' + serverVelocities.data.length);
     }
     if (questionNumber === 0 ){
         $('#arrow-left').attr('disabled', true);
-    } else if (questionNumber === serverVelocities.data.length ){
+    } else if (questionNumber === serverVelocities.data.length-1 ){
         $('#arrow-right').attr('disabled', true);
     } else {
         $('#arrow-right').attr('disabled', false);
