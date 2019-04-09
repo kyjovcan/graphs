@@ -27,6 +27,7 @@ app.get('/Chart.bundle.js', function(req, res){
 
 const rowHeight = 32;
 const peepholeHeight = 20;
+const timeStep = 200;
 let vels = [];
 
 app.use(fileUpload());
@@ -64,48 +65,154 @@ io.on('connection', function (socket) {
   });
 });
 
+/* OLD FUNCTION MAP ARRAY WITHOUT EQUAL TIMES
 function mapArray() {
     const data = parseLog();
 
-    const allVelocities = data.questions.map((question) => {
-        const moves = question.mm[0].split(',');
-        if (question.name)
-            console.log(question.name + ' otazka ');
+    const allVelocities = data.questions.map((question, i) => {
+        if (i == 5) {
+            const moves = question.mm[0].split(',');
+            if (question.name)
+                console.log(question.name + ' otazka ');
 
-        let temp = '';
-        const vels = moves.map((move, index) => {
-            if (index === 0) {
-                temp = move;
-                return {velocity: 0, time: 0, row: 1};
-            }
-            else {
-                const currentVars = move.split(" ");
-                const prevVars = temp.split(" ");
-                temp = move;
-                const deltaT = Math.abs(currentVars[0].replace('"', '') - prevVars[0].replace('"', ''));
-                const deltaX = Math.abs(currentVars[1] - prevVars[1]);
-                const deltaY = Math.abs(currentVars[2].replace('"', '') - prevVars[2].replace('"', ''));
-                const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+            let temp = '';
+            let tempDistance = 0;
+            let itRoll = 0;
 
-                const rowNumber = Math.floor((currentVars[2].replace('"', '') - 1) / rowHeight);
+            const vels = moves.map((move, index) => {
+                if (index === 0) {
+                    temp = move;
+                    return {velocity: 0, time: 0, row: 1};
+                }
+                else {
+                    const currentVars = move.split(" ");
+                    const prevVars = temp.split(" ");
+                    temp = move;
+                    const deltaT = Math.abs(currentVars[0].replace('"', '') - prevVars[0].replace('"', ''));
+                    const deltaX = Math.abs(currentVars[1] - prevVars[1]);
+                    const deltaY = Math.abs(currentVars[2].replace('"', '') - prevVars[2].replace('"', ''));
+                    const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
 
-                const vel = {
-                    velocity: dist / deltaT,
-                    time: currentVars[0].replace('"', ''),
-                    row: rowNumber,
-                };
+                    const rowNumber = Math.floor((currentVars[2].replace('"', '') - 1) / rowHeight);
 
-                return vel;
-            }
-        });
+                    const vel = {
+                        velocity: dist / deltaT,
+                        time: currentVars[0].replace('"', ''),
+                        row: rowNumber,
+                    };
 
-        const quest = {
-            vels: vels,
-            name: question.name ? question.name : 'n/a',
-            answer: question.answer,
-            difference: question.difference,
-        };
-        return quest;
+                    return vel;
+                }
+            });
+
+            const quest = {
+                vels: vels,
+                name: question.name ? question.name : 'n/a',
+                answer: question.answer,
+                difference: question.difference,
+            };
+            return quest;
+        }
+    });
+
+    writeFile("./logAllVelocities.json", allVelocities);
+
+    return allVelocities;
+}
+*/
+
+// NEW FUNCTION WITH EQUAL TIMES
+function mapArray() {
+    const data = parseLog();
+
+    const allVelocities = data.questions.map((question, i) => {
+        if (i === 6) {      // TOTO POJDE PREC ***************************************
+            const moves = question.mm[0].split(',');
+            if (question.name)
+                console.log(question.name + ' otazka ');
+
+            let temp = '';
+            let tempDistance = 0;
+            let tempIterator = 1;              // ssssssssssssssssss
+            let timeIterator = 1;
+            let isNewTimeStep = true;
+
+            const vels = moves.map((move, index) => {
+                if (index === 0) {
+                    temp = move;
+                    const currentVars = move.split(" ");
+                    actTime = currentVars[0].replace('"', '');
+                    tempIterator = Math.floor(actTime / timeStep);
+                    return {velocity: 0, time: 0, row: 1};
+                }
+                else {
+                    const currentVars = move.split(" ");
+                    const prevVars = temp.split(" ");
+                    actTime = currentVars[0].replace('"', '');
+                    prevTime = prevVars[0].replace('"', '');
+                    actX = currentVars[1];
+                    prevX = prevVars[1];
+                    actY = currentVars[2].replace('"', '');
+                    prevY = prevVars[2].replace('"', '');
+
+                    temp = move;
+                    const deltaT = Math.abs(actTime - prevTime);
+                    const deltaX = Math.abs(actX - prevX);
+                    const deltaY = Math.abs(actY - prevY);
+                    const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+
+                    console.log('\noooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo');
+
+                    const rowNumber = Math.floor((actY - 1) / rowHeight);
+
+                    timeIterator = Math.floor(actTime / timeStep);
+                    const actTimeStep = timeIterator * timeStep;
+
+                    if ( timeIterator !== tempIterator ){           // presli sme vyssie
+                        if (actTime % timeStep === 0) {
+                            // ak sme presne na 200*TI normalne vypocitaj vel a resetuj temp dist
+                            const actVel = {
+                                velocity: tempDistance / timeStep,
+                                time: actTime,
+                                row: rowNumber,
+                            };
+                            tempDistance = 0;
+                            tempIterator = timeIterator;
+                            console.log('* ' + actTime + ' / ' + actTimeStep
+                                + ' dist ' + tempDistance + ' time ' + actVel.time + ' vel ' + actVel.velocity);
+                            return actVel;
+                        }
+                        else {
+                            // ked sme vyssie (205) vypocitaj temp dist od 200 a vrat velocity v case 200
+                            const actVel = dist / deltaT;
+
+                            const vel = {
+                                velocity: tempDistance / timeStep,
+                                time: actTimeStep,
+                                row: rowNumber,
+                            };
+                            tempDistance = actVel * (actTime - actTimeStep);
+                            tempIterator = timeIterator;
+                            console.log('---------------- ' + actTime + ' / ' + actTimeStep
+                                + ' dist ' + tempDistance + ' time ' + vel.time  + ' vel ' + vel.velocity);
+                            return vel;
+                        }
+                    }
+                    else {
+                        tempDistance += dist;
+                        console.log('++++++++ ' + actTime + ' / ' + actTimeStep + ' dist ' + tempDistance);
+                    }
+                }
+            });
+
+            const quest = {
+                vels: vels,
+                name: question.name ? question.name : 'n/a',
+                answer: question.answer,
+                difference: question.difference,
+            };
+            return quest;
+        }
     });
 
     writeFile("./logAllVelocities.json", allVelocities);

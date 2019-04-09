@@ -9,6 +9,7 @@ socket.on('connect', function () {
 
 function createGraph() {
     const labels = serverVelocities.data[questionNumber].vels.map((vel) => {
+        console.log(vel);
         return vel.time;
     });
     const velData = serverVelocities.data[questionNumber].vels.map((vel) => {
