@@ -8,11 +8,27 @@ socket.on('connect', function () {
 });
 
 function createGraph() {
-    const labels = serverVelocities.data[questionNumber].vels.map((vel) => {
-        console.log(vel);
-        return vel.time;
+    const labels = serverVelocities.data[questionNumber].vels.filter((vel) => {
+        if (!vel) return false;
+        else {
+            console.log(vel.time);
+            return vel.time;
+        }
     });
-    const velData = serverVelocities.data[questionNumber].vels.map((vel) => {
+
+    const velData = serverVelocities.data[questionNumber].vels.filter((vel) => {
+        if (!vel) return false;
+        else {
+            console.log(vel.velocity);
+            return vel.velocity;
+        }
+    });
+
+    const l = labels.map((lab) => {
+        return lab.time;
+    });
+
+    const v = velData.map((vel) => {
         return vel.velocity;
     });
 
@@ -22,10 +38,10 @@ function createGraph() {
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
-            labels: labels,
+            labels: l,
             datasets: [{
                 label: 'Speed',
-                data: velData,
+                data: v,
                 backgroundColor: [
                     'rgba(255, 99, 132, 0.2)'
                 ],
