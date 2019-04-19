@@ -2,10 +2,22 @@ canvas{
     max-width: 100%;
     max-height: 100%;
 }
+
 .arrow{
     margin-top:200px;
     margin-bottom: 50px;
 }
+
 h2{
     text-align: center;
+}
+
+.buttons{
+    width: 100%;
+    margin: 10px 0 10px 0;
+}
+
+.footer-blocks{
+    display: block;
+    overflow: hidden;
 }

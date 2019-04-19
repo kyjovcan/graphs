@@ -1,5 +1,6 @@
 const socket = io(); 
 let serverVelocities = [];
+let allData = [];
 let questionNumber = 0;
 
 socket.on('connect', function () { 
@@ -11,7 +12,6 @@ function createGraph() {
     const labels = serverVelocities.data[questionNumber].vels.filter((vel) => {
         if (!vel) return false;
         else {
-            console.log(vel.time);
             return vel.time;
         }
     });
@@ -19,7 +19,6 @@ function createGraph() {
     const velData = serverVelocities.data[questionNumber].vels.filter((vel) => {
         if (!vel) return false;
         else {
-            console.log(vel.velocity);
             return vel.velocity;
         }
     });
@@ -70,6 +69,12 @@ function compute(){
     });
 }
 
+function computeAll(){
+    socket.emit('computeAll', allData, function(data){
+        console.log(data);
+    });
+}
+
 function changeQuestionNumber(direction) {
     if (questionNumber >= 0 && questionNumber <= serverVelocities.data.length-1){
         direction ? questionNumber++ : questionNumber--;
@@ -78,7 +83,7 @@ function changeQuestionNumber(direction) {
     }
     if (questionNumber === 0 ){
         $('#arrow-left').attr('disabled', true);
-    } else if (questionNumber === serverVelocities.data.length-1 ){
+    } else if (questionNumber + 1 === serverVelocities.data.length - 1){
         $('#arrow-right').attr('disabled', true);
     } else {
         $('#arrow-right').attr('disabled', false);

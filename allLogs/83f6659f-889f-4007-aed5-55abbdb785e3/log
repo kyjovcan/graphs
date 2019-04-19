@@ -1,0 +1,509 @@
+131913356582149951 OPEN 0
+131913356582158185 GET-HTML 0
+====BEGIN[OK]END====
+131913356685711377 GET-HTML 0
+====BEGIN[OK]END====
+131913356820762762 GET-HTML 0
+====BEGIN[OK]END====
+131913356935160742 GET-HTML 0
+====BEGIN[OK]END====
+131913357048611913 GET-HTML 0
+====BEGIN[OK]END====
+131913357176893970 GET-HTML 0
+====BEGIN[OK]END====
+131913357281546148 GET-HTML 0
+====BEGIN[OK]END====
+131913357408439294 GET-HTML 0
+====BEGIN[OK]END====
+131913357552075958 GET-HTML 0
+====BEGIN[OK]END====
+131913357702154048 GET-HTML 0
+====BEGIN[OK]END====
+131913357806697078 GET-HTML 0
+====BEGIN[OK]END====
+131913358557092573 GET-HTML 0
+====BEGIN[OK]END====
+131913359335995781 GET-HTML 0
+====BEGIN[OK]END====
+131913359490160169 GET-HTML 0
+====BEGIN[OK]END====
+131913359614187365 GET-HTML 0
+====BEGIN[OK]END====
+131913359737813325 GET-HTML 0
+====BEGIN[OK]END====
+131913359870479644 GET-HTML 0
+====BEGIN[OK]END====
+131913359994578878 GET-HTML 0
+====BEGIN[OK]END====
+131913360107133474 SUBMIT 0
+====BEGIN[data...0]END====
+131913360107134777 OPEN 1
+131913360108468290 GET-HTML 1
+====BEGIN[OK]END====
+131913360643111186 SUBMIT 1
+====BEGIN[{}]END====
+131913360643112181 OPEN 2
+131913360652872030 GET-HTML 2
+====BEGIN[OK]END====
+131913361089790075 SUBMIT 2
+====BEGIN[{"cursor":"touchscreen","exp_months":"24","exp_type":"beginner"}]END====
+131913361089790972 OPEN 50
+131913361091078615 GET-HTML 50
+====BEGIN[OK]END====
+131913361265384463 SUBMIT 50
+====BEGIN[{}]END====
+131913361265385488 OPEN 51
+131913361266844546 GET-HTML 51
+====BEGIN[OK]END====
+131913361754214614 SUBMIT 51
+====BEGIN[{"evs":["1435 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","1443 window 980 1409 377 542 0 0 undefined","6777 mouseout","8223 mouseout","8238 mouseout","9757 mouseout","9783 mouseout","10858 mouseout","10871 mouseout","11704 mouseout","11728 mouseout","13781 mouseout","13814 mouseout","14856 mouseout","14869 mouseout","15676 mouseout","15689 mouseout","16388 mouseout","16407 mouseout","17488 mouseout","17507 mouseout","19132 mouseout","19142 mouseout","20119 mouseout","20135 mouseout","20902 mouseout","20916 mouseout","22490 mouseout","22513 mouseout","23452 mouseout","23465 mouseout","24813 mouseout","24831 mouseout","25789 mouseout","25816 mouseout","27117 mouseout","27142 mouseout","28401 mouseout","28434 mouseout","29344 mouseout","29373 mouseout","35952 mouseout","35995 mouseout","39105 mouseout","39126 mouseout","40316 mouseout","40333 mouseout","43661 mouseout","43683 mouseout","46935 mouseout","46961 answer_select 1 8"],"mm":["3393 579 24","6769 729 31","8225 794 61","9771 146 70","10863 269 88","11710 387 109","12682 429 85","13799 180 134","14861 112 121","15678 206 149","16392 256 123","17490 339 134","19134 177 170","20124 310 221","20904 313 174","22493 188 280","23455 217 248","24815 185 363","25794 175 416","27122 210 492","28403 331 508","29348 410 531","30310 427 516","31390 397 499","35965 186 648","37533 208 620","39118 277 496","40319 212 545","42392 246 524","43675 250 606"],"ans_tutorial_01":"8"}]END====
+131913361754215638 OPEN 52
+131913361755647158 GET-HTML 52
+====BEGIN[OK]END====
+131913361800592958 SUBMIT 52
+====BEGIN[{"diff_tutorial_1":"easy"}]END====
+131913361800594044 OPEN 53
+131913361802592974 GET-HTML 53
+====BEGIN[OK]END====
+131913362081009287 SUBMIT 53
+====BEGIN[{"evs":["486 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","492 window 980 1409 377 542 0 0 undefined","2778 mouseout","2799 mouseout","3602 mouseout","3618 mouseout","4975 mouseout","4996 mouseout","6159 mouseout","6194 mouseout","7114 mouseout","7129 mouseout","7936 mouseout","7950 mouseout","9160 mouseout","9176 mouseout","10137 mouseout","10145 mouseout","11242 mouseout","11256 mouseout","13892 mouseout","13916 mouseout","14981 mouseout","15008 mouseout","16092 mouseout","16104 mouseout","16957 mouseout","16966 mouseout","19540 mouseout","19566 mouseout","20612 mouseout","20635 mouseout","21585 mouseout","21602 mouseout","22576 mouseout","22590 mouseout","23754 mouseout","23767 mouseout","25377 mouseout","25388 mouseout","26876 mouseout","26887 answer_select 1 5"],"mm":["2148 120 50","2787 269 41","3605 385 48","4394 450 36","4985 370 19","6164 523 34","7117 651 29","7941 754 36","9162 175 85","10139 305 92","11247 297 168","12370 241 156","13908 233 216","14994 229 406","16094 345 414","16959 454 426","17956 413 414","19555 294 156","20622 225 244","21588 248 196","22579 231 148","23757 314 78","25380 421 392"],"ans_tutorial_02":"5"}]END====
+131913362081010586 OPEN 54
+131913362082662784 GET-HTML 54
+====BEGIN[OK]END====
+131913362111559902 SUBMIT 54
+====BEGIN[{"diff_tutorial_2":"easy"}]END====
+131913362111561065 OPEN 100
+131913362122016844 GET-HTML 100
+====BEGIN[OK]END====
+131913362241700294 SUBMIT 100
+====BEGIN[{}]END====
+131913362241701228 OPEN 101
+131913362242723732 GET-HTML 101
+====BEGIN[OK]END====
+131913362515309601 SUBMIT 101
+====BEGIN[{"evs":["454 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","458 window 980 1409 377 542 0 0 undefined","2042 mouseout","2855 mouseout","2881 mouseout","3598 mouseout","3627 mouseout","5349 mouseout","5381 mouseout","6079 mouseout","6101 mouseout","7625 mouseout","7661 mouseout","8684 mouseout","8711 mouseout","9847 mouseout","9871 mouseout","12545 mouseout","12568 mouseout","13756 mouseout","13774 mouseout","15809 mouseout","15821 mouseout","17848 mouseout","17863 mouseout","18992 mouseout","19014 mouseout","24273 mouseout","24289 answer_select 0 110","24292 answer_select 0 110"],"mm":["2025 215 3","2867 374 25","3604 506 14","5355 605 60","6088 705 41","7627 156 87","8696 309 85","9858 301 158","11486 252 143","12556 402 151","13759 278 214","15812 263 385","17851 350 419","18998 461 403","21044 413 428","22095 370 410"],"ans_code_01_1":"110"}]END====
+131913362515310536 OPEN 102
+131913362516649630 GET-HTML 102
+====BEGIN[OK]END====
+131913362557424400 SUBMIT 102
+====BEGIN[{"diff_code_01_1":"easy"}]END====
+131913362557425362 OPEN 103
+131913362558637962 GET-HTML 103
+====BEGIN[OK]END====
+131913362745788414 SUBMIT 103
+====BEGIN[{"evs":["437 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","440 window 980 1409 377 542 0 0 undefined","2190 mouseout","3251 mouseout","3274 mouseout","5806 mouseout","5824 mouseout","6883 mouseout","6894 mouseout","9226 mouseout","9241 mouseout","10505 mouseout","10527 mouseout","11518 mouseout","11529 mouseout","13962 mouseout","13982 mouseout","15011 mouseout","15037 mouseout","17705 mouseout","17711 answer_select 0 150"],"mm":["2168 138 66","3263 279 61","5810 283 139","6887 424 158","9230 305 231","10507 305 401","11521 423 429","12432 423 409","13969 309 429","15023 394 163"],"ans_code_01_2":"150"}]END====
+131913362745789657 OPEN 104
+131913362746721083 GET-HTML 104
+====BEGIN[OK]END====
+131913362782858901 SUBMIT 104
+====BEGIN[{"diff_code_01_2":"easy"}]END====
+131913362782859926 OPEN 105
+131913362784940428 GET-HTML 105
+====BEGIN[OK]END====
+131913363245949103 SUBMIT 105
+====BEGIN[{"evs":["466 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","471 window 980 1409 377 542 0 0 undefined","2299 mouseout","3400 mouseout","3428 mouseout","4221 mouseout","4238 mouseout","5936 mouseout","5947 mouseout","8887 mouseout","8906 mouseout","10935 mouseout","10962 mouseout","13013 mouseout","13039 mouseout","15138 mouseout","15157 mouseout","16056 mouseout","16070 mouseout","17320 mouseout","17353 mouseout","18640 mouseout","18654 mouseout","21533 mouseout","21546 mouseout","25244 mouseout","25274 mouseout","28060 mouseout","28075 mouseout","28966 mouseout","28986 mouseout","41103 mouseout","41117 mouseout","42514 mouseout","42530 mouseout","45053 mouseout","45059 answer_select 3 iné","45061 answer_select 3 iné"],"mm":["2283 356 24","3413 480 43","4223 243 50","5939 166 24","8893 277 43","9488 342 36","10946 517 40","13024 768 51","13981 751 32","15145 860 58","16058 890 2","17326 291 72","18643 385 155","21536 426 425","22613 416 396","25262 275 416","28063 432 436","28974 442 394","41106 365 141","42516 409 403"],"ans_code_01_3":"iné"}]END====
+131913363245950437 OPEN 106
+131913363247931560 GET-HTML 106
+====BEGIN[OK]END====
+131913363293150579 SUBMIT 106
+====BEGIN[{"diff_code_01_3":"easy"}]END====
+131913363293151707 OPEN 113
+131913363294117750 GET-HTML 113
+====BEGIN[OK]END====
+131913363688763602 SUBMIT 113
+====BEGIN[{"evs":["564 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","573 window 980 1409 377 542 0 0 undefined","2262 mouseout","3071 mouseout","3100 mouseout","4107 mouseout","4129 mouseout","4925 mouseout","4947 mouseout","6407 mouseout","6423 mouseout","8547 mouseout","8595 mouseout","10950 mouseout","10966 mouseout","11969 mouseout","11984 mouseout","13255 mouseout","13282 mouseout","15053 mouseout","15067 mouseout","16037 mouseout","16050 mouseout","18284 mouseout","18302 mouseout","19340 mouseout","19354 mouseout","20622 mouseout","20636 mouseout","22056 mouseout","22069 mouseout","24398 mouseout","24414 mouseout","28285 mouseout","28296 mouseout","29397 mouseout","29456 mouseout","31029 mouseout","31044 mouseout","32353 mouseout","32367 mouseout","35431 mouseout","35445 mouseout","37237 mouseout","37246 answer_select 0 3","37250 answer_select 0 3"],"mm":["2242 196 10","3083 389 21","4111 533 28","4935 689 7","6413 229 61","7529 163 60","8554 383 76","10953 481 88","11972 282 66","13270 265 145","15055 189 161","16039 347 151","18290 472 163","19345 266 139","20624 301 209","22058 258 309","24401 427 311","28290 275 377","29409 258 472","31033 309 655","32355 414 652","35437 185 658"],"ans_code_03_1":"3"}]END====
+131913363688764608 OPEN 114
+131913363689905599 GET-HTML 114
+====BEGIN[OK]END====
+131913363724036491 SUBMIT 114
+====BEGIN[{"diff_code_03_1":"easy"}]END====
+131913363724037509 OPEN 115
+131913363725889947 GET-HTML 115
+====BEGIN[OK]END====
+131913364177962623 SUBMIT 115
+====BEGIN[{"evs":["437 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","443 window 980 1409 377 542 0 0 undefined","2060 mouseout","2890 mouseout","2902 mouseout","3735 mouseout","3747 mouseout","4713 mouseout","4723 mouseout","5631 mouseout","5647 mouseout","6480 mouseout","6497 mouseout","7443 mouseout","7471 mouseout","8443 mouseout","8471 mouseout","9126 mouseout","9141 mouseout","10252 mouseout","10276 mouseout","11327 mouseout","11342 mouseout","14924 mouseout","14937 mouseout","16152 mouseout","16164 mouseout","17333 mouseout","17346 mouseout","19985 mouseout","19997 mouseout","22196 mouseout","22226 mouseout","23467 mouseout","23492 mouseout","25459 mouseout","25481 mouseout","28018 mouseout","28039 mouseout","29223 mouseout","29239 mouseout","30451 mouseout","30480 mouseout","44229 mouseout","44237 answer_select 1 4","44244 answer_select 1 4"],"mm":["2042 242 32","2893 438 19","3739 595 60","4715 622 12","5636 767 50","6485 851 25","7445 307 92","8445 263 63","9132 465 83","10257 228 160","11334 358 139","14926 235 136","16155 369 160","17335 310 202","19988 272 277","20998 265 299","22214 397 305","23470 294 374","25472 270 309","28024 261 368","29225 212 464","30453 401 665"],"ans_code_03_2":"4"}]END====
+131913364177963618 OPEN 116
+131913364179635541 GET-HTML 116
+====BEGIN[OK]END====
+131913364206555353 SUBMIT 116
+====BEGIN[{"diff_code_03_2":"easy"}]END====
+131913364206556326 OPEN 117
+131913364207743971 GET-HTML 117
+====BEGIN[OK]END====
+131913364590865079 SUBMIT 117
+====BEGIN[{"evs":["385 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","395 window 980 1409 377 542 0 0 undefined","1744 mouseout","2449 mouseout","2471 mouseout","3568 mouseout","3582 mouseout","4444 mouseout","4468 mouseout","5707 mouseout","5735 mouseout","7091 mouseout","7142 mouseout","9749 mouseout","9770 mouseout","11169 mouseout","11184 mouseout","12970 mouseout","12984 mouseout","15012 mouseout","15026 mouseout","16342 mouseout","16357 mouseout","18023 mouseout","18055 mouseout","19773 mouseout","19783 mouseout","22180 mouseout","22199 mouseout","23393 mouseout","23411 mouseout","24372 mouseout","24396 mouseout","32623 mouseout","32651 mouseout","33869 mouseout","33894 mouseout","34992 mouseout","35006 mouseout","36995 mouseout","37003 answer_select 0 8","37007 answer_select 0 8"],"mm":["1729 179 72","2454 372 38","3574 361 83","4446 283 68","5715 440 94","7094 314 149","8152 261 134","9758 407 158","11171 275 148","12973 269 229","15014 343 309","16345 418 299","18032 265 298","19775 276 377","22184 215 480","23402 296 657","24378 434 662","25555 398 655","32639 313 283","33873 427 684","34997 436 648"],"ans_code_03_3":"8"}]END====
+131913364590866283 OPEN 118
+131913364592801285 GET-HTML 118
+====BEGIN[OK]END====
+131913364634302339 SUBMIT 118
+====BEGIN[{"diff_code_03_3":"medium"}]END====
+131913364634303342 OPEN 107
+131913364636290317 GET-HTML 107
+====BEGIN[OK]END====
+131913365460824507 SUBMIT 107
+====BEGIN[{"evs":["362 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","366 window 980 1409 377 542 0 0 undefined","1791 mouseout","2571 mouseout","2585 mouseout","4009 mouseout","4020 mouseout","5956 mouseout","5975 mouseout","6829 mouseout","6845 mouseout","7483 mouseout","7498 mouseout","10297 mouseout","10328 mouseout","11636 mouseout","11648 mouseout","13725 mouseout","13745 mouseout","14738 mouseout","14753 mouseout","16138 mouseout","16151 mouseout","17904 mouseout","17922 mouseout","19056 mouseout","19072 mouseout","23000 mouseout","23014 mouseout","24079 mouseout","24101 mouseout","25448 mouseout","25474 mouseout","28566 mouseout","28580 mouseout","29839 mouseout","29850 mouseout","31617 mouseout","31628 mouseout","34978 mouseout","35006 mouseout","35767 mouseout","35783 mouseout","37177 mouseout","37188 mouseout","38653 mouseout","38669 mouseout","42057 mouseout","42071 mouseout","44014 mouseout","44029 mouseout","46263 mouseout","46278 mouseout","53744 mouseout","53764 mouseout","57602 mouseout","57624 mouseout","61862 mouseout","61882 mouseout","66735 mouseout","66752 mouseout","67600 mouseout","67626 mouseout","70773 mouseout","70782 mouseout","71875 mouseout","71887 mouseout","73236 mouseout","73251 mouseout","74851 mouseout","74863 mouseout","76076 mouseout","76092 mouseout","77569 mouseout","77578 mouseout","81207 mouseout","81226 answer_select 3 iné","81230 answer_select 3 iné"],"mm":["1780 194 29","2574 437 28","4012 678 63","4977 676 51","5965 272 105","6834 220 83","7485 274 175","8375 259 146","10319 186 139","11638 225 73","13736 375 80","14743 268 158","16140 299 232","17102 260 209","17911 178 194","19060 257 202","23003 305 301","24087 279 250","25456 282 290","28570 231 185","29841 261 222","31620 312 292","32694 299 267","34988 265 204","35770 318 143","37180 256 124","38657 272 465","42060 407 470","44019 296 151","46265 247 214","53755 177 197","57615 270 270","61867 330 455","63480 407 455","64563 410 447","65736 398 464","66743 309 82","67611 313 151","70775 259 117","71878 199 161","73239 265 206","74856 189 189","76079 295 158","77571 257 232","78554 219 210"],"ans_code_02_1":"iné"}]END====
+131913365460826010 OPEN 108
+131913365461733763 GET-HTML 108
+====BEGIN[OK]END====
+131913365524055946 SUBMIT 108
+====BEGIN[{"diff_code_02_1":"dontknow"}]END====
+131913365524056964 OPEN 109
+131913365525578580 GET-HTML 109
+====BEGIN[OK]END====
+131913366139586008 SUBMIT 109
+====BEGIN[{"evs":["552 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","558 window 980 1409 377 542 0 0 undefined","2198 mouseout","4579 mouseout","4612 mouseout","6105 mouseout","6135 mouseout","7060 mouseout","7071 mouseout","9280 mouseout","9294 mouseout","11354 mouseout","11367 mouseout","12872 mouseout","12887 mouseout","24559 mouseout","24582 mouseout","26838 mouseout","26857 mouseout","28678 mouseout","28706 mouseout","29654 mouseout","29668 mouseout","30721 mouseout","30736 mouseout","31817 mouseout","31844 mouseout","34372 mouseout","34388 mouseout","35858 mouseout","35874 mouseout","37217 mouseout","37231 mouseout","41096 mouseout","41110 mouseout","45907 mouseout","45961 mouseout","47046 mouseout","47060 mouseout","47634 mouseout","47650 mouseout","51163 mouseout","51187 mouseout","52612 mouseout","52623 mouseout","54014 mouseout","54034 mouseout","56003 mouseout","56055 mouseout","57150 mouseout","57168 mouseout","58543 mouseout","58578 mouseout"],"mm":["2185 219 43","4593 347 9","6113 484 38","7063 625 25","9283 272 95","10585 251 117","11359 334 151","12878 253 207","13977 191 214","17121 268 219","24572 299 294","25560 281 277","26845 406 469","28684 334 105","29659 299 170","30726 211 149","31822 243 209","34376 410 477","35862 251 200","37220 167 192","41102 323 279","42236 279 294","45926 243 200","47051 155 194","47638 297 260","51175 313 170","52614 287 134","54017 348 489","54906 404 469","56024 282 131","57154 213 218","58545 294 272"]}]END====
+131913366139587111 OPEN 110
+131913366140242412 GET-HTML 110
+====BEGIN[OK]END====
+131913366223539340 SUBMIT 110
+====BEGIN[{"diff_code_02_2":"medium"}]END====
+131913366223541203 OPEN 111
+131913366224914072 GET-HTML 111
+====BEGIN[OK]END====
+131913366560505207 SUBMIT 111
+====BEGIN[{"evs":["468 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","473 window 980 1409 377 542 0 0 undefined","4187 mouseout","5161 mouseout","5178 mouseout","6039 mouseout","6052 mouseout","7106 mouseout","7122 mouseout","9856 mouseout","9889 mouseout","11303 mouseout","11316 mouseout","12543 mouseout","12555 mouseout","13180 mouseout","13194 mouseout","15543 mouseout","15553 mouseout","18669 mouseout","18679 mouseout","19816 mouseout","19830 mouseout","21357 mouseout","21375 mouseout","31787 mouseout","31803 answer_select 0 121","31807 answer_select 0 121"],"mm":["4142 282 87","5164 184 97","6041 331 88","7108 226 143","8455 305 146","9879 253 204","11305 257 282","12548 250 472","13183 419 476","15545 322 134","18672 250 236","19822 185 216","21364 265 253"],"ans_code_02_3":"121"}]END====
+131913366560506240 OPEN 112
+131913366562359506 GET-HTML 112
+====BEGIN[OK]END====
+131913366619022266 SUBMIT 112
+====BEGIN[{"diff_code_02_3":"medium"}]END====
+131913366619023402 OPEN 113
+131913366620850729 GET-HTML 113
+====BEGIN[OK]END====
+131913366950546604 SUBMIT 113
+====BEGIN[{"evs":["371 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","383 window 980 1409 377 542 0 0 undefined","1895 mouseout","2700 mouseout","2723 mouseout","3841 mouseout","3858 mouseout","4815 mouseout","4825 mouseout","5765 mouseout","5815 mouseout","6527 mouseout","6549 mouseout","8358 mouseout","8372 mouseout","9545 mouseout","9566 mouseout","10969 mouseout","10987 mouseout","14639 mouseout","14663 mouseout","15953 mouseout","15977 mouseout","18056 mouseout","18070 mouseout","21507 mouseout","21532 mouseout","22460 mouseout","22495 mouseout","26702 mouseout","26726 mouseout","28299 mouseout","28314 mouseout","31971 mouseout","31991 answer_select 2 1","32000 answer_select 2 1"],"mm":["1875 215 53","2713 309 24","3846 449 34","4817 549 15","5770 665 24","6531 778 24","8361 221 85","9547 356 87","10978 444 85","14651 246 155","15957 410 689","18060 387 645","21513 349 60","22483 270 158","26709 426 133","28301 297 200"],"ans_code_03_1":"1"}]END====
+131913366950547631 OPEN 114
+131913366951650132 GET-HTML 114
+====BEGIN[OK]END====
+131913366984370725 SUBMIT 114
+====BEGIN[{"diff_code_03_1":"easy"}]END====
+131913366984371623 OPEN 115
+131913366985272234 GET-HTML 115
+====BEGIN[OK]END====
+131913367301049726 SUBMIT 115
+====BEGIN[{"evs":["399 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","403 window 980 1409 377 542 0 0 undefined","3510 mouseout","9328 mouseout","9343 mouseout","13720 mouseout","13737 mouseout","15809 mouseout","15829 mouseout","19408 mouseout","19432 mouseout","22159 mouseout","22181 mouseout","28195 mouseout","28210 mouseout","30532 mouseout","30538 answer_select 3 6","30541 answer_select 3 6"],"mm":["3497 404 667","9334 279 149","13726 422 121","14747 410 136","15818 297 185","19410 414 123","22162 275 305","28200 198 457"],"ans_code_03_2":"6"}]END====
+131913367301050933 OPEN 116
+131913367302641010 GET-HTML 116
+====BEGIN[OK]END====
+131913367349859353 SUBMIT 116
+====BEGIN[{"diff_code_03_2":"medium"}]END====
+131913367349860306 OPEN 117
+131913367351147208 GET-HTML 117
+====BEGIN[OK]END====
+131913367484300284 SUBMIT 117
+====BEGIN[{"evs":["414 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","419 window 980 1409 377 542 0 0 undefined","2739 mouseout","5286 mouseout","5301 mouseout","6463 mouseout","6476 mouseout","7243 mouseout","7257 mouseout","8747 mouseout","8760 mouseout","12340 mouseout","12355 answer_select 1 5"],"mm":["2722 429 662","5290 359 138","6468 317 72","7248 240 170","8750 433 145","10000 387 149"],"ans_code_03_3":"5"}]END====
+131913367484301661 OPEN 118
+131913367485760813 GET-HTML 118
+====BEGIN[OK]END====
+131913367584115612 SUBMIT 118
+====BEGIN[{"diff_code_03_3":"medium"}]END====
+131913367584116721 OPEN 101
+131913367585794446 GET-HTML 101
+====BEGIN[OK]END====
+131913367714325744 SUBMIT 101
+====BEGIN[{"evs":["479 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","483 window 980 1409 377 542 0 0 undefined","4036 mouseout","5839 mouseout","5854 mouseout","6969 mouseout","6984 mouseout","8472 mouseout","8483 mouseout","9463 mouseout","9477 mouseout","11719 mouseout","11732 answer_select 0 110","11741 answer_select 0 110"],"mm":["4017 410 392","5841 270 94","6976 376 141","8475 264 148","9466 414 139"],"ans_code_01_1":"110"}]END====
+131913367714326634 OPEN 102
+131913367715807174 GET-HTML 102
+====BEGIN[OK]END====
+131913367745481415 SUBMIT 102
+====BEGIN[{"diff_code_01_1":"easy"}]END====
+131913367745482522 OPEN 103
+131913367747509933 GET-HTML 103
+====BEGIN[OK]END====
+131913367879662449 SUBMIT 103
+====BEGIN[{"evs":["498 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","502 window 980 1409 377 542 0 0 undefined","2449 mouseout","3334 mouseout","3346 mouseout","6149 mouseout","6162 mouseout","6884 mouseout","6894 mouseout","8368 mouseout","8382 mouseout","10287 mouseout","10303 mouseout","12138 mouseout","12151 answer_select 0 150","12155 answer_select 0 150"],"mm":["2436 364 378","3339 437 404","6154 304 82","6886 383 158","8371 312 177","10294 278 222"],"ans_code_01_2":"150"}]END====
+131913367879663381 OPEN 104
+131913367881282013 GET-HTML 104
+====BEGIN[OK]END====
+131913367911122021 SUBMIT 104
+====BEGIN[{"diff_code_01_2":"easy"}]END====
+131913367911123013 OPEN 105
+131913367911876250 GET-HTML 105
+====BEGIN[OK]END====
+131913368038532705 SUBMIT 105
+====BEGIN[{"evs":["386 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","392 window 980 1409 377 542 0 0 undefined","2383 mouseout","11435 mouseout","11440 answer_select 3 iné"],"mm":["2366 392 397"],"ans_code_01_3":"iné"}]END====
+131913368038533780 OPEN 106
+131913368039933691 GET-HTML 106
+====BEGIN[OK]END====
+131913368069613219 SUBMIT 106
+====BEGIN[{"diff_code_01_3":"easy"}]END====
+131913368069614185 OPEN 113
+131913368070383596 GET-HTML 113
+====BEGIN[OK]END====
+131913368283742347 SUBMIT 113
+====BEGIN[{"evs":["494 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","506 window 980 1409 377 542 0 0 undefined","3734 mouseout","6469 mouseout","6514 mouseout","7833 mouseout","7855 mouseout","9052 mouseout","9067 mouseout","10122 mouseout","10146 mouseout","10893 mouseout","10908 mouseout","12792 mouseout","12806 mouseout","14810 mouseout","14839 mouseout","15969 mouseout","15998 mouseout","17648 mouseout","17662 mouseout","19039 mouseout","19049 answer_select 0 3","19835 answer_select 2 1"],"mm":["3721 374 669","6490 265 133","7838 392 153","9054 254 97","10137 226 153","10896 276 216","12797 396 669","14821 280 156","15981 416 148","17651 421 677"],"ans_code_03_1":"1"}]END====
+131913368283743490 OPEN 114
+131913368284610297 GET-HTML 114
+====BEGIN[OK]END====
+131913368346899589 SUBMIT 114
+====BEGIN[{"diff_code_03_1":"easy"}]END====
+131913368346900586 OPEN 115
+131913368348132293 GET-HTML 115
+====BEGIN[OK]END====
+131913368640850326 SUBMIT 115
+====BEGIN[{"evs":["517 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","528 window 980 1409 377 542 0 0 undefined","2828 mouseout","3926 mouseout","3946 mouseout","6030 mouseout","6052 mouseout","7591 mouseout","7607 mouseout","8952 mouseout","8965 mouseout","9716 mouseout","9744 mouseout","10967 mouseout","10988 mouseout","13507 mouseout","13530 mouseout","14509 mouseout","14530 mouseout","16883 mouseout","16910 mouseout","17917 mouseout","17929 mouseout","19325 mouseout","19337 mouseout","21474 mouseout","21508 mouseout","25314 mouseout","25328 mouseout","26204 mouseout","26217 mouseout","28197 mouseout","28207 answer_select 1 4","28218 answer_select 1 4"],"mm":["2806 416 648","3933 372 683","4865 405 679","6045 420 648","7593 374 83","8954 352 138","9727 243 158","10972 385 156","13509 195 126","14517 292 204","16888 243 290","17919 379 314","19328 261 295","21476 423 308","25316 245 355","26206 385 683"],"ans_code_03_2":"4"}]END====
+131913368640851455 OPEN 116
+131913368642952028 GET-HTML 116
+====BEGIN[OK]END====
+131913368669510301 SUBMIT 116
+====BEGIN[{"diff_code_03_2":"easy"}]END====
+131913368669511332 OPEN 117
+131913368670870751 GET-HTML 117
+====BEGIN[OK]END====
+131913368931054690 SUBMIT 117
+====BEGIN[{"evs":["389 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","396 window 980 1409 377 542 0 0 undefined","4627 mouseout","7137 mouseout","7157 mouseout","8446 mouseout","8460 mouseout","9292 mouseout","9307 mouseout","10190 mouseout","10202 mouseout","11258 mouseout","11274 mouseout","13398 mouseout","13420 mouseout","16329 mouseout","16344 mouseout","17423 mouseout","17440 mouseout","18874 mouseout","18906 mouseout","20550 mouseout","20571 mouseout","22999 mouseout","23025 mouseout","24816 mouseout","24832 answer_select 0 8"],"mm":["4611 419 643","5253 418 657","7145 349 80","8450 319 158","9295 291 107","10193 238 156","11261 400 174","12169 416 148","13409 274 204","16332 319 321","17425 438 305","18889 257 327","20553 192 470","23012 424 669"],"ans_code_03_3":"8"}]END====
+131913368931055849 OPEN 118
+131913368932432761 GET-HTML 118
+====BEGIN[OK]END====
+131913368981561370 SUBMIT 118
+====BEGIN[{"diff_code_03_3":"medium"}]END====
+131913368981562376 OPEN 101
+131913368982944139 GET-HTML 101
+====BEGIN[OK]END====
+131913369185005326 SUBMIT 101
+====BEGIN[{"evs":["368 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","371 window 980 1409 377 542 0 0 undefined","3543 mouseout","5464 mouseout","5486 mouseout","6887 mouseout","6901 mouseout","8846 mouseout","8878 mouseout","9972 mouseout","9987 mouseout","12541 mouseout","12556 mouseout","13717 mouseout","13736 mouseout","14511 mouseout","14526 mouseout","19274 mouseout","19283 answer_select 0 110","19291 answer_select 0 110"],"mm":["3533 389 413","5472 378 160","6890 323 90","8226 273 87","8856 398 156","9976 301 218","12545 269 141","13723 365 175","14514 428 109","15484 413 143"],"ans_code_01_1":"110"}]END====
+131913369185006215 OPEN 102
+131913369186091920 GET-HTML 102
+====BEGIN[OK]END====
+131913369227412354 SUBMIT 102
+====BEGIN[{"diff_code_01_1":"easy"}]END====
+131913369227413214 OPEN 103
+131913369228631842 GET-HTML 103
+====BEGIN[OK]END====
+131913369404970412 SUBMIT 103
+====BEGIN[{"evs":["399 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","403 window 980 1409 377 542 0 0 undefined","2247 mouseout","3034 mouseout","3051 mouseout","7798 mouseout","7846 mouseout","9846 mouseout","9879 mouseout","12942 mouseout","12954 mouseout","14893 mouseout","14902 answer_select 0 150","14906 answer_select 0 150"],"mm":["2231 370 370","3041 450 429","4018 426 410","7834 352 112","9029 321 133","9864 315 232","12944 420 384"],"ans_code_01_2":"150"}]END====
+131913369404971273 OPEN 104
+131913369406072273 GET-HTML 104
+====BEGIN[OK]END====
+131913369436535129 SUBMIT 104
+====BEGIN[{"diff_code_01_2":"easy"}]END====
+131913369436535476 OPEN 105
+131913369438225247 GET-HTML 105
+====BEGIN[OK]END====
+131913369589775345 SUBMIT 105
+====BEGIN[{"evs":["411 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","415 window 980 1409 377 542 0 0 undefined","3014 mouseout","6559 mouseout","6584 mouseout","9045 mouseout","9061 mouseout","11368 mouseout","11392 mouseout","13998 mouseout","14009 answer_select 3 iné"],"mm":["2993 403 370","3906 427 397","6572 300 90","9049 385 170","11382 433 419"],"ans_code_01_3":"iné"}]END====
+131913369589776420 OPEN 106
+131913369590826903 GET-HTML 106
+====BEGIN[OK]END====
+131913369633008714 SUBMIT 106
+====BEGIN[{"diff_code_01_3":"easy"}]END====
+131913369633009894 OPEN 107
+131913369634202624 GET-HTML 107
+====BEGIN[OK]END====
+131913370343790390 SUBMIT 107
+====BEGIN[{"evs":["483 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","488 window 980 1409 377 542 0 0 undefined","7685 mouseout","10629 mouseout","10650 mouseout","11570 mouseout","11580 mouseout","12306 mouseout","12320 mouseout","18600 mouseout","18633 mouseout","21127 mouseout","21158 mouseout","26847 mouseout","26862 mouseout","33260 mouseout","33276 mouseout","34489 mouseout","34501 mouseout","39716 mouseout","39737 mouseout","41330 mouseout","41347 mouseout","43660 mouseout","43668 answer_select 3 iné","43671 answer_select 3 iné","46600 mouseout","53629 mouseout","53648 mouseout","56964 mouseout","56977 mouseout","63393 mouseout","63412 mouseout","64572 mouseout","64597 mouseout","69932 mouseout","69956 answer_select 3 iné","69960 answer_select 3 iné"],"mm":["7668 380 489","8754 389 484","10641 254 105","11572 312 73","12312 290 167","13390 326 163","14433 295 156","18621 214 146","21131 263 229","26851 159 209","33267 287 309","34491 261 280","39724 365 486","41335 292 289","46591 253 139","47709 298 163","53636 162 160","56969 259 236","58049 261 225","63401 159 196","64577 301 289","65641 263 272"],"ans_code_02_1":"iné"}]END====
+131913370343791547 OPEN 108
+131913370345928386 GET-HTML 108
+====BEGIN[OK]END====
+131913370376682666 SUBMIT 108
+====BEGIN[{"diff_code_02_1":"medium"}]END====
+131913370376683635 OPEN 109
+131913370378085338 GET-HTML 109
+====BEGIN[OK]END====
+131913370653755144 SUBMIT 109
+====BEGIN[{"evs":["394 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","399 window 980 1409 377 542 0 0 undefined","4288 mouseout","8008 mouseout","8033 mouseout","10393 mouseout","10410 mouseout","12916 mouseout","12940 mouseout","13834 mouseout","13860 mouseout","15046 mouseout","15062 mouseout","18050 mouseout","18064 mouseout","23730 mouseout","23756 mouseout","25770 mouseout","25783 answer_select 3 iné","25787 answer_select 3 iné"],"mm":["4271 375 448","5443 381 480","8024 320 104","9045 310 85","10399 303 131","11918 313 161","12927 263 105","13845 203 149","15050 237 212","18055 156 202","23740 280 283"],"ans_code_02_2":"iné"}]END====
+131913370653756296 OPEN 110
+131913370654938694 GET-HTML 110
+====BEGIN[OK]END====
+131913370688848505 SUBMIT 110
+====BEGIN[{"diff_code_02_2":"medium"}]END====
+131913370688849675 OPEN 111
+131913370690394871 GET-HTML 111
+====BEGIN[OK]END====
+131913371082686634 SUBMIT 111
+====BEGIN[{"evs":["374 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","379 window 980 1409 377 542 0 0 undefined","12827 mouseout","13874 mouseout","13901 mouseout","15161 mouseout","15179 mouseout","17588 mouseout","17604 mouseout","18688 mouseout","18720 mouseout","21530 mouseout","21540 mouseout","23188 mouseout","23215 mouseout","30523 mouseout","30569 mouseout","31943 mouseout","31959 mouseout","32949 mouseout","32964 mouseout","37968 mouseout","37989 answer_select 0 121","37996 answer_select 0 121"],"mm":["12805 191 533","13889 248 469","15170 407 484","17590 275 82","18696 283 145","21533 208 158","23198 258 216","30534 161 212","31947 299 298","32952 288 267"],"ans_code_02_3":"121"}]END====
+131913371082687760 OPEN 112
+131913371083911672 GET-HTML 112
+====BEGIN[OK]END====
+131913371109999850 SUBMIT 112
+====BEGIN[{"diff_code_02_3":"easy"}]END====
+131913371110000831 OPEN 131
+131913371110767385 GET-HTML 131
+====BEGIN[OK]END====
+131913371765434202 SUBMIT 131
+====BEGIN[{"evs":["389 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","393 window 980 1409 377 542 0 0 undefined","3262 mouseout","4026 mouseout","4040 mouseout","7567 mouseout","7583 mouseout","9838 mouseout","9862 mouseout","11300 mouseout","11312 mouseout","12973 mouseout","12981 mouseout","14153 mouseout","14174 mouseout","15648 mouseout","15669 mouseout","19137 mouseout","19148 mouseout","29605 mouseout","29636 mouseout","32204 mouseout","32227 mouseout","33396 mouseout","33412 mouseout","34601 mouseout","34632 mouseout","36676 mouseout","36697 mouseout","54611 mouseout","54635 mouseout","56115 mouseout","56140 mouseout","64504 mouseout","64517 answer_select 3 iné"],"mm":["3245 378 592","4032 383 557","7572 243 66","8804 181 70","9851 263 80","11302 195 156","12975 248 102","14158 256 210","15653 364 202","19139 524 200","29607 291 272","30908 229 273","32216 370 290","33404 431 258","34603 243 257","36684 383 270","54614 418 570","56122 392 273"],"ans_code_06_1":"iné"}]END====
+131913371765435153 OPEN 132
+131913371766448398 GET-HTML 132
+====BEGIN[OK]END====
+131913371797719902 SUBMIT 132
+====BEGIN[{"diff_code_06_1":"medium"}]END====
+131913371797720686 OPEN 133
+131913371799500144 GET-HTML 133
+====BEGIN[OK]END====
+131913371997933302 SUBMIT 133
+====BEGIN[{"evs":["537 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","542 window 980 1409 377 542 0 0 undefined","3948 mouseout","5016 mouseout","5062 mouseout","5530 mouseout","5569 mouseout","6810 mouseout","6846 mouseout","9253 mouseout","9275 mouseout","10408 mouseout","10421 mouseout","12344 mouseout","12361 mouseout","13749 mouseout","13772 mouseout","14737 mouseout","14758 mouseout","15789 mouseout","15802 mouseout","17654 mouseout","17702 mouseout","18907 mouseout","18918 answer_select 3 iné","18922 answer_select 3 iné"],"mm":["3915 332 562","5033 394 543","5534 290 345","6812 400 299","8390 436 289","9263 340 283","10413 432 279","12352 287 257","13752 188 170","14742 276 75","15791 533 219","17660 410 250"],"ans_code_06_2":"iné"}]END====
+131913371997934215 OPEN 134
+131913371999163861 GET-HTML 134
+====BEGIN[OK]END====
+131913372138313216 SUBMIT 134
+====BEGIN[{"diff_code_06_2":"dontknow"}]END====
+131913372138314193 OPEN 135
+131913372139942266 GET-HTML 135
+====BEGIN[OK]END====
+131913372328960370 SUBMIT 135
+====BEGIN[{"evs":["565 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","570 window 980 1409 377 542 0 0 undefined","4358 mouseout","7059 mouseout","7078 mouseout","8051 mouseout","8078 mouseout","8963 mouseout","8988 mouseout","10180 mouseout","10195 mouseout","12415 mouseout","12429 mouseout","17949 mouseout","17954 answer_select 1 20","17957 answer_select 1 20"],"mm":["4344 247 124","5495 260 151","7067 364 196","8061 270 171","8976 250 221","10183 420 272","12418 374 565"],"ans_code_06_3":"20"}]END====
+131913372328961399 OPEN 136
+131913372330929508 GET-HTML 136
+====BEGIN[OK]END====
+131913372379519763 SUBMIT 136
+====BEGIN[{"diff_code_06_3":"easy"}]END====
+131913372379520707 OPEN 149
+131913372382122294 GET-HTML 149
+====BEGIN[OK]END====
+131913373169962680 SUBMIT 149
+====BEGIN[{"evs":["476 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","483 window 980 1409 377 542 0 0 undefined","3647 mouseout","5415 mouseout","5431 mouseout","7680 mouseout","7692 mouseout","9004 mouseout","9039 mouseout","11109 mouseout","11129 mouseout","12209 mouseout","12224 mouseout","14320 mouseout","14334 mouseout","18459 mouseout","18474 mouseout","19540 mouseout","19562 mouseout","20603 mouseout","20619 mouseout","21242 mouseout","21255 mouseout","22338 mouseout","22365 mouseout","23541 mouseout","23566 mouseout","24716 mouseout","24728 mouseout","27288 mouseout","27325 mouseout","28477 mouseout","28487 mouseout","30022 mouseout","30036 mouseout","31247 mouseout","31262 mouseout","34630 mouseout","34642 mouseout","35846 mouseout","35864 mouseout","36274 mouseout","36304 mouseout","38637 mouseout","38652 mouseout","40537 mouseout","40557 mouseout","44074 mouseout","44086 mouseout","45440 mouseout","45461 mouseout","53336 mouseout","53354 mouseout","54772 mouseout","54789 mouseout","55470 mouseout","55481 mouseout","57283 mouseout","57302 mouseout","58241 mouseout","58255 mouseout","61628 mouseout","61639 mouseout","63575 mouseout","63588 mouseout","64817 mouseout","64829 mouseout","66013 mouseout","66031 mouseout","67181 mouseout","67195 mouseout","67625 mouseout","67643 mouseout","68738 mouseout","68751 mouseout","69935 mouseout","69950 mouseout","71735 mouseout","71751 mouseout","72804 mouseout","72817 mouseout","77625 mouseout","77648 answer_select 3 iné","77662 answer_select 3 iné"],"mm":["3631 259 75","5419 216 549","6610 191 550","7686 327 559","9014 444 560","11117 243 632","12213 384 621","14322 370 563","18462 265 158","19545 203 107","20605 363 97","21245 219 209","22351 312 197","23554 440 221","24721 528 202","27293 219 258","28479 356 267","30024 243 265","31253 372 263","34632 308 76","35852 562 212","36280 383 88","38642 297 168","39694 290 158","40548 318 219","41669 257 202","44079 402 214","45449 528 238","46514 539 214","53346 217 127","54776 259 165","55472 181 171","56361 199 151","57290 291 175","58243 294 141","61631 363 263","63577 255 265","64820 370 206","66016 532 206","67183 609 225","67628 273 197","68741 287 146","69941 145 68","71738 384 267","72807 364 549"],"ans_code_09_1":"iné"}]END====
+131913373169963849 OPEN 150
+131913373172171900 GET-HTML 150
+====BEGIN[OK]END====
+131913373242592592 SUBMIT 150
+====BEGIN[{"diff_code_09_1":"hard"}]END====
+131913373242593475 OPEN 151
+131913373244935919 GET-HTML 151
+====BEGIN[OK]END====
+131913373539165837 SUBMIT 151
+====BEGIN[{"evs":["360 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","365 window 980 1409 377 542 0 0 undefined","3086 mouseout","4251 mouseout","4265 mouseout","5477 mouseout","5495 mouseout","6623 mouseout","6642 mouseout","7477 mouseout","7502 mouseout","9022 mouseout","9037 mouseout","12663 mouseout","12680 mouseout","14854 mouseout","14867 mouseout","16269 mouseout","16283 mouseout","17334 mouseout","17363 mouseout","18540 mouseout","18555 mouseout","19380 mouseout","19412 mouseout","25983 mouseout","25995 mouseout","28374 mouseout","28381 answer_select 0 12","28386 answer_select 0 12"],"mm":["3072 357 642","4257 428 626","5483 345 545","6630 454 555","7485 440 635","9031 545 204","12669 358 263","14856 280 146","16272 272 219","17350 383 277","18543 460 594","19384 450 552","20522 388 550","22037 331 570","25988 454 553"],"ans_code_09_2":"12"}]END====
+131913373539166805 OPEN 152
+131913373540336400 GET-HTML 152
+====BEGIN[OK]END====
+131913373668969023 SUBMIT 152
+====BEGIN[{"diff_code_09_2":"medium"}]END====
+131913373668970174 OPEN 153
+131913373670136488 GET-HTML 153
+====BEGIN[OK]END====
+131913374169924913 SUBMIT 153
+====BEGIN[{"evs":["547 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","566 window 980 1409 377 542 0 0 undefined","5006 mouseout","7626 mouseout","7665 mouseout","23793 mouseout","23826 mouseout","27895 mouseout","27936 mouseout","29960 mouseout","29982 mouseout","34688 mouseout","34725 mouseout","37066 mouseout","37084 mouseout","37839 mouseout","37854 mouseout","38713 mouseout","38731 mouseout","41899 mouseout","41911 mouseout","44527 mouseout","44555 mouseout","49125 mouseout","49142 answer_select 1 6"],"mm":["4990 366 555","7636 484 537","8707 472 565","23808 295 98","25477 298 83","26713 374 90","27909 237 112","28893 257 88","29968 171 94","34691 243 171","35976 276 163","37073 380 290","37844 610 247","38717 564 212","41903 330 572","44529 466 584","46680 473 570"],"ans_code_09_3":"6"}]END====
+131913374169925812 OPEN 154
+131913374171210040 GET-HTML 154
+====BEGIN[OK]END====
+131913374202420934 SUBMIT 154
+====BEGIN[{"diff_code_09_3":"easy"}]END====
+131913374202421806 OPEN 143
+131913374203545793 GET-HTML 143
+====BEGIN[OK]END====
+131913375187189624 SUBMIT 143
+====BEGIN[{"evs":["373 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","377 window 980 1409 377 542 0 0 undefined","4186 mouseout","6361 mouseout","6384 mouseout","7472 mouseout","7490 mouseout","8797 mouseout","8812 mouseout","10488 mouseout","10521 mouseout","11458 mouseout","11471 mouseout","12431 mouseout","12458 mouseout","13686 mouseout","13699 mouseout","17600 mouseout","17670 mouseout","18687 mouseout","18697 mouseout","20056 mouseout","20081 mouseout","22724 mouseout","22748 mouseout","23662 mouseout","23689 mouseout","24892 mouseout","24912 mouseout","26066 mouseout","26083 mouseout","27215 mouseout","27240 mouseout","28637 mouseout","28658 mouseout","32398 mouseout","32413 mouseout","35969 mouseout","36002 mouseout","38878 mouseout","38904 mouseout","39935 mouseout","39968 mouseout","40899 mouseout","40913 mouseout","41724 mouseout","41739 mouseout","43005 mouseout","43030 mouseout","44295 mouseout","44355 mouseout","45323 mouseout","45352 mouseout","46471 mouseout","46497 mouseout","48022 mouseout","48048 mouseout","49166 mouseout","49187 mouseout","50126 mouseout","50155 mouseout","51899 mouseout","51914 mouseout","52601 mouseout","52629 mouseout","54463 mouseout","54478 mouseout","55721 mouseout","55730 mouseout","56540 mouseout","56558 mouseout","57279 mouseout","57294 mouseout","58372 mouseout","58392 mouseout","59107 mouseout","59128 mouseout","59818 mouseout","59832 mouseout","60937 mouseout","60963 mouseout","62895 mouseout","62914 mouseout","66259 mouseout","66271 mouseout","74279 mouseout","74293 mouseout","76037 mouseout","76048 mouseout","77127 mouseout","77147 mouseout","78258 mouseout","78273 mouseout","80076 mouseout","80091 mouseout","81135 mouseout","81155 mouseout","85340 mouseout","85352 answer_select 0 9","85356 answer_select 0 9"],"mm":["4166 202 123","5304 182 145","6373 313 136","7479 434 155","8800 325 83","9924 380 87","10511 253 76","11463 174 83","12440 322 80","13689 245 190","14863 192 197","16338 255 197","17631 210 143","18689 340 151","20061 458 151","22729 189 301","23676 281 265","24899 397 285","26068 486 260","27224 382 248","28645 309 287","32401 309 429","35990 225 189","37238 243 185","37940 186 192","38890 260 216","39941 309 280","40905 265 311","41726 391 279","43018 499 270","44304 261 95","45339 203 160","46482 318 167","48028 407 163","49171 480 138","50141 393 85","51902 345 440","52605 414 534","54465 397 436","55724 437 146","56546 298 102","57282 349 455","58382 433 460","59112 266 187","59822 179 199","60942 285 185","62031 282 212","62905 372 451","66262 300 270","74281 374 289","76040 199 225","77131 484 287","78261 308 199","80079 315 448","81139 387 476"],"ans_code_08_1":"9"}]END====
+131913375187190837 OPEN 144
+131913375188201632 GET-HTML 144
+====BEGIN[OK]END====
+131913375225067525 SUBMIT 144
+====BEGIN[{"diff_code_08_1":"easy"}]END====
+131913375225068481 OPEN 145
+131913375227185203 GET-HTML 145
+====BEGIN[OK]END====
+131913375597005030 SUBMIT 145
+====BEGIN[{"evs":["457 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","464 window 980 1409 377 542 0 0 undefined","4891 mouseout","5934 mouseout","5950 mouseout","7380 mouseout","7413 mouseout","9619 mouseout","9652 mouseout","10665 mouseout","10693 mouseout","12589 mouseout","12603 mouseout","13850 mouseout","13864 mouseout","15153 mouseout","15166 mouseout","20468 mouseout","20492 mouseout","21574 mouseout","21586 mouseout","22610 mouseout","22636 mouseout","23723 mouseout","23742 mouseout","24685 mouseout","24715 mouseout","28527 mouseout","28554 mouseout","29655 mouseout","29668 mouseout","30998 mouseout","31011 mouseout","33447 mouseout","33469 answer_select 0 9","33473 answer_select 0 9"],"mm":["4877 192 158","5938 344 465","7393 472 502","8311 490 476","9641 224 139","10675 310 161","12594 466 170","13853 445 547","15158 441 467","20471 466 153","21579 268 196","22620 189 197","23727 323 272","24695 361 458","28530 358 279","29657 485 289","31000 407 482"],"ans_code_08_2":"9"}]END====
+131913375597006053 OPEN 146
+131913375598365873 GET-HTML 146
+====BEGIN[OK]END====
+131913375624148879 SUBMIT 146
+====BEGIN[{"diff_code_08_2":"easy"}]END====
+131913375624150013 OPEN 147
+131913375625504853 GET-HTML 147
+====BEGIN[OK]END====
+131913375924840151 SUBMIT 147
+====BEGIN[{"evs":["538 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","555 window 980 1409 377 542 0 0 undefined","4124 mouseout","5022 mouseout","5036 mouseout","6245 mouseout","6261 mouseout","7352 mouseout","7389 mouseout","12099 mouseout","12116 mouseout","13182 mouseout","13204 mouseout","14200 mouseout","14212 mouseout","15111 mouseout","15133 mouseout","16724 mouseout","16742 mouseout","17699 mouseout","17726 mouseout","18923 mouseout","18935 mouseout","21268 mouseout","21290 mouseout","22339 mouseout","22353 mouseout","23801 mouseout","23860 mouseout","26124 mouseout","26137 mouseout","28139 mouseout","28146 answer_select 1 6","28150 answer_select 1 6"],"mm":["4107 323 499","5028 211 479","6252 353 457","7356 376 534","12103 191 160","13190 327 155","14202 463 161","15121 235 158","16022 182 151","16735 219 247","17713 216 207","18926 320 277","21280 294 474","22342 478 457","23808 350 454","26126 337 279"],"ans_code_08_3":"6"}]END====
+131913375924841446 OPEN 148
+131913375926596669 GET-HTML 148
+====BEGIN[OK]END====
+131913375982014690 SUBMIT 148
+====BEGIN[{"diff_code_08_3":"easy"}]END====
+131913375982015678 OPEN 167
+131913375990859832 GET-HTML 167
+====BEGIN[OK]END====
+131913376780769383 SUBMIT 167
+====BEGIN[{"evs":["1245 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","1249 window 980 1409 377 542 0 0 undefined","6432 mouseout","7745 mouseout","7760 mouseout","9189 mouseout","9203 mouseout","16230 mouseout","16245 mouseout","17490 mouseout","17536 mouseout","20956 mouseout","20984 mouseout","21748 mouseout","21759 mouseout","22590 mouseout","22618 mouseout","26191 mouseout","26212 mouseout","28203 mouseout","28236 mouseout","31473 mouseout","31502 mouseout","33686 mouseout","33714 mouseout","37572 mouseout","37603 mouseout","38583 mouseout","38599 mouseout","40397 mouseout","40408 mouseout","41371 mouseout","41391 mouseout","41958 mouseout","41998 mouseout","43129 mouseout","43143 mouseout","43978 mouseout","43998 mouseout","44902 mouseout","44922 mouseout","46063 mouseout","46112 mouseout","47519 mouseout","47537 mouseout","48647 mouseout","48662 mouseout","50234 mouseout","50254 mouseout","52247 mouseout","52315 mouseout","54478 mouseout","54496 mouseout","55433 mouseout","55447 mouseout","57955 mouseout","57976 mouseout","59076 mouseout","59093 mouseout","61716 mouseout","61736 mouseout","64044 mouseout","64065 mouseout","65022 mouseout","65038 mouseout","67290 mouseout","67303 mouseout","68190 mouseout","68219 mouseout","69610 mouseout","69621 mouseout","70835 mouseout","70850 mouseout","77845 mouseout","77866 answer_select 0 peter","77870 answer_select 0 peter"],"mm":["6419 401 635","7748 272 626","9191 180 625","16233 375 569","17492 490 592","18499 465 592","20217 462 570","20972 612 559","21750 747 565","22595 816 592","26197 937 606","28208 927 540","28851 914 560","31489 141 72","33696 329 95","34776 270 87","35616 271 87","35701 275 87","35751 270 87","37591 220 606","38587 354 632","40400 223 85","41382 323 92","41985 168 143","43131 224 210","43989 403 231","44910 539 231","46072 680 204","47525 243 355","48650 225 269","50240 374 295","51325 385 270","52285 541 282","54484 442 299","55435 502 263","57960 597 275","59081 502 263","61721 392 280","62692 318 280","64056 464 270","65029 586 287","67292 403 308","68196 340 250","69612 432 289","70837 274 294","71909 248 275"],"ans_code_12_1":"peter"}]END====
+131913376780770580 OPEN 168
+131913376781829514 GET-HTML 168
+====BEGIN[OK]END====
+131913376834612365 SUBMIT 168
+====BEGIN[{"diff_code_12_1":"medium"}]END====
+131913376834613324 OPEN 169
+131913376836236515 GET-HTML 169
+====BEGIN[OK]END====
+131913377312980368 SUBMIT 169
+====BEGIN[{"evs":["428 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","436 window 980 1409 377 542 0 0 undefined","3079 mouseout","3827 mouseout","3848 mouseout","4983 mouseout","5001 mouseout","6133 mouseout","6145 mouseout","7354 mouseout","7367 mouseout","8441 mouseout","8458 mouseout","9512 mouseout","9526 mouseout","12257 mouseout","12271 mouseout","14134 mouseout","14149 mouseout","15193 mouseout","15208 mouseout","16127 mouseout","16151 mouseout","18083 mouseout","18119 mouseout","19214 mouseout","19241 mouseout","20854 mouseout","20884 mouseout","24224 mouseout","24251 mouseout","26114 mouseout","26132 mouseout","26968 mouseout","27001 mouseout","27739 mouseout","27760 mouseout","29596 mouseout","29611 mouseout","36231 mouseout","36245 mouseout","37491 mouseout","37505 mouseout","38385 mouseout","38402 mouseout","42032 mouseout","42045 mouseout","46778 mouseout","46784 answer_select 3 iné"],"mm":["3061 175 501","3834 442 562","4992 305 552","6137 229 567","7358 288 633","8444 434 632","9517 441 559","12259 190 155","14137 280 225","15196 420 218","16139 545 210","18085 690 229","19219 541 292","20237 541 267","20875 442 283","21802 410 261","22478 352 261","23318 323 275","24238 256 251","25135 241 269","26124 339 279","26980 458 290","27749 560 273","28573 616 280","29604 465 257","36233 432 552","37494 287 524","38390 353 621","42037 526 263"],"ans_code_12_2":"iné"}]END====
+131913377312981428 OPEN 170
+131913377314341430 GET-HTML 170
+====BEGIN[OK]END====
+131913377340543944 SUBMIT 170
+====BEGIN[{"diff_code_12_2":"hard"}]END====
+131913377340544747 OPEN 171
+131913377341838333 GET-HTML 171
+====BEGIN[OK]END====
+131913377503566980 SUBMIT 171
+====BEGIN[{"evs":["451 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","457 window 980 1409 377 542 0 0 undefined","2851 mouseout","4836 mouseout","4850 mouseout","7697 mouseout","7723 mouseout","8537 mouseout","8563 mouseout","9193 mouseout","9208 mouseout","10121 mouseout","10145 mouseout","11072 mouseout","11089 mouseout","11790 mouseout","11805 mouseout","12695 mouseout","12703 mouseout","15238 mouseout","15249 answer_select 3 iné"],"mm":["2834 497 555","4839 488 265","7704 566 277","8548 393 244","9195 361 292","10129 313 257","11079 217 257","11796 220 187","12697 416 219"],"ans_code_12_3":"iné"}]END====
+131913377503568000 OPEN 172
+131913377504992207 GET-HTML 172
+====BEGIN[OK]END====
+131913377576699185 SUBMIT 172
+====BEGIN[{"diff_code_12_3":"medium"}]END====
+131913377576700141 OPEN 155
+131913377578515852 GET-HTML 155
+====BEGIN[OK]END====
+131913378734076425 SUBMIT 155
+====BEGIN[{"evs":["389 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","393 window 980 1409 377 542 0 0 undefined","4242 mouseout","5047 mouseout","5062 mouseout","6178 mouseout","6214 mouseout","7179 mouseout","7211 mouseout","8774 mouseout","8789 mouseout","12469 mouseout","12524 mouseout","13518 mouseout","13538 mouseout","14420 mouseout","14433 mouseout","15712 mouseout","15723 mouseout","16467 mouseout","16522 mouseout","17527 mouseout","17542 mouseout","18658 mouseout","18679 mouseout","19670 mouseout","19683 mouseout","21051 mouseout","21076 mouseout","22342 mouseout","22360 mouseout","24556 mouseout","24575 mouseout","25457 mouseout","25469 mouseout","26695 mouseout","26712 mouseout","27829 mouseout","27838 mouseout","28718 mouseout","28735 mouseout","29676 mouseout","29687 mouseout","31788 mouseout","31801 mouseout","33234 mouseout","33255 mouseout","35219 mouseout","35237 mouseout","36499 mouseout","36514 mouseout","39417 mouseout","39436 mouseout","40975 mouseout","40988 mouseout","42888 mouseout","42901 mouseout","44019 mouseout","44037 mouseout","45130 mouseout","45157 mouseout","46089 mouseout","46116 mouseout","46985 mouseout","47002 mouseout","48116 mouseout","48143 mouseout","51899 mouseout","51919 mouseout","53267 mouseout","53282 mouseout","54170 mouseout","54191 mouseout","55238 mouseout","55266 mouseout","56190 mouseout","56219 mouseout","57296 mouseout","57318 mouseout","60273 mouseout","60304 mouseout","60952 mouseout","60967 mouseout","62181 mouseout","62209 mouseout","64226 mouseout","64252 mouseout","68572 mouseout","68604 mouseout","70007 mouseout","70022 mouseout","70986 mouseout","71002 mouseout","71898 mouseout","71918 mouseout","73277 mouseout","73285 mouseout","74467 mouseout","74493 mouseout","75237 mouseout","75264 mouseout","82168 mouseout","82175 answer_select 4 neviem"],"mm":["4225 161 623","5050 207 786","6201 350 786","7191 508 778","8328 459 789","8782 374 706","12474 242 148","13527 356 219","14425 546 216","15713 410 277","16470 291 265","17530 456 265","18671 261 340","19672 323 409","21055 427 723","22345 314 721","24561 258 769","25459 410 779","26698 510 784","27832 431 716","28725 242 168","29679 193 107","31791 353 87","33239 297 50","34126 290 72","35226 401 80","36502 253 149","38389 194 138","39422 319 163","40977 266 219","42026 212 206","42894 359 214","44022 287 229","45145 432 190","46102 375 254","46989 398 207","48129 538 194","51911 272 285","53270 463 305","54173 481 261","55252 320 309","56206 321 277","57309 312 368","58247 309 345","60295 326 407","60956 233 550","62183 323 423","63176 309 396","64238 319 356","65386 301 355","68592 440 786","70009 167 73","70988 291 104","71906 414 97","73279 241 527","74469 287 374","75250 307 336"],"ans_code_10_1":"neviem"}]END====
+131913378734077410 OPEN 156
+131913378736164027 GET-HTML 156
+====BEGIN[OK]END====
+131913378772640648 SUBMIT 156
+====BEGIN[{"diff_code_10_1":"dontknow"}]END====
+131913378772641550 OPEN 157
+131913378774969727 GET-HTML 157
+====BEGIN[OK]END====
+131913379394606652 SUBMIT 157
+====BEGIN[{"evs":["450 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","457 window 980 1409 377 542 0 0 undefined","2670 mouseout","3558 mouseout","3579 mouseout","4360 mouseout","4378 mouseout","5267 mouseout","5305 mouseout","6252 mouseout","6266 mouseout","7782 mouseout","7803 mouseout","9250 mouseout","9261 mouseout","12574 mouseout","12583 mouseout","13897 mouseout","13945 mouseout","15196 mouseout","15220 mouseout","16336 mouseout","16353 mouseout","17825 mouseout","17844 mouseout","19252 mouseout","19265 mouseout","20108 mouseout","20122 mouseout","21253 mouseout","21275 mouseout","22174 mouseout","22221 mouseout","23592 mouseout","23609 mouseout","25506 mouseout","25519 mouseout","26905 mouseout","26930 mouseout","28559 mouseout","28579 mouseout","30138 mouseout","30153 mouseout","31253 mouseout","31267 mouseout","32263 mouseout","32281 mouseout","38317 mouseout","38336 mouseout","39754 mouseout","39774 mouseout","41269 mouseout","41287 mouseout","42562 mouseout","42574 mouseout","44371 mouseout","44406 mouseout","47153 mouseout","47168 mouseout","48216 mouseout","48232 mouseout","49658 mouseout","49681 mouseout","50848 mouseout","50872 mouseout","53565 mouseout","53596 mouseout","60354 mouseout","60372 mouseout"],"mm":["2657 362 689","3568 283 708","4370 235 665","5285 385 776","6254 487 788","7792 450 706","9253 342 63","12576 260 66","13902 167 76","15208 261 156","16338 179 151","17831 290 123","19254 429 258","20113 359 161","21256 299 219","22176 287 160","23594 264 225","25510 378 231","26913 538 222","28562 427 222","30142 372 104","31255 378 232","32269 286 302","33590 308 285","38324 229 219","39756 221 177","40749 219 174","41279 396 85","42564 299 275","44380 454 294","47159 365 134","48221 194 158","49670 304 151","50851 468 269","53576 283 350","60359 287 409"]}]END====
+131913379394607808 OPEN 158
+131913379396699312 GET-HTML 158
+====BEGIN[OK]END====
+131913379424195328 SUBMIT 158
+====BEGIN[{"diff_code_10_2":"dontknow"}]END====
+131913379424196311 OPEN 159
+131913379426086989 GET-HTML 159
+====BEGIN[OK]END====
+131913379699507692 SUBMIT 159
+====BEGIN[{"evs":["375 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","381 window 980 1409 377 542 0 0 undefined","5584 mouseout","7155 mouseout","7168 mouseout","8483 mouseout","8515 mouseout","10013 mouseout","10027 mouseout","10916 mouseout","10938 mouseout","12819 mouseout","12839 mouseout","14370 mouseout","14390 mouseout","15455 mouseout","15473 mouseout","17241 mouseout","17257 mouseout","18459 mouseout","18476 mouseout","20195 mouseout","20241 mouseout","22549 mouseout","22565 mouseout","26365 mouseout","26368 answer_select 3 iné","26371 answer_select 3 iné"],"mm":["5544 294 272","7159 282 155","8486 318 253","10016 472 287","10926 432 250","11588 411 280","12831 490 272","14378 451 216","15461 298 199","17244 464 298","18465 287 326","20198 309 404","22551 233 545"],"ans_code_10_3":"iné"}]END====
+131913379699508644 OPEN 160
+131913379702035752 GET-HTML 160
+====BEGIN[OK]END====
+131913379729361438 SUBMIT 160
+====BEGIN[{"diff_code_10_3":"hard"}]END====
+131913379729362492 OPEN 173
+131913379730286192 GET-HTML 173
+====BEGIN[OK]END====
+131913380507693153 SUBMIT 173
+====BEGIN[{"evs":["502 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","507 window 980 1409 377 542 0 0 undefined","3033 mouseout","4508 mouseout","4523 mouseout","6484 mouseout","6508 mouseout","7600 mouseout","7613 mouseout","9068 mouseout","9082 mouseout","10101 mouseout","10116 mouseout","11465 mouseout","11478 mouseout","12471 mouseout","12533 mouseout","16686 mouseout","16708 mouseout","17608 mouseout","17633 mouseout","18512 mouseout","18526 mouseout","19301 mouseout","19316 mouseout","20689 mouseout","20710 mouseout","21604 mouseout","21620 mouseout","22464 mouseout","22480 mouseout","24026 mouseout","24091 mouseout","25303 mouseout","25336 mouseout","26227 mouseout","26251 mouseout","28042 mouseout","28073 mouseout","28887 mouseout","28898 mouseout","32473 mouseout","32487 mouseout","33565 mouseout","33581 mouseout","36128 mouseout","36155 mouseout","37166 mouseout","37183 mouseout","39472 mouseout","39489 mouseout","41624 mouseout","41644 mouseout","43013 mouseout","43032 mouseout","45024 mouseout","45043 mouseout","46001 mouseout","46019 mouseout","54146 mouseout","54161 mouseout","57494 mouseout","57534 mouseout","58605 mouseout","58629 mouseout","62168 mouseout","62185 mouseout","63037 mouseout","63058 mouseout","63865 mouseout","63879 mouseout","64894 mouseout","64922 mouseout","65694 mouseout","65717 mouseout","66425 mouseout","66441 mouseout","67235 mouseout","67254 mouseout","69118 mouseout","69130 mouseout","72591 mouseout","72596 answer_select 1 Maria","72599 answer_select 1 Maria","73811 mouseout","75888 mouseout","75910 mouseout","77725 mouseout"],"mm":["3010 462 784","4515 352 789","5469 304 788","6498 201 801","7603 436 796","9070 350 842","10107 258 843","11468 155 862","12486 340 852","16692 221 95","17620 336 80","18514 173 48","19303 208 158","20696 211 194","21607 330 212","22467 487 236","23299 534 212","24032 694 229","24831 760 219","25327 675 265","26233 550 273","27207 497 269","28064 414 254","28890 319 279","32479 278 348","33567 393 348","36133 258 419","37171 406 416","39478 329 416","41626 416 280","43018 225 523","44075 175 530","45034 309 543","46007 203 594","54149 214 216","57496 324 212","58618 454 211","62172 566 232","63046 641 204","63868 796 197","64908 613 263","65698 666 304","66427 389 423","67241 298 413","68268 350 431","69124 342 353","73798 186 592","75893 229 528"],"ans_code_13_1":"Maria"}]END====
+131913380507694332 OPEN 174
+131913380508989842 GET-HTML 174
+====BEGIN[OK]END====
+131913380552106062 SUBMIT 174
+====BEGIN[{"diff_code_13_1":"hard"}]END====
+131913380552107075 OPEN 175
+131913380553881698 GET-HTML 175
+====BEGIN[OK]END====
+131913381152802070 SUBMIT 175
+====BEGIN[{"evs":["487 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","492 window 980 1409 377 542 0 0 undefined","4139 mouseout","7201 mouseout","7219 mouseout","8266 mouseout","8299 mouseout","9197 mouseout","9265 mouseout","10051 mouseout","10066 mouseout","15109 mouseout","15132 mouseout","17028 mouseout","17039 mouseout","18153 mouseout","18168 mouseout","19544 mouseout","19560 mouseout","20683 mouseout","20692 mouseout","27202 mouseout","27212 mouseout","29169 mouseout","29187 mouseout","30117 mouseout","30128 mouseout","31078 mouseout","31092 mouseout","31967 mouseout","31977 mouseout","32718 mouseout","32732 mouseout","33922 mouseout","33935 mouseout","34782 mouseout","34802 mouseout","35877 mouseout","35906 mouseout","37512 mouseout","37527 mouseout","38582 mouseout","38602 mouseout","39840 mouseout","39853 mouseout","48305 mouseout","48322 mouseout","50798 mouseout","50815 mouseout","52205 mouseout","52225 mouseout","54997 mouseout","55010 mouseout","57037 mouseout","57048 answer_select 0 S","58835 answer_select 3 iné"],"mm":["4126 498 763","5397 469 788","7211 195 126","8278 237 197","9202 358 197","10058 485 222","15119 652 218","17030 261 244","18156 280 207","19548 658 212","20686 745 210","27204 359 267","29176 486 272","30120 634 287","31080 352 375","31969 610 218","32720 648 292","33925 546 272","34789 286 272","35885 379 283","37514 529 301","38586 665 267","39842 506 270","48315 605 290","49358 575 279","50805 419 273","52217 669 265","54999 291 257"],"ans_code_13_2":"iné"}]END====
+131913381152803076 OPEN 176
+131913381154127603 GET-HTML 176
+====BEGIN[OK]END====
+131913381344617414 SUBMIT 176
+====BEGIN[{"diff_code_13_2":"hard"}]END====
+131913381344618366 OPEN 177
+131913381345954319 GET-HTML 177
+====BEGIN[OK]END====
+131913381575149622 SUBMIT 177
+====BEGIN[{"evs":["465 ready 377 670 377 670 980 1409 980 1409 0 80 980 1211","469 window 980 1409 377 542 0 0 undefined","2525 mouseout","4582 mouseout","4614 mouseout","7573 mouseout","7613 mouseout","9499 mouseout","9516 mouseout","11410 mouseout","11422 mouseout","13397 mouseout","13440 mouseout","21717 mouseout","21731 answer_select 0 J,J"],"mm":["2513 487 801","4591 294 178","5459 298 206","7582 339 269","8569 294 257","9508 378 270","11413 523 265","13417 622 270"],"ans_code_13_3":"J,J"}]END====
+131913381575150610 OPEN 178
+131913381576673913 GET-HTML 178
+====BEGIN[OK]END====
+131913381622706459 SUBMIT 178
+====BEGIN[{"diff_code_13_3":"medium"}]END====
+131913381622707436 OPEN 900
+131913381623575655 GET-HTML 900
+====BEGIN[OK]END====
+131913382289374069 SUBMIT 900
+====BEGIN[{"eval":"1","comment":"Niektoré otázky sa opakovali"}]END====
+131913382289374997 OPEN 999
+131913382290593518 GET-HTML 999
+====BEGIN[OK]END====
+131913382402348414 GET-HTML 999
+====BEGIN[OK]END====

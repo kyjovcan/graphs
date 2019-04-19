@@ -40,7 +40,7 @@ app.post('/upload', function(req, res) {
 
     let sampleFile = req.files.sampleFile;
 
-    sampleFile.mv('./logs/log.txt', function(err) {
+    sampleFile.mv('./uploadedLogs/log.txt', function(err) {
         if (err)
           return res.status(500).send(err);
     
@@ -60,17 +60,140 @@ io.on('connection', function (socket) {
   });
 
   socket.on('computeData', function (data, fn){
-    vels = mapArray();
-    fn({ data: vels });
+    vels = mapArray(0);
+      console.log(vels);
+    fn({ data: vels.velocities });
+  });
+
+  socket.on('computeAll', function (data, fn){
+    getAllLogs();
   });
 });
 
-function mapArray() {
-    const data = parseLog();
+function parseLog(lines){
+    let myLines = [];
 
-    const allVelocities = data.questions.map((question, i) => {
+    if (!lines) {
+        myLines = fs.readFileSync('./uploadedLogs/log.txt').toString().split('\n');
+    } else {
+        myLines = lines;
+    }
+
+    let userData = {
+        cursor: '',
+        expMonths: '',
+        expType: '',
+        questions: []
+    };
+
+    let tempQuestion = {};
+
+    myLines.forEach((line, index) => {
+        // INTRODUCTION INFORMATION RETRIEVAL
+        const matchIntro = line.match(/====BEGIN\[{"cursor"/);
+        if (matchIntro) {
+            const intro = line.match(/"cursor":"(.*)","exp_months":"(.*)","exp_type":"(.*)"}]END====/);
+            userData.cursor = intro[1];
+            userData.expMonths = intro[2];
+            userData.expType = intro[3];
+        }
+
+        // QUESTION MOUSE DATA RETRIEVAL
+        const matchData = line.match(/====BEGIN\[{"(evs|mm)":/);
+        const question = {};
+
+        // IF DATA STARTS WITH 'EVS'
+        if (matchData && matchData[1] === 'evs') {
+            let mm = line.match(new RegExp(/"mm":\[(.*)],"ans/));
+
+            if (!mm) {  // IF MM DOESNT CONTAIN ANSWER
+                mm = line.match(new RegExp(/"mm":\[(.*)]}]END====/));
+                if (!mm) {
+                    const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
+                    if (answer && answer[1].indexOf("code") > -1) {
+                        question.mm = [];
+                        question.name = answer[1];
+                        question.answer = answer[2];
+                    }
+                }
+                else {
+                    question.mm = [];
+                    question.mm.push(mm[1]);
+                    question.name = 'n/a';
+                    question.answer = 'n/a';
+                }
+            }
+            else {      // IF MM CONTAINS ANSWER
+                const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
+                if (answer && answer[1].indexOf("code") > -1) {
+                    question.mm = [];
+                    question.mm.push(mm[1]);
+                    question.name = answer[1];
+                    question.answer = answer[2];
+                }
+            }
+            tempQuestion = question;
+        }
+        // IF DATA STARTS WITH 'MM'
+        else if (matchData && matchData[1] === 'mm') {
+            let mm = line.match(new RegExp(/"mm":\[(.*)],"evs/));
+
+            const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d)":(.*)}]END====/));
+
+            if (!answer) {  // IF MM DOESNT CONTAIN ANSWER
+                question.mm = [];
+                question.mm.push(mm[1]);
+                question.name = 'n/a';
+                question.answer = 'n/a';
+            }
+            else {          // IF MM CONTAINS ANSWER
+                question.mm = [];
+                question.mm.push(mm[1]);
+
+                question.name = answer[1];
+                question.answer = answer[2];
+            }
+            tempQuestion = question;
+        }
+
+        // QUESTION EVALUATION DATA RETRIEVAL
+        const evalData = line.match(/====BEGIN\[{"diff_(code_\d{2}_\d)":"(.*)"}]END====/);
+
+        if (evalData) {
+            tempQuestion.difficulty = evalData[2];
+            userData.questions.push(tempQuestion);
+            tempQuestion = {};
+        }
+
+        // OVERALL EVALUATION DATA RETRIEVAL
+        const evaluation = line.match(/====BEGIN\[{"eval":"(.*)","comment":"(.*)"}]END====/);
+
+        if (evaluation) {
+            userData.eval = evaluation[1];
+            userData.comment = evaluation[2];
+        }
+    });
+    writeFile("./logData.json", userData);
+
+    return userData;
+}
+
+function mapArray(lines) {
+    const data = parseLog(lines);
+
+    const allVelocities = data.questions.map((question) => {
+        // IF THERE ARE NO MOUSE MOVEMENTS RETURN EMPTY VELOCITIES
+        if (question.mm.length === 0) {
+            console.log('QUESTION MM IS EMPTY');
+            return {
+                vels: [],
+                name: question.name ? question.name : 'n/a',
+                answer: question.answer,
+                difficulty: question.difficulty,
+            }
+        }
+
         const moves = question.mm[0].split(',');
-
         let temp = '';
         let tempDistance = 0;
         let tempIterator = 1;
@@ -104,7 +227,7 @@ function mapArray() {
                 timeIterator = Math.floor(actTime / timeStep);
                 const actTimeStep = timeIterator * timeStep;
 
-                if ( timeIterator !== tempIterator ){
+                if (timeIterator !== tempIterator) {
                     if (actTime % timeStep === 0) {
                         // ak sme presne na 200*TI normalne vypocitaj vel a resetuj temp dist
                         const actVel = {
@@ -135,93 +258,55 @@ function mapArray() {
                 }
             }
         });
-        console.log(vels);
+
+        const cleanVels = vels.filter((v) => {
+            return v !== undefined;
+        });
+
         const quest = {
-            vels: vels,
+            vels: cleanVels,
             name: question.name ? question.name : 'n/a',
             answer: question.answer,
-            difference: question.difference,
+            difficulty: question.difficulty,
         };
         return quest;
     });
 
     writeFile("./logAllVelocities.json", allVelocities);
 
-    return allVelocities;
+    const {cursor, expMonths, expType, eval, comment} = data;
+
+    return {
+        velocities: allVelocities,
+        cursor,
+        expMonths,
+        expType,
+        eval,
+        comment,
+    };
 }
 
+function getAllLogs(){
+    const folders = fs.readdirSync('./allLogs');
 
-function parseLog(){
-    const myLines = fs.readFileSync('./logs/log.txt').toString().split('\n');
+    const allLogFiles = folders.map((folder, i) => {
+        const logLines = fs.readFileSync('log').toString().split('\n');
+        console.log(folder + ' ------ prechadzam');
+        const logContents = mapArray(logLines);
 
-    let userData = {
-        cursor: '',
-        expMonths: '',
-        expType: '',
-        questions: []
-    };
-
-    let tempQuestion = {};
-
-    myLines.forEach((line, index) => {
-        // INTRODUCTION INFORMATION RETRIEVAL
-        const matchIntro = line.match(/====BEGIN\[{"cursor"/);
-        if (matchIntro) {
-            const intro = line.match(/"cursor":"(.*)","exp_months":"(.*)","exp_type":"(.*)"}]END====/);
-            userData.cursor = intro[1];
-            userData.expMonths = intro[2];
-            userData.expType = intro[3];
-        };
-        
-        // QUESTION MOUSE DATA RETRIEVAL
-        const matchData = line.match(/====BEGIN\[{"(evs|mm)":/);
-        const question = {};
-
-        if (matchData) {
-            let mm = line.match(new RegExp(/"mm":\[(.*)],"(ans|evs)/));
-            if (!mm) {
-                mm = line.match(new RegExp(/"mm":\[(.*)]}]END====/));
-                question.mm = [];
-                question.mm.push(mm[1]);
-                question.answer = 'n/a';
-            } else {
-                question.mm = [];
-                question.mm.push(mm[1]);
-                const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
-                question.name = answer[1];
-                question.answer = answer[2];
-            }
-            tempQuestion = question;
+        const logFile = {
+            //logLines: logLines,
+            userId: folder,
+            logContents,
         };
 
-        // QUESTION EVALUATION DATA RETRIEVAL
-        const evalData = line.match(/====BEGIN\[{"diff_(code_\d{2}_\d)":"(.*)"}]END====/);
-        
-        if (evalData) {
-            tempQuestion.difference = evalData[2];
-            userData.questions.push(tempQuestion);
-            tempQuestion = {};
-        };
+        writeFile(`./clearLogs/${folder}.json`, logFile);
 
-        // OVERALL EVALUATION DATA RETRIEVAL
-        const evaluation = line.match(/====BEGIN\[{"eval":"(.*)","comment":"(.*)"}]END====/);
-        
-        if (evaluation) {
-            userData.eval = evaluation[1];
-            userData.comment = evaluation[2];
-        };
-    });
+        return logFile;
+    })
 
-    writeFile("./logData.json", userData);
-
-    return userData;
 }
 
 function writeFile(name, data){
-    fs.writeFile(name, JSON.stringify(data), function(err) {
-        if(err) {
-            return console.log(err);
-        }
-        console.log(`The file ${name} was saved!`);
-    });
+    fs.writeFileSync(name, JSON.stringify(data));
 }

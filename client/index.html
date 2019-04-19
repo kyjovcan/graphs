@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Canvas</title>
+    <title>DP</title>
     <link rel="icon" href="icon.gif">
     <link href="style.css" rel="stylesheet" media="all">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
@@ -55,7 +55,7 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-2 footer-blocks">
                     <form 
                         class="file-upload"
                         ref='uploadForm' 
@@ -66,18 +66,29 @@
                     >
                         <input type="file" name="sampleFile" />
                         <input type='submit' value='Upload!' />
-                  </form> 
+                  </form>
             </div>
 
-            <div class="col-md-4">
+            <div class="col-md-8 footer-blocks">
                 <h2>
-                    logy
+                    Graf rychlosti pohybov mysi v case
                 </h2>
             </div>
 
-            <div class="col-md-4">
-                <button type="button" onclick="compute()" class="btn btn-success btn-md">
+            <div class="col-md-2 footer-blocks">
+                <button
+                    type="button"
+                    onclick="compute()"
+                    class="btn btn-success btn-md buttons"
+                >
                     Generuj graf
+                </button>
+                <button
+                    type="button"
+                    onclick="computeAll()"
+                    class="btn btn-success btn-md buttons"
+                >
+                    Compute All
                 </button>
             </div>
         </div>
