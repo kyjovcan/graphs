@@ -73,22 +73,42 @@
                 <h2>
                     Graf rychlosti pohybov mysi v case
                 </h2>
+                <ul>
+                    <hr />
+                    <li><label>Cursor : </label><p id="info-cursor"></p></li>
+                    <hr />
+                    <li><label>ExpMonths : </label><p id="info-expMonths"></p></li>
+                    <hr />
+                    <li><label>ExpType : </label><p id="info-expType"></p></li>
+                    <hr />
+                    <li><label>Eval : </label><p id="info-eval"></p></li>
+                    <hr />
+                    <li><label>Comment : </label><p id="info-comment"></p></li>
+                    <hr />
+                </ul>
             </div>
 
             <div class="col-md-2 footer-blocks">
                 <button
                     type="button"
-                    onclick="compute()"
-                    class="btn btn-success btn-md buttons"
+                    onclick="computeOneFile()"
+                    class="btn btn-primary btn-md buttons"
                 >
                     Generuj graf
                 </button>
                 <button
                     type="button"
-                    onclick="computeAll()"
+                    onclick="computeAllFiles()"
                     class="btn btn-success btn-md buttons"
                 >
                     Compute All
+                </button>
+                <button
+                    type="button"
+                    onclick="processAllData()"
+                    class="btn btn-warning btn-md buttons"
+                >
+                    Process All Data
                 </button>
             </div>
         </div>

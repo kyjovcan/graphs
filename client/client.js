@@ -9,14 +9,14 @@ socket.on('connect', function () {
 });
 
 function createGraph() {
-    const labels = serverVelocities.data[questionNumber].vels.filter((vel) => {
+    const labels = serverVelocities.data.velocities[questionNumber].vels.filter((vel) => {
         if (!vel) return false;
         else {
             return vel.time;
         }
     });
 
-    const velData = serverVelocities.data[questionNumber].vels.filter((vel) => {
+    const velData = serverVelocities.data.velocities[questionNumber].vels.filter((vel) => {
         if (!vel) return false;
         else {
             return vel.velocity;
@@ -31,7 +31,12 @@ function createGraph() {
         return vel.velocity;
     });
 
-    $('#question-name').text(serverVelocities.data[questionNumber].name);
+    $('#question-name').text(serverVelocities.data.velocities[questionNumber].name);
+    $('#info-cursor').text(serverVelocities.data.cursor);
+    $('#info-expMonths').text(serverVelocities.data.expMonths);
+    $('#info-expType').text(serverVelocities.data.expType);
+    $('#info-eval').text(serverVelocities.data.eval);
+    $('#info-comment').text(serverVelocities.data.comment);
 
     let ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
@@ -62,28 +67,35 @@ function createGraph() {
     });
 }
 
-function compute(){
-    socket.emit('computeData', serverVelocities, function(data){
-        serverVelocities = data; 
+function computeOneFile(){
+    socket.emit('computeOneFile', serverVelocities, function(data){
+        serverVelocities = data;
+        console.log(serverVelocities);
         createGraph(0);
     });
 }
 
-function computeAll(){
-    socket.emit('computeAll', allData, function(data){
+function computeAllFiles(){
+    socket.emit('computeAllFiles', allData, function(data){
+        console.log(data);
+    });
+}
+
+function processAllData(){
+    socket.emit('processAllData', allData, function(data){
         console.log(data);
     });
 }
 
 function changeQuestionNumber(direction) {
-    if (questionNumber >= 0 && questionNumber <= serverVelocities.data.length-1){
+    if (questionNumber >= 0 && questionNumber <= serverVelocities.data.velocities.length-1){
         direction ? questionNumber++ : questionNumber--;
         createGraph();
-        console.log(questionNumber + ' / ' + serverVelocities.data.length);
+        console.log(questionNumber + ' / ' + serverVelocities.data.velocities.length);
     }
     if (questionNumber === 0 ){
         $('#arrow-left').attr('disabled', true);
-    } else if (questionNumber + 1 === serverVelocities.data.length - 1){
+    } else if (questionNumber + 1 === serverVelocities.data.velocities.length - 1){
         $('#arrow-right').attr('disabled', true);
     } else {
         $('#arrow-right').attr('disabled', false);

@@ -5,6 +5,7 @@ const app = express();
 const fileUpload = require('express-fileupload');
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
+const csv = require("csvtojson");
 
 app.get('', function(req, res) {
     res.sendFile(__dirname + '/client/index.html');
@@ -59,15 +60,22 @@ io.on('connection', function (socket) {
     console.log("Connected");
   });
 
-  socket.on('computeData', function (data, fn){
+  socket.on('computeOneFile', function (data, fn){
     vels = mapArray(0);
-      console.log(vels);
-    fn({ data: vels.velocities });
-  });
+    fn({ data: vels });
+  }); // VYSTUP -> jeden uploadnuty log subor spracovany
 
-  socket.on('computeAll', function (data, fn){
-    getAllLogs();
-  });
+  socket.on('computeAllFiles', function (data, fn){
+      getAllLogs();
+  }); // VYSTUP -> vsetky log subory v CLEARLOGS ocistene so vsetkymi datami
+
+  socket.on('processAllData', async function (data, fn){
+      processAllData();
+
+  });   /* VYSTUP -> vsetky data z hash/log suborov ocistene + ID
+                    + znamky + ET data + fixacie z EXPORT CSV
+
+        */
 });
 
 function parseLog(lines){
@@ -286,16 +294,24 @@ function mapArray(lines) {
     };
 }
 
-function getAllLogs(){
+async function getAllLogs(){
     const folders = fs.readdirSync('./allLogs');
+    const studentData = await getStudentData();
 
     const allLogFiles = folders.map((folder, i) => {
-        const logLines = fs.readFileSync('log').toString().split('\n');
         console.log(folder + ' ------ prechadzam');
+
+        const logLines = fs.readFileSync('log').toString().split('\n');
         const logContents = mapArray(logLines);
+
+        const student = studentData.find(line => {
+            return line.studentHash === folder;
+        });
 
         const logFile = {
             //logLines: logLines,
+            grade: student ? student.grade : 'n/a',
+            studentId: student ? student.studentId : 'n/a',
             userId: folder,
             logContents,
         };
@@ -304,7 +320,163 @@ function getAllLogs(){
 
         return logFile;
     })
+}
 
+async function getStudentData() {
+    return await csv().fromFile('./data.csv');
+}
+
+async function getEyetrackerData(){
+    return await csv().fromFile('./export.csv');
+}
+
+async function processAllData() {
+    const studentData = await getStudentData();
+    const eyetrackerData = await getEyetrackerData();
+
+    //writeFile(`./students.json`, studentData);
+    //writeFile(`./ET.json`, eyetrackerData);
+
+    console.log('complete');
+    let tempStudent = {};
+    let qv = 1;
+
+    let processedET = eyetrackerData.map((line) => {
+        const {
+            UserId,
+            CodeId,
+            Variant1,
+            DiffAvg,
+            SubjDiffAvg,
+            SubjDiffCorrectAvg,
+            SubjDiffIncorrectAvg,
+            DurationAvg,
+            DurationCorrectAvg,
+            DurationIncorrectAvg,
+            ResultCorrect,
+            SubjDiff,
+            Duration,
+            DurationSum,
+            Gender,
+            AbilityAvg,
+            PriorExpHighSchool,
+            PriorExpSmallProjects,
+            PriorExpPublicProjects,
+            ExpIndividual,
+            ExpProfessional,
+            ExpOther,
+            ProgLangCount,
+            FixationCodeCount,
+            FixationCodeDuration,
+            FixationOtherDuration,
+            SaccadeDuration,
+            FixationCodeDurationAvg,
+            FixationCodeDurationSD,
+            AoiMainFixDurationRatio,
+            AoiMainFixDurationAvg,
+            AoiFuncFixDurationRatio,
+            AoiFuncFixDurationAvg,
+            MouseClickAccuracyAvg,
+            MouseClickAccuracySD,
+            MouseClickSpeedAvg,
+            MouseClickSpeedSD,
+            ReactionSpeedAvg,
+            ReactionSpeedSD,
+            MemorySearchSpeedSlopeAvg,
+            MemorySearchSpeedSlopeSD,
+            MouseTrailHitTimeAvg,
+            MouseTrailHitTimeSD,
+            MouseTrailTwoSlope,
+            MemorySize,
+            MemoryPeek
+        } = line;
+
+        const userHash = studentData.find(line => {
+            return line.studentHash === UserId;
+        });
+
+        questionName = CodeId > 9 ? `code_${CodeId}_${qv}`: `code_0${CodeId}_${qv}`
+        console.log(' ' + questionName + '    +  ' + UserId);
+
+        if (Variant1 === '1') {
+            console.log('********************** hej tu som *********');
+            tempStudent = {
+                UserId,
+                UserHash: userHash ? userHash : 'n/a',
+                Gender,
+                AbilityAvg,
+                Experience: {
+                    PriorExpHighSchool,
+                    PriorExpSmallProjects,
+                    PriorExpPublicProjects,
+                    ExpIndividual,
+                    ExpProfessional,
+                    ExpOther,
+                    ProgLangCount,
+                },
+                Cognitive: {
+                    MouseClickAccuracyAvg,
+                    MouseClickAccuracySD,
+                    MouseClickSpeedAvg,
+                    MouseClickSpeedSD,
+                    ReactionSpeedAvg,
+                    ReactionSpeedSD,
+                    MemorySearchSpeedSlopeAvg,
+                    MemorySearchSpeedSlopeSD,
+                    MouseTrailHitTimeAvg,
+                    MouseTrailHitTimeSD,
+                    MouseTrailTwoSlope,
+                    MemorySize,
+                    MemoryPeek,
+                },
+
+            }
+        }
+
+        tempStudent.Metrics.push({
+            name: questionName,
+            ResultCorrect,
+            DiffAvg,
+            SubjDiffAvg,
+            SubjDiffCorrectAvg,
+            SubjDiffIncorrectAvg,
+            DurationAvg,
+            DurationCorrectAvg,
+            DurationIncorrectAvg,
+            SubjDiff,
+            Duration,
+            DurationSum,
+            FixationCodeCount,
+            FixationCodeDuration,
+            FixationOtherDuration,
+            SaccadeDuration,
+            FixationCodeDurationAvg,
+            FixationCodeDurationSD,
+            AoiMainFixDurationRatio,
+            AoiMainFixDurationAvg,
+            AoiFuncFixDurationRatio,
+            AoiFuncFixDurationAvg,
+        });
+
+        qv++;
+        let student = {};
+        if (qv === 4){
+            qv = 1;
+            student = tempStudent;
+            tempStudent = {};
+            return student;
+        }
+    });
+
+    processedET =  processedET.filter((data) => {
+        if (!data) return false;
+        else {
+            return data;
+        }
+    });
+
+    writeFile(`./processedET.json`, processedET);
+    console.log('processed ET ');
 }
 
 function writeFile(name, data){

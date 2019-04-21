@@ -1,3 +1,10 @@
 {
-    "ignore": ["logData.json", "logAllVelocities.json", "/clearLogs/*", "/computedLogs/*"]
+    "ignore": [
+        "logData.json",
+        "logAllVelocities.json",
+        "/clearLogs/*",
+        "/computedLogs/*",
+        "ET.json",
+        "students.json"
+    ]
 }
