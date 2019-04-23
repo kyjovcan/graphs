@@ -81,8 +81,14 @@ function computeAllFiles(){
     });
 }
 
-function processAllData(){
-    socket.emit('processAllData', allData, function(data){
+function processETData(){
+    socket.emit('processETData', allData, function(data){
+        console.log(data);
+    });
+}
+
+function processMouseData(){
+    socket.emit('processMouseData', allData, function(data){
         console.log(data);
     });
 }

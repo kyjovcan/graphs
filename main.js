@@ -63,19 +63,20 @@ io.on('connection', function (socket) {
   socket.on('computeOneFile', function (data, fn){
     vels = mapArray(0);
     fn({ data: vels });
-  }); // VYSTUP -> jeden uploadnuty log subor spracovany
+  });   // VYSTUP -> jeden uploadnuty log subor spracovany
 
   socket.on('computeAllFiles', function (data, fn){
       getAllLogs();
-  }); // VYSTUP -> vsetky log subory v CLEARLOGS ocistene so vsetkymi datami
+  });   // VYSTUP -> vsetky log subory v CLEARLOGS ocistene so vsetkymi datami
 
-  socket.on('processAllData', async function (data, fn){
-      processAllData();
+  socket.on('processETData', async function (data, fn){
+      processETData();
+  });   // VYSTUP -> vsetky ET data z hash/log suborov , ID, znamky + fixacie z EXPORT CSV
 
-  });   /* VYSTUP -> vsetky data z hash/log suborov ocistene + ID
-                    + znamky + ET data + fixacie z EXPORT CSV
+  socket.on('processMouseData', async function (data, fn){
+      processMouseData();
+  });   // VYSTUP -> spracovane mouse data
 
-        */
 });
 
 function parseLog(lines){
@@ -298,9 +299,7 @@ async function getAllLogs(){
     const folders = fs.readdirSync('./allLogs');
     const studentData = await getStudentData();
 
-    const allLogFiles = folders.map((folder, i) => {
-        console.log(folder + ' ------ prechadzam');
-
+    const allLogFiles = folders.map((folder) => {
         const logLines = fs.readFileSync('log').toString().split('\n');
         const logContents = mapArray(logLines);
 
@@ -309,7 +308,6 @@ async function getAllLogs(){
         });
 
         const logFile = {
-            //logLines: logLines,
             grade: student ? student.grade : 'n/a',
             studentId: student ? student.studentId : 'n/a',
             userId: folder,
@@ -319,7 +317,11 @@ async function getAllLogs(){
         writeFile(`./clearLogs/${folder}.json`, logFile);
 
         return logFile;
-    })
+    });
+}
+
+function processMouseData() {
+
 }
 
 async function getStudentData() {
@@ -330,22 +332,25 @@ async function getEyetrackerData(){
     return await csv().fromFile('./export.csv');
 }
 
-async function processAllData() {
+async function processETData() {
     const studentData = await getStudentData();
     const eyetrackerData = await getEyetrackerData();
 
     //writeFile(`./students.json`, studentData);
     //writeFile(`./ET.json`, eyetrackerData);
 
-    console.log('complete');
     let tempStudent = {};
-    let qv = 1;
+    tempStudent.Metrics = [];
+    let student = {};
+    let isNew = 0;
 
     let processedET = eyetrackerData.map((line) => {
         const {
             UserId,
             CodeId,
             Variant1,
+            Variant2,
+            Variant3,
             DiffAvg,
             SubjDiffAvg,
             SubjDiffCorrectAvg,
@@ -357,7 +362,6 @@ async function processAllData() {
             SubjDiff,
             Duration,
             DurationSum,
-            Gender,
             AbilityAvg,
             PriorExpHighSchool,
             PriorExpSmallProjects,
@@ -391,48 +395,57 @@ async function processAllData() {
             MemoryPeek
         } = line;
 
-        const userHash = studentData.find(line => {
-            return line.studentHash === UserId;
-        });
-
-        questionName = CodeId > 9 ? `code_${CodeId}_${qv}`: `code_0${CodeId}_${qv}`
-        console.log(' ' + questionName + '    +  ' + UserId);
-
-        if (Variant1 === '1') {
-            console.log('********************** hej tu som *********');
-            tempStudent = {
-                UserId,
-                UserHash: userHash ? userHash : 'n/a',
-                Gender,
-                AbilityAvg,
-                Experience: {
-                    PriorExpHighSchool,
-                    PriorExpSmallProjects,
-                    PriorExpPublicProjects,
-                    ExpIndividual,
-                    ExpProfessional,
-                    ExpOther,
-                    ProgLangCount,
-                },
-                Cognitive: {
-                    MouseClickAccuracyAvg,
-                    MouseClickAccuracySD,
-                    MouseClickSpeedAvg,
-                    MouseClickSpeedSD,
-                    ReactionSpeedAvg,
-                    ReactionSpeedSD,
-                    MemorySearchSpeedSlopeAvg,
-                    MemorySearchSpeedSlopeSD,
-                    MouseTrailHitTimeAvg,
-                    MouseTrailHitTimeSD,
-                    MouseTrailTwoSlope,
-                    MemorySize,
-                    MemoryPeek,
-                },
-
-            }
+        if (tempStudent.UserId && tempStudent.UserId !== UserId){
+            student = tempStudent;
+            isNew = 1;
+            tempStudent = {};
+            tempStudent.Metrics = [];
         }
 
+        const userHash = studentData.find(line => {
+            if (line.studentId === UserId) {
+                return line;
+            }
+        });
+
+        if (Variant1 === '1'){
+            questionName = CodeId > 9 ? `code_${CodeId}_1`: `code_0${CodeId}_1`;
+        }
+        else if (Variant2 === '1'){
+            questionName = CodeId > 9 ? `code_${CodeId}_2`: `code_0${CodeId}_2`;
+        }
+        else if(Variant3 === '1'){
+            questionName = CodeId > 9 ? `code_${CodeId}_3`: `code_0${CodeId}_3`;
+        }
+
+        tempStudent.UserId = UserId;
+        tempStudent.UserHash = userHash ? userHash.studentHash : 'n/a';
+        tempStudent.Grade = userHash ? userHash.grade : 'n/a';
+        tempStudent.AbilityAvg = AbilityAvg;
+        tempStudent.Experience  = {
+                PriorExpHighSchool,
+                PriorExpSmallProjects,
+                PriorExpPublicProjects,
+                ExpIndividual,
+                ExpProfessional,
+                ExpOther,
+                ProgLangCount,
+            };
+        tempStudent.Cognitive = {
+                MouseClickAccuracyAvg,
+                MouseClickAccuracySD,
+                MouseClickSpeedAvg,
+                MouseClickSpeedSD,
+                ReactionSpeedAvg,
+                ReactionSpeedSD,
+                MemorySearchSpeedSlopeAvg,
+                MemorySearchSpeedSlopeSD,
+                MouseTrailHitTimeAvg,
+                MouseTrailHitTimeSD,
+                MouseTrailTwoSlope,
+                MemorySize,
+                MemoryPeek,
+            };
         tempStudent.Metrics.push({
             name: questionName,
             ResultCorrect,
@@ -458,12 +471,8 @@ async function processAllData() {
             AoiFuncFixDurationAvg,
         });
 
-        qv++;
-        let student = {};
-        if (qv === 4){
-            qv = 1;
-            student = tempStudent;
-            tempStudent = {};
+        if (isNew){
+            isNew = 0;
             return student;
         }
     });
