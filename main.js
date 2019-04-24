@@ -41,7 +41,7 @@ app.post('/upload', function(req, res) {
 
     let sampleFile = req.files.sampleFile;
 
-    sampleFile.mv('./uploadedLogs/log.txt', function(err) {
+    sampleFile.mv('./logs/uploadedLogs/log.txt', function(err) {
         if (err)
           return res.status(500).send(err);
     
@@ -83,7 +83,7 @@ function parseLog(lines){
     let myLines = [];
 
     if (!lines) {
-        myLines = fs.readFileSync('./uploadedLogs/log.txt').toString().split('\n');
+        myLines = fs.readFileSync('./logs/uploadedLogs/log.txt').toString().split('\n');
     } else {
         myLines = lines;
     }
@@ -99,12 +99,20 @@ function parseLog(lines){
 
     myLines.forEach((line, index) => {
         // INTRODUCTION INFORMATION RETRIEVAL
-        const matchIntro = line.match(/====BEGIN\[{"cursor"/);
+        const matchIntro = line.match(/====BEGIN\[{"(cursor|exp_months|exp_type)"/);
         if (matchIntro) {
-            const intro = line.match(/"cursor":"(.*)","exp_months":"(.*)","exp_type":"(.*)"}]END====/);
-            userData.cursor = intro[1];
-            userData.expMonths = intro[2];
-            userData.expType = intro[3];
+            const cursor = line.match(/"cursor":"(.{1,10})(","exp_type|","exp_months|"}]END)/);
+            if (cursor) {
+                userData.cursor = cursor[1];
+            }
+            const expMonths = line.match(/"exp_months":"(.{1,10})(","cursor|","exp_|"}]END)/);
+            if (expMonths) {
+                userData.expMonths = expMonths[1];
+            }
+            const expType = line.match(/"exp_type":"(.{1,15})(","exp_|","cursor|"}]END====)/);
+            if (expType) {
+                userData.expType = expType[1];
+            }
         }
 
         // QUESTION MOUSE DATA RETRIEVAL
@@ -169,6 +177,7 @@ function parseLog(lines){
         const evalData = line.match(/====BEGIN\[{"diff_(code_\d{2}_\d)":"(.*)"}]END====/);
 
         if (evalData) {
+            tempQuestion.name = evalData[1];
             tempQuestion.difficulty = evalData[2];
             userData.questions.push(tempQuestion);
             tempQuestion = {};
@@ -182,8 +191,8 @@ function parseLog(lines){
             userData.comment = evaluation[2];
         }
     });
-    writeFile("./logData.json", userData);
-
+    writeFile("./logs/logData.json", userData);
+    console.log('Parse data complete');
     return userData;
 }
 
@@ -192,8 +201,7 @@ function mapArray(lines) {
 
     const allVelocities = data.questions.map((question) => {
         // IF THERE ARE NO MOUSE MOVEMENTS RETURN EMPTY VELOCITIES
-        if (question.mm.length === 0) {
-            console.log('QUESTION MM IS EMPTY');
+        if (!question.mm || question.mm.length === 0) {
             return {
                 vels: [],
                 name: question.name ? question.name : 'n/a',
@@ -278,14 +286,19 @@ function mapArray(lines) {
             answer: question.answer,
             difficulty: question.difficulty,
         };
+
+        const metrics = evalaute(quest);
+
+        quest.metrics = metrics;
+
         return quest;
     });
 
-    writeFile("./logAllVelocities.json", allVelocities);
+    writeFile("./logs/logAllVelocities.json", allVelocities);
 
     const {cursor, expMonths, expType, eval, comment} = data;
 
-    return {
+    return {                // tu pridame metriky
         velocities: allVelocities,
         cursor,
         expMonths,
@@ -295,12 +308,20 @@ function mapArray(lines) {
     };
 }
 
+const AOIs = JSON.parse(fs.readFileSync('AOIs.json').toString());
+
+function evalaute(question) {
+    // spravnost otazky
+
+}
+
 async function getAllLogs(){
-    const folders = fs.readdirSync('./allLogs');
+    const folders = fs.readdirSync('./logs/logsSecondRun');
     const studentData = await getStudentData();
 
-    const allLogFiles = folders.map((folder) => {
-        const logLines = fs.readFileSync('log').toString().split('\n');
+    const allLogFiles = folders.map((folder, index) => {
+        const logLines = fs.readFileSync(`./logs/logsSecondRun/${folder}/log`).toString().split('\n');
+        console.log(index + ' folder       ' + folder);
         const logContents = mapArray(logLines);
 
         const student = studentData.find(line => {
@@ -314,30 +335,30 @@ async function getAllLogs(){
             logContents,
         };
 
-        writeFile(`./clearLogs/${folder}.json`, logFile);
+        writeFile(`./logs/clearLogs/${folder}.json`, logFile);
 
         return logFile;
     });
 }
 
 function processMouseData() {
-
+    evalaute(0);
 }
 
 async function getStudentData() {
-    return await csv().fromFile('./data.csv');
+    return await csv().fromFile('./logs/data.csv');
 }
 
 async function getEyetrackerData(){
-    return await csv().fromFile('./export.csv');
+    return await csv().fromFile('./logs/export.csv');
 }
 
 async function processETData() {
     const studentData = await getStudentData();
     const eyetrackerData = await getEyetrackerData();
 
-    //writeFile(`./students.json`, studentData);
-    //writeFile(`./ET.json`, eyetrackerData);
+    writeFile(`./logs/students.json`, studentData);
+    writeFile(`./logs/ET.json`, eyetrackerData);
 
     let tempStudent = {};
     tempStudent.Metrics = [];
@@ -346,53 +367,20 @@ async function processETData() {
 
     let processedET = eyetrackerData.map((line) => {
         const {
-            UserId,
-            CodeId,
-            Variant1,
-            Variant2,
-            Variant3,
-            DiffAvg,
-            SubjDiffAvg,
-            SubjDiffCorrectAvg,
-            SubjDiffIncorrectAvg,
-            DurationAvg,
-            DurationCorrectAvg,
-            DurationIncorrectAvg,
-            ResultCorrect,
-            SubjDiff,
-            Duration,
-            DurationSum,
-            AbilityAvg,
-            PriorExpHighSchool,
-            PriorExpSmallProjects,
-            PriorExpPublicProjects,
-            ExpIndividual,
-            ExpProfessional,
-            ExpOther,
-            ProgLangCount,
-            FixationCodeCount,
-            FixationCodeDuration,
-            FixationOtherDuration,
-            SaccadeDuration,
-            FixationCodeDurationAvg,
-            FixationCodeDurationSD,
-            AoiMainFixDurationRatio,
-            AoiMainFixDurationAvg,
-            AoiFuncFixDurationRatio,
-            AoiFuncFixDurationAvg,
-            MouseClickAccuracyAvg,
-            MouseClickAccuracySD,
-            MouseClickSpeedAvg,
-            MouseClickSpeedSD,
-            ReactionSpeedAvg,
-            ReactionSpeedSD,
-            MemorySearchSpeedSlopeAvg,
-            MemorySearchSpeedSlopeSD,
-            MouseTrailHitTimeAvg,
-            MouseTrailHitTimeSD,
-            MouseTrailTwoSlope,
-            MemorySize,
-            MemoryPeek
+            UserId, CodeId, Variant1, Variant2, Variant3, ResultCorrect,
+            DiffAvg, SubjDiffAvg, SubjDiffCorrectAvg, SubjDiffIncorrectAvg,
+            DurationAvg, DurationCorrectAvg, DurationIncorrectAvg, SubjDiff,
+            Duration, DurationSum, AbilityAvg,
+            PriorExpHighSchool, PriorExpSmallProjects, PriorExpPublicProjects,
+            ExpIndividual, ExpProfessional, ExpOther, ProgLangCount,
+            FixationCodeCount, FixationCodeDuration, FixationOtherDuration,
+            SaccadeDuration, FixationCodeDurationAvg, FixationCodeDurationSD,
+            AoiMainFixDurationRatio, AoiMainFixDurationAvg, AoiFuncFixDurationRatio, AoiFuncFixDurationAvg,
+            MouseClickAccuracyAvg, MouseClickAccuracySD, MouseClickSpeedAvg, MouseClickSpeedSD,
+            ReactionSpeedAvg, ReactionSpeedSD,
+            MemorySearchSpeedSlopeAvg, MemorySearchSpeedSlopeSD,
+            MouseTrailHitTimeAvg, MouseTrailHitTimeSD, MouseTrailTwoSlope,
+            MemorySize, MemoryPeek
         } = line;
 
         if (tempStudent.UserId && tempStudent.UserId !== UserId){
@@ -484,7 +472,7 @@ async function processETData() {
         }
     });
 
-    writeFile(`./processedET.json`, processedET);
+    writeFile(`./logs/processedET.json`, processedET);
     console.log('processed ET ');
 }
 

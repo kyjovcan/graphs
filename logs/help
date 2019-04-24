@@ -1,0 +1,53 @@
+
+    tempStudent.UserId = UserId;
+    tempStudent.UserHash = userHash ? userHash.studentHash : 'n/a';
+    tempStudent.Grade = userHash ? userHash.grade : 'n/a';
+    tempStudent.AbilityAvg = AbilityAvg;
+    tempStudent.Experience  = {
+            PriorExpHighSchool,
+            PriorExpSmallProjects,
+            PriorExpPublicProjects,
+            ExpIndividual,
+            ExpProfessional,
+            ExpOther,
+            ProgLangCount,
+        };
+    tempStudent.Cognitive = {
+            MouseClickAccuracyAvg,
+            MouseClickAccuracySD,
+            MouseClickSpeedAvg,
+            MouseClickSpeedSD,
+            ReactionSpeedAvg,
+            ReactionSpeedSD,
+            MemorySearchSpeedSlopeAvg,
+            MemorySearchSpeedSlopeSD,
+            MouseTrailHitTimeAvg,
+            MouseTrailHitTimeSD,
+            MouseTrailTwoSlope,
+            MemorySize,
+            MemoryPeek,
+        };
+    tempStudent.Metrics.push({
+        name: questionName,
+        ResultCorrect,
+        DiffAvg,
+        SubjDiffAvg,
+        SubjDiffCorrectAvg,
+        SubjDiffIncorrectAvg,
+        DurationAvg,
+        DurationCorrectAvg,
+        DurationIncorrectAvg,
+        SubjDiff,
+        Duration,
+        DurationSum,
+        FixationCodeCount,
+        FixationCodeDuration,
+        FixationOtherDuration,
+        SaccadeDuration,
+        FixationCodeDurationAvg,
+        FixationCodeDurationSD,
+        AoiMainFixDurationRatio,
+        AoiMainFixDurationAvg,
+        AoiFuncFixDurationRatio,
+        AoiFuncFixDurationAvg,
+    });

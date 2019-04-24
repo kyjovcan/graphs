@@ -3,10 +3,42 @@
   <component name="ChangeListManager">
     <list default="true" id="5a47ce3e-3588-4abd-b0c4-a1e0a939fcbd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ET.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/logs/data.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/export.csv" beforeDir="false" afterPath="$PROJECT_DIR$/logs/export.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/llll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/log2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logAllVelocities.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logData.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/191bfc2f-ec46-4d64-8f17-589ba85267cb/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/191bfc2f-ec46-4d64-8f17-589ba85267cb/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/2ddc610a-35ab-4044-99c9-f8e3b857e72f/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/2ddc610a-35ab-4044-99c9-f8e3b857e72f/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/335a1750-a433-44d9-b27d-b8e5e377c6b2/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/335a1750-a433-44d9-b27d-b8e5e377c6b2/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/36c5b49a-fdf0-4d3d-bec2-08627c763236/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/36c5b49a-fdf0-4d3d-bec2-08627c763236/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/5affe2e6-f6f1-4f85-a763-32cb53782229/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/5affe2e6-f6f1-4f85-a763-32cb53782229/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/670cd04b-f9fa-4320-a930-1dfaa970415b/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/670cd04b-f9fa-4320-a930-1dfaa970415b/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/7b737c91-b06b-4b9e-b939-3fff84fd2d63/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/7b737c91-b06b-4b9e-b939-3fff84fd2d63/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/bb90799b-a65e-484d-9e9c-c8cf27a7cfb8/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/bb90799b-a65e-484d-9e9c-c8cf27a7cfb8/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/data2.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/e92fdae6-39b9-4011-966e-a1a5b2685da4/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/e92fdae6-39b9-4011-966e-a1a5b2685da4/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/f0694f36-7c31-4bb3-8b99-1546b239796e/log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/f0694f36-7c31-4bb3-8b99-1546b239796e/status" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/logsSecondRun/mouse.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/processedET.json" beforeDir="false" afterPath="$PROJECT_DIR$/processedET.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodemon.json" beforeDir="false" afterPath="$PROJECT_DIR$/nodemon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/processedET.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/students.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/uploadedLogs/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/logs/uploadedLogs/log.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,39 +51,30 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5526075">
+    <splitter split-orientation="horizontal" split-proportion="0.55043685">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="304" lean-forward="true" selection-start-line="304" selection-end-line="304" />
+                <state relative-caret-position="329">
+                  <caret line="475" column="14" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="14" />
                   <folding>
-                    <element signature="e#288#343#0" />
-                    <element signature="e#386#440#0" />
-                    <element signature="e#482#535#0" />
-                    <element signature="e#578#632#0" />
-                    <element signature="e#685#749#0" />
-                    <element signature="e#798#878#0" />
-                    <element signature="e#1032#1425#0" />
-                    <element signature="e#1646#1681#0" />
-                    <element signature="n#!!block;n#parseLog#0" />
-                    <element signature="n#!!block;n#mapArray#0" />
-                    <element signature="n#!!block;n#getUserData#0" />
+                    <element signature="e#6234#6506#0" />
+                    <element signature="e#6304#6496#0" />
+                    <element signature="e#6750#7024#0" />
+                    <element signature="e#9992#10129#0" />
+                    <element signature="n#!!block;n#getAllLogs#0" />
+                    <element signature="n#!!block;n#getStudentData#0" />
                     <element signature="n#!!block;n#getEyetrackerData#0" />
-                    <element signature="n#!!block;n#processAllData#0" />
-                    <element signature="e#11102#15386#0" />
-                    <element signature="e#11128#11152#0" />
-                    <element signature="e#12722#12781#0" />
-                    <element signature="e#12808#12832#0" />
-                    <element signature="e#12851#12875#0" />
-                    <element signature="e#12889#12913#0" />
-                    <element signature="e#13648#13899#0" />
-                    <element signature="e#13932#14414#0" />
-                    <element signature="e#13795#14483#0" />
-                    <element signature="e#14832#14925#0" />
-                    <element signature="n#!!block;n#writeFile#0" />
+                    <element signature="e#12872#13009#0" />
+                    <element signature="e#13061#13160#0" />
+                    <element signature="e#13193#13285#0" />
+                    <element signature="e#13320#13412#0" />
+                    <element signature="e#13446#13538#0" />
+                    <element signature="e#13791#14042#0" />
+                    <element signature="e#14076#14558#0" />
+                    <element signature="e#14593#15281#0" />
                   </folding>
                 </state>
               </provider>
@@ -61,13 +84,12 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/client.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="400">
-                  <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
+                <state relative-caret-position="849">
+                  <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
                   <folding>
-                    <element signature="e#882#1486#0" />
                     <element signature="n#!!block;n#changeQuestionNumber#0" />
                   </folding>
                 </state>
@@ -77,8 +99,8 @@
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="430">
-                  <caret line="114" column="45" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="45" />
+                <state relative-caret-position="294">
+                  <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
                   <folding>
                     <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
                     <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
@@ -89,15 +111,39 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="help" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/help">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="68">
+                  <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AOIs.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/AOIs.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="log" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="207">
+                  <caret line="359" column="27" selection-start-line="356" selection-start-column="20" selection-end-line="359" selection-end-column="27" />
+                </state>
+              </provider>
+            </entry>
+          </file>
         </leaf>
       </split-second>
     </splitter>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>400</find>
-      <find>tempDist</find>
-      <find>log.txt</find>
       <find>mapArray</find>
       <find>parseLog</find>
       <find>fs</find>
@@ -115,6 +161,19 @@
       <find>serverVelocities.data</find>
       <find>data</find>
       <find>:</find>
+      <find>./</find>
+      <find>log</find>
+      <find>\n</find>
+      <find>P002</find>
+      <find>UserId</find>
+      <find>name</find>
+      <find>empty</find>
+      <find>readFileSync</find>
+      <find>name&quot;:</find>
+      <find>computed</find>
+      <find>n/a</find>
+      <find>END</find>
+      <find>console.lo</find>
     </findStrings>
     <replaceStrings>
       <replace>serverVelocities.data.velocities</replace>
@@ -133,10 +192,13 @@
         <option value="$PROJECT_DIR$/logData.json" />
         <option value="$PROJECT_DIR$/allLogs/0a1036d7-f89e-49e7-9707-dff066d32a55/log" />
         <option value="$PROJECT_DIR$/uploadedLogs/log.txt" />
-        <option value="$PROJECT_DIR$/nodemon.json" />
         <option value="$PROJECT_DIR$/llll" />
-        <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/client/client.js" />
+        <option value="$PROJECT_DIR$/nodemon.json" />
+        <option value="$PROJECT_DIR$/logs/allLogs/11152186-6b69-4219-bc95-2f996e608a71/log" />
+        <option value="$PROJECT_DIR$/client/index.html" />
+        <option value="$PROJECT_DIR$/logs/help" />
+        <option value="$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log" />
         <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
@@ -187,11 +249,6 @@
               <item name="web_player" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_player" type="462c0819:PsiDirectoryNode" />
               <item name="logs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_player" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_player" type="462c0819:PsiDirectoryNode" />
-              <item name="uploadedLogs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -245,30 +302,41 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180507000" />
+    <option name="totallyTimeSpent" value="192009000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-485" width="1696" height="1036" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11130952" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13869047" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005952" side_tool="true" visible="true" weight="0.36916396" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5011905" side_tool="true" weight="0.32464713" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49940476" visible="true" weight="0.36916396" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49880952" visible="true" weight="0.32464713" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11130952" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5005952" side_tool="true" visible="true" weight="0.36916396" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49940476" visible="true" weight="0.36916396" />
+      <window_info id="Favorites" order="3" side_tool="true" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,311 +347,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="11" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5610">
-          <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodemon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
-          <folding>
-            <element signature="e#288#343#0" />
-            <element signature="e#386#440#0" />
-            <element signature="e#482#535#0" />
-            <element signature="e#578#632#0" />
-            <element signature="e#685#749#0" />
-            <element signature="e#798#878#0" />
-            <element signature="e#1032#1425#0" />
-            <element signature="e#1646#1681#0" />
-            <element signature="n#!!block;n#parseLog#0" />
-            <element signature="n#!!block;n#mapArray#0" />
-            <element signature="n#!!block;n#getUserData#0" />
-            <element signature="n#!!block;n#getEyetrackerData#0" />
-            <element signature="n#!!block;n#processAllData#0" />
-            <element signature="e#11102#15386#0" />
-            <element signature="e#11128#11152#0" />
-            <element signature="e#12722#12781#0" />
-            <element signature="e#12808#12832#0" />
-            <element signature="e#12851#12875#0" />
-            <element signature="e#12889#12913#0" />
-            <element signature="e#13648#13899#0" />
-            <element signature="e#13932#14414#0" />
-            <element signature="e#13795#14483#0" />
-            <element signature="e#14832#14925#0" />
-            <element signature="n#!!block;n#writeFile#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logAllVelocities.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5610">
-          <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodemon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AOIs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1904">
-          <caret line="112" column="43" selection-start-line="112" selection-start-column="43" selection-end-line="112" selection-end-column="43" />
-          <folding>
-            <element signature="e#288#343#0" />
-            <element signature="e#386#440#0" />
-            <element signature="e#482#535#0" />
-            <element signature="e#578#632#0" />
-            <element signature="e#685#749#0" />
-            <element signature="e#798#878#0" />
-            <element signature="e#1032#1425#0" />
-            <element signature="e#1646#1681#0" />
-            <element signature="n#!!block;n#parseLog#0" />
-            <element signature="n#!!block;n#mapArray#0" />
-            <element signature="n#!!block;n#getUserData#0" />
-            <element signature="n#!!block;n#getEyetrackerData#0" />
-            <element signature="n#!!block;n#processAllData#0" />
-            <element signature="e#11102#15386#0" />
-            <element signature="e#11128#11152#0" />
-            <element signature="e#12722#12781#0" />
-            <element signature="e#12808#12832#0" />
-            <element signature="e#12851#12875#0" />
-            <element signature="e#12889#12913#0" />
-            <element signature="e#13648#13899#0" />
-            <element signature="e#13932#14414#0" />
-            <element signature="e#13795#14483#0" />
-            <element signature="e#14832#14925#0" />
-            <element signature="n#!!block;n#writeFile#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logAllVelocities.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="25" selection-start-column="25" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="986">
-          <caret line="58" column="26" selection-start-line="58" selection-start-column="26" selection-end-line="58" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5610">
-          <caret line="149" column="19" lean-forward="true" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodemon.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="55" selection-start-line="1" selection-start-column="55" selection-end-line="1" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AOIs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6800">
-          <caret line="400" column="36" lean-forward="true" selection-start-line="400" selection-start-column="36" selection-end-line="400" selection-end-column="36" />
-          <folding>
-            <element signature="e#288#343#0" />
-            <element signature="e#386#440#0" />
-            <element signature="e#482#535#0" />
-            <element signature="e#578#632#0" />
-            <element signature="e#685#749#0" />
-            <element signature="e#798#878#0" />
-            <element signature="e#1032#1425#0" />
-            <element signature="e#1646#1681#0" />
-            <element signature="n#!!block;n#parseLog#0" />
-            <element signature="n#!!block;n#mapArray#0" />
-            <element signature="n#!!block;n#getUserData#0" />
-            <element signature="n#!!block;n#getEyetrackerData#0" />
-            <element signature="n#!!block;n#processAllData#0" />
-            <element signature="e#11102#15386#0" />
-            <element signature="e#11128#11152#0" />
-            <element signature="e#12722#12781#0" />
-            <element signature="e#12808#12832#0" />
-            <element signature="e#12851#12875#0" />
-            <element signature="e#12889#12913#0" />
-            <element signature="e#13648#13899#0" />
-            <element signature="e#13932#14414#0" />
-            <element signature="e#13795#14483#0" />
-            <element signature="e#14832#14925#0" />
-            <element signature="n#!!block;n#writeFile#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34612">
-          <caret line="149" column="19" selection-start-line="149" selection-start-column="19" selection-end-line="149" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/allLogs/00fc9ee2-c98b-4f12-a93b-1448553c140e/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="121" column="3264" selection-start-line="121" selection-start-column="3264" selection-end-line="121" selection-end-column="3264" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/log.txt" />
-    <entry file="file://$PROJECT_DIR$/computedLogs/f44eaa43-a647-4d63-a8da-6de0f094095f.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/d5970169-a2a3-4e05-b103-feff3a18255a.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-234816" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/00fc9ee2-c98b-4f12-a93b-1448553c140e.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="36" selection-start-column="18" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/1dfacb55-5fcf-4ce1-a676-0c2bd028214b.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/allLogs/0f9dc727-4141-42a5-a20b-80f8682eefa0/log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logs/allLogs/1ebfe045-e0a8-42a9-8572-68373239d26d/log">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/uploadedLogs/log.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="82" column="20" selection-start-line="82" selection-start-column="20" selection-end-line="82" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AOIs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/0f9dc727-4141-42a5-a20b-80f8682eefa0.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-115187" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/2bc35854-4539-48b4-a0d2-95f57552430b.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/2dbbbdde-9e1f-4621-b349-8933df19e161.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret column="891" selection-start-column="891" selection-end-column="891" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/1ebfe045-e0a8-42a9-8572-68373239d26d.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret column="66" selection-start-column="56" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/computedLogs/1bd335c0-05f3-403c-b0db-53805efe8c86.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logData.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret column="796587" selection-start-column="796587" selection-end-column="796587" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/allLogs/0a1036d7-f89e-49e7-9707-dff066d32a55/log">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
@@ -591,10 +358,164 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clearLogs/data2.csv.json" />
+    <entry file="file://$PROJECT_DIR$/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json" />
+    <entry file="file://$PROJECT_DIR$/clearLogs/0a1036d7-f89e-49e7-9707-dff066d32a55.json" />
+    <entry file="file://$PROJECT_DIR$/llll">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ET.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logAllVelocities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret column="463753" lean-forward="true" selection-start-column="463753" selection-end-column="463753" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/processedET.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="2" selection-start-column="2" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodemon.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="1" lean-forward="true" selection-start-column="1" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/00fc9ee2-c98b-4f12-a93b-1448553c140e.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/1c5d683b-d37c-4618-98d8-b2492544af96.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/allLogs/11152186-6b69-4219-bc95-2f996e608a71/log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="483" lean-forward="true" selection-start-line="483" selection-end-line="483" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/1ebfe045-e0a8-42a9-8572-68373239d26d.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret column="445917" lean-forward="true" selection-start-column="445917" selection-end-column="445917" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/4f8fa9f8-9aa9-45ef-ab8c-41c2b13acafb.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret column="269929" lean-forward="true" selection-start-column="269929" selection-end-column="269929" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/70cc5f6d-1835-4580-ae45-ac73d6b5a0bc.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64451">
+          <caret column="1263" lean-forward="true" selection-start-column="1263" selection-end-column="1263" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/2581452b-cdfa-4f96-9c66-5e81d4dace62.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret column="378538" lean-forward="true" selection-start-column="378538" selection-end-column="378538" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/processedET.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret column="25508" lean-forward="true" selection-start-column="25508" selection-end-column="25508" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/students.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="54" lean-forward="true" selection-start-column="54" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/ET.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret column="1435" selection-start-column="1435" selection-end-column="1435" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/students.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/allLogs/41b70466-6a79-4fd1-9d54-0816e0319439/log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="84" column="8" selection-start-line="84" selection-start-column="8" selection-end-line="84" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="849">
+          <caret line="91" column="25" selection-start-line="91" selection-start-column="25" selection-end-line="91" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!block;n#changeQuestionNumber#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AOIs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logAllVelocities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret column="104341" selection-start-column="104341" selection-end-column="104341" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="73" column="59" selection-start-line="73" selection-start-column="59" selection-end-line="73" selection-end-column="59" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/help">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/outputs.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="17">
+          <caret line="1" column="5" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding>
             <element signature="e#61#770#0" />
             <element signature="e#955#1666#0" />
@@ -647,122 +568,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clearLogs/data2.csv.json">
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/2ddc610a-35ab-4044-99c9-f8e3b857e72f/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/1e1fc106-fcd8-4451-9e4d-be363ecc8929/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/0c567d52-30d4-4d83-80f6-410bfea30ff9/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/4fdd885c-eecd-4426-a715-b0ace0ed05ca/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/5affe2e6-f6f1-4f85-a763-32cb53782229/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/335a1750-a433-44d9-b27d-b8e5e377c6b2/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/191bfc2f-ec46-4d64-8f17-589ba85267cb/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/36c5b49a-fdf0-4d3d-bec2-08627c763236/log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret column="458" selection-start-column="458" selection-end-column="458" />
+        <state relative-caret-position="189">
+          <caret line="487" column="20" lean-forward="true" selection-start-line="487" selection-start-column="20" selection-end-line="487" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json">
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/5d66bd28-77d6-48f4-99c0-71608774439c/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/670cd04b-f9fa-4320-a930-1dfaa970415b/log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret column="1079" selection-start-column="1079" selection-end-column="1079" />
+        <state relative-caret-position="-16352">
+          <caret line="2" column="20" lean-forward="true" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clearLogs/0a1036d7-f89e-49e7-9707-dff066d32a55.json">
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/0bdc4309-be6b-496b-9fdc-09cccd748e58/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/7b737c91-b06b-4b9e-b939-3fff84fd2d63/log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-92672">
-          <caret column="114" selection-start-column="114" selection-end-column="114" />
+        <state relative-caret-position="-102355" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/bb90799b-a65e-484d-9e9c-c8cf27a7cfb8/log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="20" lean-forward="true" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodemon.json">
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/1d893215-e859-42d9-9b57-d743ac97542b/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/e92fdae6-39b9-4011-966e-a1a5b2685da4/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/e92fdae6-39b9-4011-966e-a1a5b2685da4/status">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/01cb4ca8-e35e-45f2-9887-defa097d8be4/log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/f0694f36-7c31-4bb3-8b99-1546b239796e/log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+        <state relative-caret-position="-186947" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/data.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/export.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/0f9dc727-4141-42a5-a20b-80f8682eefa0.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret column="181204" selection-start-column="181201" selection-end-column="181204" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/llll">
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/0a1036d7-f89e-49e7-9707-dff066d32a55.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+        <state relative-caret-position="182">
+          <caret column="242223" selection-start-column="242220" selection-end-column="242223" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ET.json">
+    <entry file="file://$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="1" selection-start-column="1" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/logAllVelocities.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="671">
-          <caret column="463753" lean-forward="true" selection-start-column="463753" selection-end-column="463753" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/processedET.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/students.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="80" selection-start-column="75" selection-end-column="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="114" column="45" selection-start-line="114" selection-start-column="29" selection-end-line="114" selection-end-column="45" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="94" lean-forward="true" selection-start-line="94" selection-end-line="94" />
-          <folding>
-            <element signature="e#882#1486#0" />
-            <element signature="n#!!block;n#changeQuestionNumber#0" />
-          </folding>
+        <state relative-caret-position="207">
+          <caret line="359" column="27" selection-start-line="356" selection-start-column="20" selection-end-line="359" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="304" lean-forward="true" selection-start-line="304" selection-end-line="304" />
+        <state relative-caret-position="329">
+          <caret line="475" column="14" selection-start-line="475" selection-start-column="4" selection-end-line="475" selection-end-column="14" />
           <folding>
-            <element signature="e#288#343#0" />
-            <element signature="e#386#440#0" />
-            <element signature="e#482#535#0" />
-            <element signature="e#578#632#0" />
-            <element signature="e#685#749#0" />
-            <element signature="e#798#878#0" />
-            <element signature="e#1032#1425#0" />
-            <element signature="e#1646#1681#0" />
-            <element signature="n#!!block;n#parseLog#0" />
-            <element signature="n#!!block;n#mapArray#0" />
-            <element signature="n#!!block;n#getUserData#0" />
+            <element signature="e#6234#6506#0" />
+            <element signature="e#6304#6496#0" />
+            <element signature="e#6750#7024#0" />
+            <element signature="e#9992#10129#0" />
+            <element signature="n#!!block;n#getAllLogs#0" />
+            <element signature="n#!!block;n#getStudentData#0" />
             <element signature="n#!!block;n#getEyetrackerData#0" />
-            <element signature="n#!!block;n#processAllData#0" />
-            <element signature="e#11102#15386#0" />
-            <element signature="e#11128#11152#0" />
-            <element signature="e#12722#12781#0" />
-            <element signature="e#12808#12832#0" />
-            <element signature="e#12851#12875#0" />
-            <element signature="e#12889#12913#0" />
-            <element signature="e#13648#13899#0" />
-            <element signature="e#13932#14414#0" />
-            <element signature="e#13795#14483#0" />
-            <element signature="e#14832#14925#0" />
-            <element signature="n#!!block;n#writeFile#0" />
+            <element signature="e#12872#13009#0" />
+            <element signature="e#13061#13160#0" />
+            <element signature="e#13193#13285#0" />
+            <element signature="e#13320#13412#0" />
+            <element signature="e#13446#13538#0" />
+            <element signature="e#13791#14042#0" />
+            <element signature="e#14076#14558#0" />
+            <element signature="e#14593#15281#0" />
           </folding>
         </state>
       </provider>

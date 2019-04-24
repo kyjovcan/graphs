@@ -1,5 +1,6 @@
 {
     "ignore": [
+        "./logs",
         "logData.json",
         "logAllVelocities.json",
         "/clearLogs/*",
