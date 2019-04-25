@@ -2,6 +2,32 @@
   {
     "name": "code_01",
     "mainFn": {
+      "from": 11,
+      "to": 15
+    },
+    "mainChanging": [
+      13
+    ],
+    "secFn": {
+      "from": 3,
+      "to": 8
+    },
+    "primary": [
+      5,
+      7
+    ],
+    "rtrn": [
+      9
+    ],
+    "correct" : [
+      "110",
+      "iné",
+      "120"
+    ]
+  },
+  {
+    "name": "code_02",
+    "mainFn": {
       "from": 13,
       "to": 17
     },
@@ -27,7 +53,7 @@
     ]
   },
   {
-    "name": "code_02",
+    "name": "code_03",
     "mainFn": {
       "from": 19,
       "to": 23
@@ -55,7 +81,7 @@
     ]
   },
   {
-    "name": "code_03",
+    "name": "code_04",
     "mainFn": {
       "from": 23,
       "to": 27
@@ -84,7 +110,7 @@
     ]
   },
   {
-    "name": "code_04",
+    "name": "code_05",
     "mainFn": {
       "from": 18,
       "to": 22
@@ -111,7 +137,7 @@
     ]
   },
   {
-    "name": "code_05",
+    "name": "code_06",
     "mainFn": {
       "from": 16,
       "to": 20
@@ -137,7 +163,7 @@
     ]
   },
   {
-    "name": "code_06",
+    "name": "code_07",
     "mainFn": {
       "from": 16,
       "to": 20
@@ -163,7 +189,7 @@
     ]
   },
   {
-    "name": "code_07",
+    "name": "code_08",
     "mainFn": {
       "from": 13,
       "to": 19
@@ -191,7 +217,7 @@
     ]
   },
   {
-    "name": "code_08",
+    "name": "code_09",
     "mainFn": {
       "from": 16,
       "to": 22
@@ -218,7 +244,7 @@
     ]
   },
   {
-    "name": "code_09",
+    "name": "code_10",
     "mainFn": {
       "from": 21,
       "to": 27
@@ -247,7 +273,7 @@
     ]
   },
   {
-    "name": "code_10",
+    "name": "code_11",
     "mainFn": {
       "from": 18,
       "to": 24
@@ -275,7 +301,7 @@
     ]
   },
   {
-    "name": "code_11",
+    "name": "code_12",
     "mainFn": {
       "from": 16,
       "to": 22
@@ -301,7 +327,7 @@
     ]
   },
   {
-    "name": "code_12",
+    "name": "code_13",
     "mainFn": {
       "from": 23,
       "to": 29
@@ -329,7 +355,7 @@
     ]
   },
   {
-    "name": "code_13",
+    "name": "code_14",
     "mainFn": {
       "from": 19,
       "to": 31
@@ -358,7 +384,7 @@
     ]
   },
   {
-    "name": "code_14",
+    "name": "code_15",
     "mainFn": {
       "from": 23,
       "to": 33

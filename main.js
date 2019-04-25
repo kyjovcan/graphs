@@ -27,9 +27,10 @@ app.get('/Chart.bundle.js', function(req, res){
 });
 
 const rowHeight = 32;
-const peepholeHeight = 20;
 const timeStep = 200;
 let vels = [];
+
+const AOIs = JSON.parse(fs.readFileSync('AOIs.json').toString());
 
 app.use(fileUpload());
 
@@ -241,6 +242,7 @@ function mapArray(lines) {
                 const deltaX = Math.abs(actX - prevX);
                 const deltaY = Math.abs(actY - prevY);
                 const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
+
                 const rowNumber = Math.floor((actY - 1) / rowHeight);
 
                 timeIterator = Math.floor(actTime / timeStep);
@@ -289,7 +291,7 @@ function mapArray(lines) {
             difficulty: question.difficulty,
         };
 
-        quest.resultCorrect = evalauteCorrect(quest);
+        quest.resultCorrect = evaluateCorrect(quest);
         quest.resultCorrect ? correctAnswers++ : incorrectAnswers++;
 
         return quest;
@@ -298,7 +300,7 @@ function mapArray(lines) {
     writeFile("./logs/logAllVelocities.json", allVelocities);
 
     const {cursor, expMonths, expType, eval, comment} = data;
-    const abilityAvg = ((correctAnswers + incorrectAnswers) / correctAnswers)/100;
+    const abilityAvg = ((100 * correctAnswers)/(correctAnswers + incorrectAnswers))/100;
     const correctAnswersCount = correctAnswers;
     const incorrectAnswersCount = incorrectAnswers;
     correctAnswers = 0;
@@ -317,13 +319,13 @@ function mapArray(lines) {
     };
 }
 
-const AOIs = JSON.parse(fs.readFileSync('AOIs.json').toString());
+function evaluateRowFixation() {
 
-function evalauteCorrect(question) {
+}
+
+function evaluateCorrect(question) {
     const questionName = question.name.slice(0, 7);
-    //console.log(questionName);
     const questionVariant = question.name.slice(8, 9);
-    //console.log(questionName - 1);
     const ResultCorrect = AOIs.find((q) => {
         return questionName === q.name
     });
@@ -361,7 +363,7 @@ async function getAllLogs(){
 }
 
 function processMouseData() {
-    evalauteCorrect(0);
+    evaluateCorrect(0);
 }
 
 async function getStudentData() {
