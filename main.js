@@ -27,8 +27,9 @@ app.get('/Chart.bundle.js', function(req, res){
 });
 
 const rowHeight = 32;
-const timeStep = 200;
-let vels = [];
+const timeStep = 100;
+const fixationMaxSpeed = 0.5;
+let studentData = [];
 
 const AOIs = JSON.parse(fs.readFileSync('AOIs.json').toString());
 
@@ -62,8 +63,8 @@ io.on('connection', function (socket) {
   });
 
   socket.on('computeOneFile', function (data, fn){
-    vels = mapArray(0);
-    fn({ data: vels });
+    studentData = mapArray(0);
+    fn({ data: studentData });
   });   // VYSTUP -> jeden uploadnuty log subor spracovany
 
   socket.on('computeAllFiles', function (data, fn){
@@ -202,14 +203,23 @@ function mapArray(lines) {
     const data = parseLog(lines);
     let correctAnswers = 0;
     let incorrectAnswers = 0;
-    const allVelocities = data.questions.map((question) => {
+
+    const allVelocities = data.questions.map((question, i) => {
         // IF THERE ARE NO MOUSE MOVEMENTS RETURN EMPTY VELOCITIES
         if (!question.mm || question.mm.length === 0) {
             return {
-                vels: [],
+                velocities: [],
+                BeaconFixCount: 0,
+                InputFixCount: 0,
+                MainFixCount: 0,
+                FunctionFixCount: 0,
+                OtherFixCount: 0,
+                AllFixationsCount: 0,
+                AllSaccadesCount: 0,
                 name: question.name ? question.name : 'n/a',
                 answer: question.answer,
                 difficulty: question.difficulty,
+                resultCorrect: 0
             }
         }
 
@@ -218,14 +228,18 @@ function mapArray(lines) {
         let tempDistance = 0;
         let tempIterator = 1;
         let timeIterator = 1;
+        let BeaconFixCount= 0;  let InputFixCount= 0;       let MainFixCount= 0;    let FunctionFixCount= 0;
+        let OtherFixCount= 0;   let AllFixationsCount= 0;   let AllSaccadesCount= 0;
 
-        const vels = moves.map((move, index) => {
+        const velocities = moves.map((move, index) => {
             if (index === 0) {
                 temp = move;
                 const currentVars = move.split(" ");
                 actTime = currentVars[0].replace('"', '');
                 tempIterator = Math.floor(actTime / timeStep);
-                return {velocity: 0, time: 0, row: 1};
+                AllSaccadesCount++;
+                return {velocity: 0, time: 0, row: 1, isBeaconFix: 0, isInputFix: 0,
+                    isMainFix: 0, isFunctionFix: 0, isOtherFix: 0, isSaccade: 1};              ///////////////////
             }
             else {
                 const currentVars = move.split(" ");
@@ -243,31 +257,65 @@ function mapArray(lines) {
                 const deltaY = Math.abs(actY - prevY);
                 const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
 
-                const rowNumber = Math.floor((actY - 1) / rowHeight);
-
                 timeIterator = Math.floor(actTime / timeStep);
                 const actTimeStep = timeIterator * timeStep;
+                const isFixation = ((tempDistance / timeStep) < fixationMaxSpeed) ? 1 : 0;
 
                 if (timeIterator !== tempIterator) {
+                    // row fixation / saccade
+                    const row = evaluateRowFixation(actY, question.name);              ////////////////////////////
+                    const {rowNumber, isBeaconFix, isInputFix, isMainFix, isFunctionFix, isOtherFix} = row;
+
+                    BeaconFixCount = isFixation && isBeaconFix ? BeaconFixCount + 1 : BeaconFixCount;
+                    InputFixCount = isFixation && isInputFix ? InputFixCount + 1 : InputFixCount;
+                    MainFixCount = isFixation && isMainFix ? MainFixCount + 1 : MainFixCount;
+                    FunctionFixCount = isFixation && isFunctionFix ? FunctionFixCount + 1 : FunctionFixCount;
+                    OtherFixCount = isFixation && isOtherFix ? OtherFixCount + 1 : OtherFixCount;
+                    AllFixationsCount = isFixation ? AllFixationsCount + 1 : AllFixationsCount;
+                    AllSaccadesCount = isFixation ? AllSaccadesCount : AllSaccadesCount + 1;
+
                     if (actTime % timeStep === 0) {
                         // ak sme presne na 200*TI normalne vypocitaj vel a resetuj temp dist
                         const actVel = {
                             velocity: tempDistance / timeStep,
-                            time: actTime,
+                            time: parseInt(actTime, 10),
                             row: rowNumber,
+                            isBeaconFix: isBeaconFix ? 1 : 0,
+                            isInputFix: isInputFix ? 1 : 0,
+                            isMainFix: isMainFix ? 1 : 0,
+                            isFunctionFix: isFunctionFix ? 1 : 0,
+                            isOtherFix: isOtherFix ? 1 : 0,
+                            isSaccade: isFixation ? 0 : 1,
                         };
                         tempDistance = 0;
                         tempIterator = timeIterator;
+
                         return actVel;
                     }
                     else {
                         // ked sme vyssie (205) vypocitaj temp dist od 200 a vrat velocity v case 200
                         const actVel = dist / deltaT;
+                        const row = evaluateRowFixation(actY, question.name);              ////////////////////////////
+                        const {rowNumber, isBeaconFix, isInputFix, isMainFix, isFunctionFix, isOtherFix} = row;
+
+                        BeaconFixCount = isFixation && isBeaconFix ? BeaconFixCount + 1 : BeaconFixCount;
+                        InputFixCount = isFixation && isInputFix ? InputFixCount + 1 : InputFixCount;
+                        MainFixCount = isFixation && isMainFix ? MainFixCount + 1 : MainFixCount;
+                        FunctionFixCount = isFixation && isFunctionFix ? FunctionFixCount + 1 : FunctionFixCount;
+                        OtherFixCount = isFixation && isOtherFix ? OtherFixCount + 1 : OtherFixCount;
+                        AllFixationsCount = isFixation ? AllFixationsCount++ + 1 : AllFixationsCount;
+                        AllSaccadesCount = isFixation ? AllSaccadesCount++ + 1 : AllSaccadesCount;
 
                         const vel = {
                             velocity: tempDistance / timeStep,
                             time: actTimeStep,
                             row: rowNumber,
+                            isBeaconFix: isFixation && isBeaconFix ? 1 : 0,
+                            isInputFix: isFixation && isInputFix ? 1 : 0,
+                            isMainFix: isFixation && isMainFix ? 1 : 0,
+                            isFunctionFix: isFixation && isFunctionFix ? 1 : 0,
+                            isOtherFix: isFixation && isOtherFix ? 1 : 0,
+                            isSaccade: isFixation ? 0 : 1,
                         };
                         tempDistance = actVel * (actTime - actTimeStep);
                         tempIterator = timeIterator;
@@ -280,12 +328,19 @@ function mapArray(lines) {
             }
         });
 
-        const cleanVels = vels.filter((v) => {
+        const cleanVelocities = velocities.filter((v) => {
             return v !== undefined;
         });
 
         const quest = {
-            vels: cleanVels,
+            velocities: cleanVelocities,
+            BeaconFixCount,
+            InputFixCount,
+            MainFixCount,
+            FunctionFixCount,
+            OtherFixCount,
+            AllFixationsCount,
+            AllSaccadesCount,
             name: question.name ? question.name : 'n/a',
             answer: question.answer.replace(/"/g, ''),
             difficulty: question.difficulty,
@@ -307,7 +362,7 @@ function mapArray(lines) {
     incorrectAnswers = 0;
 
     return {                // tu pridame metriky
-        velocities: allVelocities,
+        questions: allVelocities,
         cursor,
         expMonths,
         expType,
@@ -319,8 +374,44 @@ function mapArray(lines) {
     };
 }
 
-function evaluateRowFixation() {
+function evaluateRowFixation(y, questionName) {
+    const questionNumber = questionName.slice(5, 7).replace('0', '');
+    const {mainFn, mainChanging, secFn, primary} = AOIs[questionNumber-1];
 
+    let isBeaconFix = false;
+    let isInputFix = false;
+    let isMainFix = false;
+    let isFunctionFix = false;
+    let isOtherFix = false;
+    const rowNumber = Math.ceil((y) / rowHeight);
+
+    if ((y > (((mainFn.from-1)*32) - 16)) && (y < ((mainFn.to*32) + 16))){
+        const mapChanging = mainChanging.map((line) => {
+            if ((y > (((line-1)*32) - 16)) && (y < ((line*32) + 16))) {
+                isInputFix = true;
+            }
+        });
+        isMainFix = true;
+    }
+    else if ((y > (((secFn.from-1)*32) - 16)) && (y < ((secFn.to*32) + 16))){
+        const mapPrimary = primary.map((line) => {
+            if ((y > (((line-1)*32) - 16)) && (y < ((line*32) + 16))) {
+                isBeaconFix = true;
+            }
+        });
+        isFunctionFix = true;
+    }
+    else {
+        isOtherFix = true;
+    }
+    return {
+        rowNumber,
+        isBeaconFix,
+        isInputFix,
+        isMainFix,
+        isFunctionFix,
+        isOtherFix
+    };
 }
 
 function evaluateCorrect(question) {

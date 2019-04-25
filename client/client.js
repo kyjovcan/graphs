@@ -1,5 +1,5 @@
 const socket = io(); 
-let serverVelocities = [];
+let studentData = [];
 let allData = [];
 let questionNumber = 0;
 
@@ -9,14 +9,14 @@ socket.on('connect', function () {
 });
 
 function createGraph() {
-    const labels = serverVelocities.data.velocities[questionNumber].vels.filter((vel) => {
+    const labels = studentData.data.questions[questionNumber].velocities.filter((vel) => {
         if (!vel) return false;
         else {
             return vel.time;
         }
     });
 
-    const velData = serverVelocities.data.velocities[questionNumber].vels.filter((vel) => {
+    const velData = studentData.data.questions[questionNumber].velocities.filter((vel) => {
         if (!vel) return false;
         else {
             return vel.velocity;
@@ -31,12 +31,12 @@ function createGraph() {
         return vel.velocity;
     });
 
-    $('#question-name').text(serverVelocities.data.velocities[questionNumber].name);
-    $('#info-cursor').text(serverVelocities.data.cursor);
-    $('#info-expMonths').text(serverVelocities.data.expMonths);
-    $('#info-expType').text(serverVelocities.data.expType);
-    $('#info-eval').text(serverVelocities.data.eval);
-    $('#info-comment').text(serverVelocities.data.comment);
+    $('#question-name').text(studentData.data.questions[questionNumber].name);
+    $('#info-cursor').text(studentData.data.cursor);
+    $('#info-expMonths').text(studentData.data.expMonths);
+    $('#info-expType').text(studentData.data.expType);
+    $('#info-eval').text(studentData.data.eval);
+    $('#info-comment').text(studentData.data.comment);
 
     let ctx = document.getElementById('myChart');
     const myChart = new Chart(ctx, {
@@ -68,10 +68,10 @@ function createGraph() {
 }
 
 function computeOneFile(){
-    socket.emit('computeOneFile', serverVelocities, function(data){
-        serverVelocities = data;
-        console.log(serverVelocities);
-        createGraph(0);
+    socket.emit('computeOneFile', studentData, function(data){
+        studentData = data;
+        console.log(studentData);
+        createGraph();
     });
 }
 
@@ -94,14 +94,14 @@ function processMouseData(){
 }
 
 function changeQuestionNumber(direction) {
-    if (questionNumber >= 0 && questionNumber <= serverVelocities.data.velocities.length-1){
+    if (questionNumber >= 0 && questionNumber <= studentData.data.questions.length-1){
         direction ? questionNumber++ : questionNumber--;
         createGraph();
-        console.log(questionNumber + ' / ' + serverVelocities.data.velocities.length);
+        console.log(questionNumber + ' / ' + studentData.data.questions.length);
     }
     if (questionNumber === 0 ){
         $('#arrow-left').attr('disabled', true);
-    } else if (questionNumber + 1 === serverVelocities.data.velocities.length - 1){
+    } else if (questionNumber + 1 === studentData.data.questions.length - 1){
         $('#arrow-right').attr('disabled', true);
     } else {
         $('#arrow-right').attr('disabled', false);

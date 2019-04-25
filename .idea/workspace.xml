@@ -3,15 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="5a47ce3e-3588-4abd-b0c4-a1e0a939fcbd" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AOIs.json" beforeDir="false" afterPath="$PROJECT_DIR$/AOIs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/01cb4ca8-e35e-45f2-9887-defa097d8be4.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/01cb4ca8-e35e-45f2-9887-defa097d8be4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/0c567d52-30d4-4d83-80f6-410bfea30ff9.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/0c567d52-30d4-4d83-80f6-410bfea30ff9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/10a9837b-76d3-4906-afba-0b15cfa6bc63.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/10a9837b-76d3-4906-afba-0b15cfa6bc63.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/1284caad-d250-4a16-8014-21c0aa66fd76.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/1284caad-d250-4a16-8014-21c0aa66fd76.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/13a1dc6c-017c-42a1-9d4a-1ceaaba99b95.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/13a1dc6c-017c-42a1-9d4a-1ceaaba99b95.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/193ca3fa-bc68-4b6b-bdad-63f9fc6ad16d.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/193ca3fa-bc68-4b6b-bdad-63f9fc6ad16d.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/1d893215-e859-42d9-9b57-d743ac97542b.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/1d893215-e859-42d9-9b57-d743ac97542b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/1e1fc106-fcd8-4451-9e4d-be363ecc8929.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/1e1fc106-fcd8-4451-9e4d-be363ecc8929.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/22bbbb83-5327-4c3e-b35c-c9a30a79e710.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/22bbbb83-5327-4c3e-b35c-c9a30a79e710.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/24a392bc-fc5e-4a8d-a795-b744671343c1.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/24a392bc-fc5e-4a8d-a795-b744671343c1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/256c1db5-ee4a-4cd5-ac89-5b1fd5986ccc.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/256c1db5-ee4a-4cd5-ac89-5b1fd5986ccc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/2644b701-f256-415e-970f-57c356d0aca6.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/2644b701-f256-415e-970f-57c356d0aca6.json" afterDir="false" />
@@ -23,13 +26,19 @@
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/454af019-feff-4c99-8acf-3fc45c59d58b.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/454af019-feff-4c99-8acf-3fc45c59d58b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/47a6255c-5768-4cfb-a5f0-7d8a1311cda5.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/47a6255c-5768-4cfb-a5f0-7d8a1311cda5.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/4fdd885c-eecd-4426-a715-b0ace0ed05ca.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/4fdd885c-eecd-4426-a715-b0ace0ed05ca.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/57fdc3ac-65a0-4444-917b-9567e89eb582.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/57fdc3ac-65a0-4444-917b-9567e89eb582.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/59980de9-50ad-4299-83db-082eb66b5b4f.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/59980de9-50ad-4299-83db-082eb66b5b4f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/5d66bd28-77d6-48f4-99c0-71608774439c.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/5d66bd28-77d6-48f4-99c0-71608774439c.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/62e4e278-641f-45ee-8acf-e39079a54cf2.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/62e4e278-641f-45ee-8acf-e39079a54cf2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/65fbdf96-dd1e-4bd1-9d09-d9cf413bca73.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/65fbdf96-dd1e-4bd1-9d09-d9cf413bca73.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/698d566f-1e2d-4a00-a878-4e2873b0cb29.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/698d566f-1e2d-4a00-a878-4e2873b0cb29.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/6c80ca6d-cb23-4647-afa2-9dbfdf63df5b.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/6c80ca6d-cb23-4647-afa2-9dbfdf63df5b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/6d6ca460-c4cd-41a4-ae56-efafbc1bb9be.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/6d6ca460-c4cd-41a4-ae56-efafbc1bb9be.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/6e9400a6-d7dc-4fd4-a40b-697c09828a0d.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/6e9400a6-d7dc-4fd4-a40b-697c09828a0d.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/715bb7c8-5561-4763-9cea-70e122fb1499.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/715bb7c8-5561-4763-9cea-70e122fb1499.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/7571114b-a951-42bf-bcbe-b06fd14e50b9.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/7571114b-a951-42bf-bcbe-b06fd14e50b9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/774195e1-f240-4df6-be06-4b470bc56989.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/774195e1-f240-4df6-be06-4b470bc56989.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/778c4bc6-8742-43d3-88ae-7ece7185b1c9.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/778c4bc6-8742-43d3-88ae-7ece7185b1c9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/77e51c46-fad2-4168-8723-f5968ee7b564.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/77e51c46-fad2-4168-8723-f5968ee7b564.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/78ba3009-ce16-4d23-b31f-79fe1ff79c4b.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/78ba3009-ce16-4d23-b31f-79fe1ff79c4b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/79e81cec-c7fe-44cf-b9e9-6f43f6899eab.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/79e81cec-c7fe-44cf-b9e9-6f43f6899eab.json" afterDir="false" />
@@ -41,6 +50,7 @@
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/a257a60c-3569-4d20-8b5b-119814953cbe.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a257a60c-3569-4d20-8b5b-119814953cbe.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/a3034702-8e11-4d2b-97eb-9c8b7de06c77.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a3034702-8e11-4d2b-97eb-9c8b7de06c77.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/a40dbf50-75b5-4b5f-82a3-bf2c4d02a90a.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a40dbf50-75b5-4b5f-82a3-bf2c4d02a90a.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/a5ef5070-3d1b-4cc0-89e2-f39611b402dc.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a5ef5070-3d1b-4cc0-89e2-f39611b402dc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/a7cc0e9c-13af-4f23-b72f-29b761015a2f.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a7cc0e9c-13af-4f23-b72f-29b761015a2f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/a8809a52-ab9f-42f7-9f4c-86e2fb3e010f.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a8809a52-ab9f-42f7-9f4c-86e2fb3e010f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/a8aaa27d-3ef9-496f-9119-c8a808c1cc86.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/a8aaa27d-3ef9-496f-9119-c8a808c1cc86.json" afterDir="false" />
@@ -48,6 +58,7 @@
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/ab0b5041-b27f-446b-8bfe-67e1d3b112b4.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/ab0b5041-b27f-446b-8bfe-67e1d3b112b4.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/ab867bb5-6d21-41bf-a052-a9ba9e67abb7.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/ab867bb5-6d21-41bf-a052-a9ba9e67abb7.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/ac7c09c5-9023-4dda-a7b3-e6b8928eac47.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/ac7c09c5-9023-4dda-a7b3-e6b8928eac47.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/aca0e2ad-58cf-4335-8d61-9ac4cae34982.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/aca0e2ad-58cf-4335-8d61-9ac4cae34982.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/adad9594-5c7d-4cf4-9e4a-a82b42a06783.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/adad9594-5c7d-4cf4-9e4a-a82b42a06783.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/af798327-fb71-4da3-a7af-17e64a8b97e9.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/af798327-fb71-4da3-a7af-17e64a8b97e9.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/af8842a9-91b7-4ec1-b3e5-92d4a52cf0f5.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/af8842a9-91b7-4ec1-b3e5-92d4a52cf0f5.json" afterDir="false" />
@@ -57,10 +68,13 @@
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/c8851ab5-8af4-47d9-8de5-65bddbf43f6c.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/c8851ab5-8af4-47d9-8de5-65bddbf43f6c.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/cda54b29-a04c-4048-a65f-e4ac4073e965.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/cda54b29-a04c-4048-a65f-e4ac4073e965.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/cfdb6db8-e4ec-4e8c-821e-b539b05463e7.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/cfdb6db8-e4ec-4e8c-821e-b539b05463e7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/d1be55ea-43ce-456d-86a6-0d98a71e1c3f.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/d1be55ea-43ce-456d-86a6-0d98a71e1c3f.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/d29c4a20-c089-4c7a-981f-db34a1116009.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/d29c4a20-c089-4c7a-981f-db34a1116009.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/d53ed19c-ca36-43c7-9c48-b3c16bec82fd.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/d53ed19c-ca36-43c7-9c48-b3c16bec82fd.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/d895f236-24a9-450e-984b-fe42bd2ac126.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/d895f236-24a9-450e-984b-fe42bd2ac126.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/db6ccb72-159b-4180-bb84-a5cd26f1468b.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/db6ccb72-159b-4180-bb84-a5cd26f1468b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/db934607-a6aa-46d7-8800-e45e0ba3b800.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/db934607-a6aa-46d7-8800-e45e0ba3b800.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/clearLogs/dd2439b4-aff3-40bd-8393-c1e14bdf9dfd.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/dd2439b4-aff3-40bd-8393-c1e14bdf9dfd.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/e0508709-60dc-4b2f-b035-18058f9f932b.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/e0508709-60dc-4b2f-b035-18058f9f932b.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/e498109c-2343-4ac2-aee1-35d02ce923dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/e498109c-2343-4ac2-aee1-35d02ce923dd.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/clearLogs/e8d0a81a-509a-4b53-a882-08c018cd4881.json" beforeDir="false" afterPath="$PROJECT_DIR$/logs/clearLogs/e8d0a81a-509a-4b53-a882-08c018cd4881.json" afterDir="false" />
@@ -85,14 +99,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5487215">
+    <splitter split-orientation="horizontal" split-proportion="0.59087765">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="256">
-                  <caret line="245" column="34" selection-start-line="245" selection-start-column="34" selection-end-line="245" selection-end-column="34" />
+                <state relative-caret-position="156">
+                  <caret line="337" column="26" lean-forward="true" selection-start-line="337" selection-start-column="26" selection-end-line="337" selection-end-column="26" />
                   <folding>
                     <element signature="e#322#377#0" />
                     <element signature="e#420#474#0" />
@@ -101,14 +115,18 @@
                     <element signature="e#719#783#0" />
                     <element signature="e#832#912#0" />
                     <element signature="e#1066#1464#0" />
-                    <element signature="e#1773#1826#0" />
                     <element signature="e#1933#1958#0" />
                     <element signature="e#2089#2117#0" />
-                    <element signature="e#6696#6919#0" />
-                    <element signature="e#8389#9515#0" />
+                    <element signature="n#!!block;n#parseLog#0" />
+                    <element signature="e#7485#12214#0" />
+                    <element signature="e#9671#9718#0" />
+                    <element signature="n#!!block;n#evalauteCorrect#0" />
+                    <element signature="n#!!block;n#getAllLogs#0" />
+                    <element signature="n#!!block;n#processMouseData#0" />
                     <element signature="n#!!block;n#getStudentData#0" />
                     <element signature="n#!!block;n#getEyetrackerData#0" />
                     <element signature="n#!!block;n#processETData#0" />
+                    <element signature="n#!!block;n#writeFile#0" />
                   </folding>
                 </state>
               </provider>
@@ -156,8 +174,8 @@
           <file leaf-file-name="0bdc4309-be6b-496b-9fdc-09cccd748e58.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/logs/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret column="892" selection-end-column="155559" />
+                <state relative-caret-position="170">
+                  <caret column="1062" selection-start-column="1062" selection-end-column="1062" />
                 </state>
               </provider>
             </entry>
@@ -166,29 +184,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="client.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="client.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/client.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1">
-                  <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-                  <folding>
-                    <element signature="n#!!block;n#changeQuestionNumber#0" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/client/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="230">
-                  <caret line="70" selection-start-line="70" selection-end-line="70" />
-                  <folding>
-                    <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                    <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-                  </folding>
+                <state relative-caret-position="356">
+                  <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
                 </state>
               </provider>
             </entry>
@@ -196,17 +196,35 @@
           <file leaf-file-name="AOIs.json" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/AOIs.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-170">
-                  <caret line="386" column="22" selection-start-line="386" selection-start-column="22" selection-end-line="386" selection-end-column="22" />
+                <state relative-caret-position="884">
+                  <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="10" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="log" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/a257a60c-3569-4d20-8b5b-119814953cbe/log">
+          <file leaf-file-name="logAllVelocities.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/logAllVelocities.json">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="238">
-                  <caret line="27" column="18" selection-start-line="27" selection-end-line="27" selection-end-column="18" />
+                <state relative-caret-position="4080">
+                  <caret column="1028073" selection-start-column="1028073" selection-end-column="1028073" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="log" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="199">
+                  <caret line="224" column="18" selection-start-line="224" selection-end-line="224" selection-end-column="18" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="logData.json" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/logs/logData.json">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="204">
+                  <caret column="977" selection-start-column="977" selection-end-column="977" />
                 </state>
               </provider>
             </entry>
@@ -217,10 +235,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>logs</find>
-      <find>evs</find>
-      <find>time</find>
-      <find>console.l</find>
       <find>answer</find>
       <find>uploadedlo</find>
       <find>serverVelocities.data</find>
@@ -247,10 +261,17 @@
       <find>110</find>
       <find>ans_code_01</find>
       <find>code_15</find>
+      <find>code_03</find>
+      <find>serverVelocities</find>
+      <find>vels</find>
+      <find>velocities</find>
     </findStrings>
     <replaceStrings>
       <replace>serverVelocities.data.velocities</replace>
       <replace>,                      /</replace>
+      <replace>studentData</replace>
+      <replace>velocities</replace>
+      <replace>questions</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -265,15 +286,15 @@
         <option value="$PROJECT_DIR$/allLogs/0a1036d7-f89e-49e7-9707-dff066d32a55/log" />
         <option value="$PROJECT_DIR$/uploadedLogs/log.txt" />
         <option value="$PROJECT_DIR$/llll" />
-        <option value="$PROJECT_DIR$/client/client.js" />
         <option value="$PROJECT_DIR$/nodemon.json" />
         <option value="$PROJECT_DIR$/logs/allLogs/11152186-6b69-4219-bc95-2f996e608a71/log" />
         <option value="$PROJECT_DIR$/client/index.html" />
         <option value="$PROJECT_DIR$/logs/help" />
-        <option value="$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log" />
         <option value="$PROJECT_DIR$/logs/logAllVelocities.json" />
         <option value="$PROJECT_DIR$/logs/logsSecondRun/a257a60c-3569-4d20-8b5b-119814953cbe/log" />
         <option value="$PROJECT_DIR$/AOIs.json" />
+        <option value="$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log" />
+        <option value="$PROJECT_DIR$/client/client.js" />
         <option value="$PROJECT_DIR$/main.js" />
       </list>
     </option>
@@ -324,6 +345,12 @@
               <item name="web_player" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_player" type="462c0819:PsiDirectoryNode" />
               <item name="logs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="web_player" type="b2602c69:ProjectViewProjectNode" />
+              <item name="web_player" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
+              <item name="clearLogs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -377,12 +404,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="216517000" />
+    <option name="totallyTimeSpent" value="238276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1688" y="-485" width="1696" height="1036" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13869047" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13869047" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5011905" side_tool="true" weight="0.32464713" />
@@ -391,7 +419,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.49880952" visible="true" weight="0.504886" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49880952" visible="true" weight="0.22258414" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -422,17 +450,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/logs/clearLogs/70cc5f6d-1835-4580-ae45-ac73d6b5a0bc.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-64451">
-          <caret column="1263" lean-forward="true" selection-start-column="1263" selection-end-column="1263" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/clearLogs/2581452b-cdfa-4f96-9c66-5e81d4dace62.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="438">
@@ -586,13 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/logAllVelocities.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-102">
-          <caret column="105932" selection-start-column="105932" selection-end-column="105932" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/clearLogs/00fc9ee2-c98b-4f12-a93b-1448553c140e.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -638,13 +652,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="279" column="27" lean-forward="true" selection-start-line="279" selection-start-column="27" selection-end-line="279" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/logs/help">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -663,36 +670,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
           <caret line="87" column="29" lean-forward="true" selection-start-line="87" selection-start-column="29" selection-end-line="87" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/client.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1">
-          <caret line="23" column="7" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
-          <folding>
-            <element signature="n#!!block;n#changeQuestionNumber#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/AOIs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="386" column="22" selection-start-line="386" selection-start-column="22" selection-end-line="386" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -733,24 +710,73 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logs/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json">
+    <entry file="file://$PROJECT_DIR$/client/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret column="892" selection-end-column="155559" />
+        <state relative-caret-position="197">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/logsSecondRun/a257a60c-3569-4d20-8b5b-119814953cbe/log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
+        <state relative-caret-position="59">
           <caret line="27" column="18" selection-start-line="27" selection-end-line="27" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logAllVelocities.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4080">
+          <caret column="1028073" selection-start-column="1028073" selection-end-column="1028073" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/logData.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret column="977" selection-start-column="977" selection-end-column="977" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/AOIs.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="884">
+          <caret line="106" column="6" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/allLogs/1ab869cb-c4dd-4f9e-937c-72ddf74a5e18/log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="224" column="18" selection-start-line="224" selection-end-line="224" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/client.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="27" column="7" selection-start-line="27" selection-start-column="7" selection-end-line="27" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/logs/clearLogs/0bdc4309-be6b-496b-9fdc-09cccd748e58.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret column="1062" selection-start-column="1062" selection-end-column="1062" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="245" column="34" selection-start-line="245" selection-start-column="34" selection-end-line="245" selection-end-column="34" />
+        <state relative-caret-position="156">
+          <caret line="337" column="26" lean-forward="true" selection-start-line="337" selection-start-column="26" selection-end-line="337" selection-end-column="26" />
           <folding>
             <element signature="e#322#377#0" />
             <element signature="e#420#474#0" />
@@ -759,14 +785,18 @@
             <element signature="e#719#783#0" />
             <element signature="e#832#912#0" />
             <element signature="e#1066#1464#0" />
-            <element signature="e#1773#1826#0" />
             <element signature="e#1933#1958#0" />
             <element signature="e#2089#2117#0" />
-            <element signature="e#6696#6919#0" />
-            <element signature="e#8389#9515#0" />
+            <element signature="n#!!block;n#parseLog#0" />
+            <element signature="e#7485#12214#0" />
+            <element signature="e#9671#9718#0" />
+            <element signature="n#!!block;n#evalauteCorrect#0" />
+            <element signature="n#!!block;n#getAllLogs#0" />
+            <element signature="n#!!block;n#processMouseData#0" />
             <element signature="n#!!block;n#getStudentData#0" />
             <element signature="n#!!block;n#getEyetrackerData#0" />
             <element signature="n#!!block;n#processETData#0" />
+            <element signature="n#!!block;n#writeFile#0" />
           </folding>
         </state>
       </provider>
