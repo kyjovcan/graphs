@@ -191,6 +191,7 @@ function parseLog(lines){
             userData.comment = evaluation[2];
         }
     });
+
     writeFile("./logs/logData.json", userData);
     console.log('Parse data complete');
     return userData;
@@ -198,7 +199,8 @@ function parseLog(lines){
 
 function mapArray(lines) {
     const data = parseLog(lines);
-
+    let correctAnswers = 0;
+    let incorrectAnswers = 0;
     const allVelocities = data.questions.map((question) => {
         // IF THERE ARE NO MOUSE MOVEMENTS RETURN EMPTY VELOCITIES
         if (!question.mm || question.mm.length === 0) {
@@ -283,13 +285,12 @@ function mapArray(lines) {
         const quest = {
             vels: cleanVels,
             name: question.name ? question.name : 'n/a',
-            answer: question.answer,
+            answer: question.answer.replace(/"/g, ''),
             difficulty: question.difficulty,
         };
 
-        const metrics = evalaute(quest);
-
-        quest.metrics = metrics;
+        quest.resultCorrect = evalauteCorrect(quest);
+        quest.resultCorrect ? correctAnswers++ : incorrectAnswers++;
 
         return quest;
     });
@@ -297,6 +298,11 @@ function mapArray(lines) {
     writeFile("./logs/logAllVelocities.json", allVelocities);
 
     const {cursor, expMonths, expType, eval, comment} = data;
+    const abilityAvg = ((correctAnswers + incorrectAnswers) / correctAnswers)/100;
+    const correctAnswersCount = correctAnswers;
+    const incorrectAnswersCount = incorrectAnswers;
+    correctAnswers = 0;
+    incorrectAnswers = 0;
 
     return {                // tu pridame metriky
         velocities: allVelocities,
@@ -305,14 +311,27 @@ function mapArray(lines) {
         expType,
         eval,
         comment,
+        abilityAvg,
+        correctAnswersCount,
+        incorrectAnswersCount
     };
 }
 
 const AOIs = JSON.parse(fs.readFileSync('AOIs.json').toString());
 
-function evalaute(question) {
-    // spravnost otazky
+function evalauteCorrect(question) {
+    const questionName = question.name.slice(0, 7);
+    //console.log(questionName);
+    const questionVariant = question.name.slice(8, 9);
+    //console.log(questionName - 1);
+    const ResultCorrect = AOIs.find((q) => {
+        return questionName === q.name
+    });
 
+    if (ResultCorrect) {
+        return ResultCorrect.correct[questionVariant-1] === question.answer;
+    }
+    else return false;
 }
 
 async function getAllLogs(){
@@ -342,7 +361,7 @@ async function getAllLogs(){
 }
 
 function processMouseData() {
-    evalaute(0);
+    evalauteCorrect(0);
 }
 
 async function getStudentData() {
