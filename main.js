@@ -27,14 +27,17 @@ app.get('/Chart.bundle.js', function(req, res){
 });
 
 const rowHeight = 32;
+const peekHeight = 16;
 const timeStep = 100;
 const fixationMaxSpeed = 0.5;
 let studentData = [];
 
 const AOIs = JSON.parse(fs.readFileSync('AOIs.json').toString());
 
+/**
+ * File upload for single log files
+ */
 app.use(fileUpload());
-
 app.post('/upload', function(req, res) {
     if (Object.keys(req.files).length === 0) {
         return res.status(400).send('No files were uploaded.');
@@ -52,55 +55,80 @@ app.post('/upload', function(req, res) {
     });
 });
 
-// inicializacia servera
+/**
+ * Server initialization
+ */
 server.listen(process.env.PORT || 2500);
 console.log("Server started on PORT 2500");
 
-// pripojenie na klienta
+/**
+ * Server connection to client
+ */
 io.on('connection', function (socket) {
   socket.on('mainInput', function (data) {
     console.log("Connected");
   });
 
-  socket.on('computeOneFile', function (data, fn){
+  /**
+     * Processing of ONE log file
+     * Output: processed data of one file
+     */
+  socket.on('computeOneFile', function (data, fn) {
     studentData = mapArray(0);
     fn({ data: studentData });
-  });   // VYSTUP -> jeden uploadnuty log subor spracovany
+  });
 
+  /**
+     * Processing of ALL log files
+     * Output: processed data of all files stored in ./clearLogs
+     */
   socket.on('computeAllFiles', function (data, fn){
-      getAllLogs();
-  });   // VYSTUP -> vsetky log subory v CLEARLOGS ocistene so vsetkymi datami
+      getAllLogs('logsSecondRun');
+  });
 
+  /**
+     * Processing of EyeTracker data
+     * Output: processed data of .csv files with ET data of all students in ./processedET.json
+     */
   socket.on('processETData', async function (data, fn){
       processETData();
-  });   // VYSTUP -> vsetky ET data z hash/log suborov , ID, znamky + fixacie z EXPORT CSV
+  });
 
+  /**
+     * Processing of mouse data
+     * Output: processed data of all files with mouse data
+     */
   socket.on('processMouseData', async function (data, fn){
       processMouseData();
-  });   // VYSTUP -> spracovane mouse data
-
+  });
 });
 
+/**
+ * ParseLog Function
+ * Input: raw log file
+ * Output: parsed data from log files:
+ *      - cursor, months of experience and exp level, overall evaluation
+ *      - every question - mouse movements, name of the question, answer, difficulty
+ */
 function parseLog(lines){
     let myLines = [];
-
-    if (!lines) {
-        myLines = fs.readFileSync('./logs/uploadedLogs/log.txt').toString().split('\n');
-    } else {
-        myLines = lines;
-    }
-
     let userData = {
         cursor: '',
         expMonths: '',
         expType: '',
         questions: []
     };
-
     let tempQuestion = {};
 
+    // If we didn't receive log contents, read contents from uploaded log file
+    if (!lines) {
+        myLines = fs.readFileSync('./logs/uploadedLogs/log.txt').toString().split('\n');
+    } else {
+        myLines = lines;
+    }
+
     myLines.forEach((line, index) => {
-        // INTRODUCTION INFORMATION RETRIEVAL
+        // *** Introduction data retrieval - cursor and experience
         const matchIntro = line.match(/====BEGIN\[{"(cursor|exp_months|exp_type)"/);
         if (matchIntro) {
             const cursor = line.match(/"cursor":"(.{1,10})(","exp_type|","exp_months|"}]END)/);
@@ -117,15 +145,16 @@ function parseLog(lines){
             }
         }
 
-        // QUESTION MOUSE DATA RETRIEVAL
+        // *** Data retrieval from mouse movements
         const matchData = line.match(/====BEGIN\[{"(evs|mm)":/);
         const question = {};
 
-        // IF DATA STARTS WITH 'EVS'
+        // If data starts with 'EVS'
         if (matchData && matchData[1] === 'evs') {
             let mm = line.match(new RegExp(/"mm":\[(.*)],"ans/));
 
-            if (!mm) {  // IF MM DOESNT CONTAIN ANSWER
+            // If mm doesn't contain an answer
+            if (!mm) {
                 mm = line.match(new RegExp(/"mm":\[(.*)]}]END====/));
                 if (!mm) {
                     const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
@@ -142,7 +171,8 @@ function parseLog(lines){
                     question.answer = 'n/a';
                 }
             }
-            else {      // IF MM CONTAINS ANSWER
+            // If mm contains an answer
+            else {
                 const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d|tutorial_\d{2})":(.*)}]END====/));
                 if (answer && answer[1].indexOf("code") > -1) {
                     question.mm = [];
@@ -153,29 +183,29 @@ function parseLog(lines){
             }
             tempQuestion = question;
         }
-        // IF DATA STARTS WITH 'MM'
+        // If data starts with 'MM'
         else if (matchData && matchData[1] === 'mm') {
             let mm = line.match(new RegExp(/"mm":\[(.*)],"evs/));
-
             const answer = line.match(new RegExp(/"ans_(code_\d{2}_\d)":(.*)}]END====/));
 
-            if (!answer) {  // IF MM DOESNT CONTAIN ANSWER
+            // If mm doesn't contain an answer
+            if (!answer) {
                 question.mm = [];
                 question.mm.push(mm[1]);
                 question.name = 'n/a';
                 question.answer = 'n/a';
             }
-            else {          // IF MM CONTAINS ANSWER
+            // If mm contains an answer
+            else {
                 question.mm = [];
                 question.mm.push(mm[1]);
-
                 question.name = answer[1];
                 question.answer = answer[2];
             }
             tempQuestion = question;
         }
 
-        // QUESTION EVALUATION DATA RETRIEVAL
+        // *** Question evaluation data retrieval
         const evalData = line.match(/====BEGIN\[{"diff_(code_\d{2}_\d)":"(.*)"}]END====/);
 
         if (evalData) {
@@ -185,7 +215,7 @@ function parseLog(lines){
             tempQuestion = {};
         }
 
-        // OVERALL EVALUATION DATA RETRIEVAL
+        // *** Overall evaluation data retrieval
         const evaluation = line.match(/====BEGIN\[{"eval":"(.*)","comment":"(.*)"}]END====/);
 
         if (evaluation) {
@@ -194,76 +224,88 @@ function parseLog(lines){
         }
     });
 
+    // Saving parsed data results to log file
     writeFile("./logs/logData.json", userData);
-    console.log('Parse data complete');
+    console.log('*** Data parsing complete');
     return userData;
 }
 
+/**
+ * MapArray Function
+ * Input: parsed data from log file
+ * Output: processed data from log files with info about students and questions:
+ *      - cursor, months of experience and exp level, overall evaluation
+ *      - final score, number of (in)correctly answered questions
+ *      - every question    - mouse velocities, name of the question, answer, difficulty
+ *                          - AOIs fixation counts, saccades counts, corectness
+ */
 function mapArray(lines) {
     const data = parseLog(lines);
     let correctAnswers = 0;
     let incorrectAnswers = 0;
 
-    const allVelocities = data.questions.map((question, i) => {
-        // IF THERE ARE NO MOUSE MOVEMENTS RETURN EMPTY VELOCITIES
+    const allQuestions = data.questions.map((question, i) => {
+        let temp = '';
+        let tempDistance = 0;   let tempIterator = 1;       let timeIterator = 1;
+        let BeaconFixCount= 0;  let InputFixCount= 0;       let MainFixCount= 0;    let FunctionFixCount= 0;
+        let OtherFixCount= 0;   let AllFixationsCount= 0;   let AllSaccadesCount= 0;
+
+        // If there are no mouse movements, return empty velocities
         if (!question.mm || question.mm.length === 0) {
             return {
                 velocities: [],
+                name: question.name ? question.name : 'n/a',
+                answer: question.answer,
+                difficulty: question.difficulty,
+                resultCorrect: 0,
                 BeaconFixCount: 0,
                 InputFixCount: 0,
                 MainFixCount: 0,
                 FunctionFixCount: 0,
                 OtherFixCount: 0,
                 AllFixationsCount: 0,
-                AllSaccadesCount: 0,
-                name: question.name ? question.name : 'n/a',
-                answer: question.answer,
-                difficulty: question.difficulty,
-                resultCorrect: 0
+                AllSaccadesCount: 0
             }
         }
 
         const moves = question.mm[0].split(',');
-        let temp = '';
-        let tempDistance = 0;
-        let tempIterator = 1;
-        let timeIterator = 1;
-        let BeaconFixCount= 0;  let InputFixCount= 0;       let MainFixCount= 0;    let FunctionFixCount= 0;
-        let OtherFixCount= 0;   let AllFixationsCount= 0;   let AllSaccadesCount= 0;
 
+        // Else compute all velocities and fixations
         const velocities = moves.map((move, index) => {
             if (index === 0) {
                 temp = move;
                 const currentVars = move.split(" ");
-                actTime = currentVars[0].replace('"', '');
+                const actTime = currentVars[0].replace('"', '');
                 tempIterator = Math.floor(actTime / timeStep);
                 AllSaccadesCount++;
                 return {velocity: 0, time: 0, row: 1, isBeaconFix: 0, isInputFix: 0,
-                    isMainFix: 0, isFunctionFix: 0, isOtherFix: 0, isSaccade: 1};              ///////////////////
+                    isMainFix: 0, isFunctionFix: 0, isOtherFix: 0, isSaccade: 1};
             }
             else {
                 const currentVars = move.split(" ");
                 const prevVars = temp.split(" ");
-                actTime = currentVars[0].replace('"', '');
-                prevTime = prevVars[0].replace('"', '');
-                actX = currentVars[1];
-                prevX = prevVars[1];
-                actY = currentVars[2].replace('"', '');
-                prevY = prevVars[2].replace('"', '');
+                const actTime = currentVars[0].replace('"', '');
+                const prevTime = prevVars[0].replace('"', '');
+                const actX = currentVars[1];
+                const prevX = prevVars[1];
+                const actY = currentVars[2].replace('"', '');
+                const prevY = prevVars[2].replace('"', '');
 
-                temp = move;
                 const deltaT = Math.abs(actTime - prevTime);
                 const deltaX = Math.abs(actX - prevX);
                 const deltaY = Math.abs(actY - prevY);
                 const dist = Math.sqrt((deltaX * deltaX) + (deltaY * deltaY));
 
+                temp = move;
+
+                // Time Iterator for calculating at the same time steps
                 timeIterator = Math.floor(actTime / timeStep);
                 const actTimeStep = timeIterator * timeStep;
                 const isFixation = ((tempDistance / timeStep) < fixationMaxSpeed) ? 1 : 0;
 
                 if (timeIterator !== tempIterator) {
-                    // row fixation / saccade
-                    const row = evaluateRowFixation(actY, question.name);              ////////////////////////////
+                    // Calculating, whether the move is saccade or fixation, and its belonging
+                    const row = evaluateRowFixation(actY, question.name);
                     const {rowNumber, isBeaconFix, isInputFix, isMainFix, isFunctionFix, isOtherFix} = row;
 
                     BeaconFixCount = isFixation && isBeaconFix ? BeaconFixCount + 1 : BeaconFixCount;
@@ -274,8 +316,8 @@ function mapArray(lines) {
                     AllFixationsCount = isFixation ? AllFixationsCount + 1 : AllFixationsCount;
                     AllSaccadesCount = isFixation ? AllSaccadesCount : AllSaccadesCount + 1;
 
+                    // When actual time is exactly timeStep*iterator, calculate velocity and reset temp
                     if (actTime % timeStep === 0) {
-                        // ak sme presne na 200*TI normalne vypocitaj vel a resetuj temp dist
                         const actVel = {
                             velocity: tempDistance / timeStep,
                             time: parseInt(actTime, 10),
@@ -292,10 +334,10 @@ function mapArray(lines) {
 
                         return actVel;
                     }
+                    // When actual time is higher, calculate distance to timeStep*iterator
+                    //  and return velocity in timeStep*iterator, also calculate fixations
                     else {
-                        // ked sme vyssie (205) vypocitaj temp dist od 200 a vrat velocity v case 200
-                        const actVel = dist / deltaT;
-                        const row = evaluateRowFixation(actY, question.name);              ////////////////////////////
+                        const row = evaluateRowFixation(actY, question.name);
                         const {rowNumber, isBeaconFix, isInputFix, isMainFix, isFunctionFix, isOtherFix} = row;
 
                         BeaconFixCount = isFixation && isBeaconFix ? BeaconFixCount + 1 : BeaconFixCount;
@@ -305,6 +347,8 @@ function mapArray(lines) {
                         OtherFixCount = isFixation && isOtherFix ? OtherFixCount + 1 : OtherFixCount;
                         AllFixationsCount = isFixation ? AllFixationsCount++ + 1 : AllFixationsCount;
                         AllSaccadesCount = isFixation ? AllSaccadesCount++ + 1 : AllSaccadesCount;
+
+                        const actVel = dist / deltaT;
 
                         const vel = {
                             velocity: tempDistance / timeStep,
@@ -322,18 +366,22 @@ function mapArray(lines) {
                         return vel;
                     }
                 }
+                // If we didnt reach timeStep, just add tempDistance
                 else {
                     tempDistance += dist;
                 }
             }
         });
-
+        // Cleaning of null velocities
         const cleanVelocities = velocities.filter((v) => {
             return v !== undefined;
         });
 
         const quest = {
             velocities: cleanVelocities,
+            name: question.name ? question.name : 'n/a',
+            answer: question.answer.replace(/"/g, ''),
+            difficulty: question.difficulty,
             BeaconFixCount,
             InputFixCount,
             MainFixCount,
@@ -341,9 +389,6 @@ function mapArray(lines) {
             OtherFixCount,
             AllFixationsCount,
             AllSaccadesCount,
-            name: question.name ? question.name : 'n/a',
-            answer: question.answer.replace(/"/g, ''),
-            difficulty: question.difficulty,
         };
 
         quest.resultCorrect = evaluateCorrect(quest);
@@ -351,9 +396,10 @@ function mapArray(lines) {
 
         return quest;
     });
+    // Saving results to log file
+    writeFile("./logs/logAllQuestions.json", allQuestions);
 
-    writeFile("./logs/logAllVelocities.json", allVelocities);
-
+    // Calculating students score
     const {cursor, expMonths, expType, eval, comment} = data;
     const abilityAvg = ((100 * correctAnswers)/(correctAnswers + incorrectAnswers))/100;
     const correctAnswersCount = correctAnswers;
@@ -361,8 +407,8 @@ function mapArray(lines) {
     correctAnswers = 0;
     incorrectAnswers = 0;
 
-    return {                // tu pridame metriky
-        questions: allVelocities,
+    return {
+        questions: allQuestions,
         cursor,
         expMonths,
         expType,
@@ -374,28 +420,34 @@ function mapArray(lines) {
     };
 }
 
+/**
+ * EvaluateRowFixation Function
+ * Input: Y-position of mouse move, name of the question
+ * Output: info about fixations/ saccades belongings to AOI
+ */
 function evaluateRowFixation(y, questionName) {
-    const questionNumber = questionName.slice(5, 7).replace('0', '');
-    const {mainFn, mainChanging, secFn, primary} = AOIs[questionNumber-1];
-
     let isBeaconFix = false;
     let isInputFix = false;
     let isMainFix = false;
     let isFunctionFix = false;
     let isOtherFix = false;
+
+    const questionNumber = questionName.slice(5, 7).replace('0', '');
+    const {mainFn, mainChanging, secFn, primary} = AOIs[questionNumber-1];
     const rowNumber = Math.ceil((y) / rowHeight);
 
-    if ((y > (((mainFn.from-1)*32) - 16)) && (y < ((mainFn.to*32) + 16))){
-        const mapChanging = mainChanging.map((line) => {
-            if ((y > (((line-1)*32) - 16)) && (y < ((line*32) + 16))) {
+    // Calculating fixation at height of row + half of its height from top and bottom
+    if ((y > ((mainFn.from - 1) * rowHeight - peekHeight)) && (y < (mainFn.to * rowHeight + peekHeight))){
+        const mapInput = mainChanging.map((line) => {
+            if ((y > ((line - 1) * rowHeight - peekHeight)) && (y < (line * rowHeight + peekHeight))) {
                 isInputFix = true;
             }
         });
         isMainFix = true;
     }
-    else if ((y > (((secFn.from-1)*32) - 16)) && (y < ((secFn.to*32) + 16))){
-        const mapPrimary = primary.map((line) => {
-            if ((y > (((line-1)*32) - 16)) && (y < ((line*32) + 16))) {
+    else if ((y > ((secFn.from - 1) * rowHeight - peekHeight)) && (y < (secFn.to * rowHeight + peekHeight))){
+        const mapBeacon = primary.map((line) => {
+            if ((y > ((line - 1) * rowHeight - peekHeight)) && (y < (line * rowHeight + peekHeight))) {
                 isBeaconFix = true;
             }
         });
@@ -414,6 +466,11 @@ function evaluateRowFixation(y, questionName) {
     };
 }
 
+/**
+ * EvaluateCorrect Function
+ * Input: question info
+ * Output: boolean value of answers correctness
+ */
 function evaluateCorrect(question) {
     const questionName = question.name.slice(0, 7);
     const questionVariant = question.name.slice(8, 9);
@@ -427,13 +484,18 @@ function evaluateCorrect(question) {
     else return false;
 }
 
-async function getAllLogs(){
-    const folders = fs.readdirSync('./logs/logsSecondRun');
+/**
+ * GetAllLogs Function
+ * Input: directory name with all saved log files, .csv file with student grades
+ * Output: cleared log files with all data about student using mapArray()
+ */
+async function getAllLogs(dirName){
+    const folders = fs.readdirSync(`./logs/${dirName}`);
     const studentData = await getStudentData();
 
     const allLogFiles = folders.map((folder, index) => {
-        const logLines = fs.readFileSync(`./logs/logsSecondRun/${folder}/log`).toString().split('\n');
-        console.log(index + ' folder       ' + folder);
+        const logLines = fs.readFileSync(`./logs/${dirName}/${folder}/log`).toString().split('\n');
+        console.log(index + ' Processing folder:        ' + folder);
         const logContents = mapArray(logLines);
 
         const student = studentData.find(line => {
@@ -457,14 +519,26 @@ function processMouseData() {
     evaluateCorrect(0);
 }
 
+/**
+ * GetStudentData Function
+ * Output: data from .csv file with student grades
+ */
 async function getStudentData() {
     return await csv().fromFile('./logs/data.csv');
 }
 
+/**
+ * GetStudentData Function
+ * Output: data from .csv file with EyeTracker data
+ */
 async function getEyetrackerData(){
     return await csv().fromFile('./logs/export.csv');
 }
 
+/**
+ * ProcessETData Function
+ * Output: processed ET data from .csv file to JSON file
+ */
 async function processETData() {
     const studentData = await getStudentData();
     const eyetrackerData = await getEyetrackerData();
@@ -588,6 +662,10 @@ async function processETData() {
     console.log('processed ET ');
 }
 
+/**
+ * WriteFile Function
+ * Output: saved file with given name and data in JSON format
+ */
 function writeFile(name, data){
     fs.writeFileSync(name, JSON.stringify(data));
 }
